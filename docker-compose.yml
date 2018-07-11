@@ -13,3 +13,13 @@ services:
       - "8000:8000"
     depends_on:
       - db
+  client:
+    build: frontend/.
+    command: npm start
+    volumes:
+      - ./frontend/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "9000:9000"
+    depends_on:
+      - api
