@@ -1,4 +1,4 @@
 dist/*
 **/node_modules/*
 *.config.js
-*.config.production.js
+*.config.*.js
