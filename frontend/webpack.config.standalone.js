@@ -36,7 +36,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
+        test: /\.(js|jsx)$/,
         loaders: ['babel'],
         include: path.join(__dirname, 'src')
       },
@@ -44,5 +44,8 @@ module.exports = {
       { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file-loader' },
       { test: /\.scss$/, loader: sassLoader }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   }
 };
