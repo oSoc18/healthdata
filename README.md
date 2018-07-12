@@ -9,4 +9,4 @@ docker-compose up -d
 drc exec api python manage.py migrate # only when you need to run migrations (make sure the db is up)
 ```
 
-The backend should be available on http://localhost:8000 and the frontend should be available on XXX
+The backend should be available on http://localhost:8000 and the frontend should be available on http://localhost:9000
