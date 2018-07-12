@@ -1,8 +1,9 @@
 import React from 'react';
+import MapLeaflet from './components/MapLeaflet';
 
 const App = () => (
   <div className="App">
-    React running
+    <MapLeaflet />
   </div>
 );
 
