@@ -9,7 +9,7 @@ docker-compose up -d
 docker-compose exec api python manage.py migrate # only when you need to run migrations (make sure the db is up)
 ```
 
-#### To the frontend locally with hot reloading:
+#### To run the frontend locally with hot reloading:
 
 Requires Node version >= 8.0.0
 
