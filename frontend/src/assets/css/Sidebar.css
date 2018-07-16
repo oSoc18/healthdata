@@ -1,0 +1,48 @@
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: absolute;
+    /* 3.9 cause, nav has 1.4 padding --> 2.8 (bot + top), and text 1em, en 0.1 to make it perfect */
+    /* and footer also has 1 em padding */
+    height: calc((100vh - 3.9em) - 3.1em);
+    z-index: 1;
+    width: 30%;
+    max-width: 270px;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: auto;
+}
+
+.sidebar .closeButton {
+    margin-top: 4em;
+    margin-bottom: 4em;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+}
+
+.sidebar .closeButton:hover {
+    color: #ff6464;
+}
+
+.sidebar h1 {
+    clear: both;
+}
+
+.sidebar p {
+    line-height: 1.5
+}
+
+@media only screen and (max-width: 730px) {
+    .sidebar {
+        min-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
