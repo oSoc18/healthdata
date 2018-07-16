@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['*'] # windows 10 support, remove for production!
 # Application definition
 
 INSTALLED_APPS = [
+    'django_admin_index',
+    'ordered_model',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,6 +55,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'healthBackend.urls'
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -60,6 +64,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django_admin_index.context_processors.dashboard',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
