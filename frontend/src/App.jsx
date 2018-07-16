@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:9001/hospitals.json')
+    fetch('http://localhost:9000/hospitals.json')
       .then(r => r.json())
       .then((data) => {
         const hospitals = data.map(hospital => new Hospital(hospital));
