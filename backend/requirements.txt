@@ -6,6 +6,7 @@ chardet==3.0.4
 colorama==0.3.9
 Django==2.0.7
 django-admin-index==1.0.1
+django-cors-headers==2.3.0
 django-filter==1.1.0
 django-ordered-model==2.0.0
 djangorestframework==3.8.2
