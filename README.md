@@ -20,4 +20,10 @@ Requires Node version >= 8.0.0
 `yarn` or `npm install`  
 `yarn start` or `npm start`
 
+Requires a `.env` file in the frontend folder to run.  
+If using the standard docker configuration and port, the env file should look like:
+```
+REACT_APP_API_URL=http://localhost:8000/api
+```
+
 The backend should be available on http://localhost:8000 and the frontend should be available on http://localhost:9000
