@@ -1,8 +1,10 @@
-from django.conf.urls import url
-from . import views
+from django.conf.urls import include, url
 
-urlpatterns=[
+from api import views
+
+
+urlpatterns = [
     url('importHospitals', views.importHospitals),
-    url('hospitalDetail/(?P<pk>[0-9]+)/', views.hospital_detail),
+    url('hospitals/(?P<pk>[0-9]+)/$', views.hospital_detail),
     url('hospitals', views.hospital_list),
 ]

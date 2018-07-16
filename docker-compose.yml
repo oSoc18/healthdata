@@ -13,6 +13,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    dns:
+      - 8.8.8.8
   client:
     build: frontend/.
     command: npm start

@@ -22,5 +22,4 @@ from api import urls
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('api/', include(api.urls)),
-
 ]
