@@ -10,6 +10,12 @@
       "no-console": "warn",
       "no-unused-expressions": ["error", {"allowTernary": true}],
       "no-return-assign": [2, "except-parens"],
-      "no-param-reassign": ["error", { "props": false }]
+      "no-param-reassign": ["error", { "props": false }],
+      "object-curly-newline": ["error", {
+        "ObjectExpression": { "consistent": true },
+        "ObjectPattern": { "multiline": true },
+        "ImportDeclaration": "never",
+        "ExportDeclaration": { "multiline": true, "minProperties": 5 }
+    }]
     }
   }

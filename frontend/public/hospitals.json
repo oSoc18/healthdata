@@ -1,0 +1,1969 @@
+[
+  {
+    "id": 1,
+    "lat": 50.42612,
+    "long": 6.023917,
+    "hospital": "CLINIQUE REINE ASTRID",
+    "TOTAAL BEDDEN": 151
+  },
+  {
+    "id": 2,
+    "lat": 50.46745,
+    "long": 4.887628,
+    "hospital": "CENTRE HOSPITALIER REGIONAL DE NAMUR",
+    "TOTAAL BEDDEN": 397
+  },
+  {
+    "id": 3,
+    "lat": 50.5769184,
+    "long": 4.0666748,
+    "hospital": "CENTRE HOSPITALIER DE LA HAUTE SENNE",
+    "TOTAAL BEDDEN": 40
+  },
+  {
+    "id": 4,
+    "lat": 50.5824875,
+    "long": 4.0793184,
+    "hospital": "CENTRE HOSPITALIER DE LA HAUTE SENNE",
+    "TOTAAL BEDDEN": 200
+  },
+  {
+    "id": 5,
+    "lat": 50.5629623,
+    "long": 3.9837256,
+    "hospital": "CENTRE HOSPITALIER DE LA HAUTE SENNE",
+    "TOTAAL BEDDEN": 6
+  },
+  {
+    "id": 6,
+    "lat": 51.2141961,
+    "long": 4.4073415,
+    "hospital": "ZIEKENHUISNETWERK ANTWERPEN",
+    "TOTAAL BEDDEN": 204
+  },
+  {
+    "id": 7,
+    "lat": 51.2221392,
+    "long": 4.4352579,
+    "hospital": "ZIEKENHUISNETWERK ANTWERPEN",
+    "TOTAAL BEDDEN": 335
+  },
+  {
+    "id": 8,
+    "lat": 51.1817753,
+    "long": 4.4212415,
+    "hospital": "ZIEKENHUISNETWERK ANTWERPEN",
+    "TOTAAL BEDDEN": 728
+  },
+  {
+    "id": 9,
+    "lat": 51.183998,
+    "long": 4.3531837,
+    "hospital": "ZIEKENHUISNETWERK ANTWERPEN",
+    "TOTAAL BEDDEN": 196
+  },
+  {
+    "id": 10,
+    "lat": 51.2587512,
+    "long": 4.626135,
+    "hospital": "ZIEKENHUISNETWERK ANTWERPEN",
+    "TOTAAL BEDDEN": 60
+  },
+  {
+    "id": 11,
+    "lat": 51.3432806,
+    "long": 3.2875704,
+    "hospital": "ZIEKENHUISNETWERK ANTWERPEN",
+    "TOTAAL BEDDEN": 87
+  },
+  {
+    "id": 12,
+    "lat": 51.2588916,
+    "long": 4.4513523,
+    "hospital": "ZIEKENHUISNETWERK ANTWERPEN",
+    "TOTAAL BEDDEN": 352
+  },
+  {
+    "id": 13,
+    "lat": 50.4176757,
+    "long": 4.4538886,
+    "hospital": "GRAND HOPITAL DE CHARLEROI",
+    "TOTAAL BEDDEN": 432
+  },
+  {
+    "id": 14,
+    "lat": 50.4177499,
+    "long": 4.4818727,
+    "hospital": "GRAND HOPITAL DE CHARLEROI",
+    "TOTAAL BEDDEN": 297
+  },
+  {
+    "id": 15,
+    "lat": 50.6945759,
+    "long": 5.5258573,
+    "hospital": "GRAND HOPITAL DE CHARLEROI",
+    "TOTAAL BEDDEN": 174
+  },
+  {
+    "id": 16,
+    "lat": 50.4094173,
+    "long": 4.4817019,
+    "hospital": "GRAND HOPITAL DE CHARLEROI",
+    "TOTAAL BEDDEN": 215
+  },
+  {
+    "id": 17,
+    "lat": 51.0260217,
+    "long": 4.1139549,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST. BLASIUS",
+    "TOTAAL BEDDEN": 418
+  },
+  {
+    "id": 18,
+    "lat": 51.0671719,
+    "long": 4.0259603,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST. BLASIUS",
+    "TOTAAL BEDDEN": 20
+  },
+  {
+    "id": 19,
+    "lat": 51.0663758,
+    "long": 4.0265552,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST. BLASIUS",
+    "TOTAAL BEDDEN": null
+  },
+  {
+    "id": 20,
+    "lat": 50.6291047,
+    "long": 6.0293706,
+    "hospital": "ST.-NIKOLAUS HOSPITAL",
+    "TOTAAL BEDDEN": 192
+  },
+  {
+    "id": 21,
+    "lat": 51.024231,
+    "long": 3.702642,
+    "hospital": "ALGEMEEN ZIEKENHUIS MARIA MIDDELARES",
+    "TOTAAL BEDDEN": 542
+  },
+  {
+    "id": 22,
+    "lat": 51.0430567,
+    "long": 3.7556037,
+    "hospital": "ALGEMEEN ZIEKENHUIS MARIA MIDDELARES",
+    "TOTAAL BEDDEN": 0
+  },
+  {
+    "id": 23,
+    "lat": 50.4579447,
+    "long": 3.9510117,
+    "hospital": "CENTRE HOSPITALIER REGIONAL DE VERVIERS",
+    "TOTAAL BEDDEN": 376
+  },
+  {
+    "id": 24,
+    "lat": 50.5839602,
+    "long": 5.8542782,
+    "hospital": "CENTRE HOSPITALIER REGIONAL DE VERVIERS",
+    "TOTAAL BEDDEN": 60
+  },
+  {
+    "id": 25,
+    "lat": 50.6747993,
+    "long": 5.6336604,
+    "hospital": "CLINIQUE ANDRE RENARD",
+    "TOTAAL BEDDEN": 160
+  },
+  {
+    "id": 26,
+    "lat": 51.0200642,
+    "long": 4.4768237,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST.- MAARTEN",
+    "TOTAAL BEDDEN": 198
+  },
+  {
+    "id": 27,
+    "lat": 51.0955666,
+    "long": 4.4953159,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST. -MAARTEN",
+    "TOTAAL BEDDEN": 271
+  },
+  {
+    "id": 28,
+    "lat": 51.0295129,
+    "long": 4.4879546,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST. -MAARTEN",
+    "TOTAAL BEDDEN": 190
+  },
+  {
+    "id": 29,
+    "lat": 51.1908238,
+    "long": 3.5328549,
+    "hospital": "ALGEMEEN ZIEKENHUIS ALMA",
+    "TOTAAL BEDDEN": 451
+  },
+  {
+    "id": 30,
+    "lat": 50.6340218,
+    "long": 5.5891446,
+    "hospital": "ISOSL, INTERCOMMUNALE DE SOINS SPECIALISES DE LIEGE",
+    "TOTAAL BEDDEN": 229
+  },
+  {
+    "id": 31,
+    "lat": 50.6510656,
+    "long": 5.5701005,
+    "hospital": "INTERCOM. DE SOINS SPECIALISES DE LIEGE",
+    "TOTAAL BEDDEN": 257
+  },
+  {
+    "id": 32,
+    "lat": 50.8546804,
+    "long": 4.2951539,
+    "hospital": "SILVA MEDICAL Vzw",
+    "TOTAAL BEDDEN": 120
+  },
+  {
+    "id": 33,
+    "lat": 50.5468865,
+    "long": 4.7183287,
+    "hospital": "SILVA MEDICAL Vzw",
+    "TOTAAL BEDDEN": 224
+  },
+  {
+    "id": 34,
+    "lat": 50.7312147,
+    "long": 4.4269208,
+    "hospital": "SILVA MEDICAL  Vzw",
+    "TOTAAL BEDDEN": 96
+  },
+  {
+    "id": 35,
+    "lat": 50.3583593,
+    "long": 4.8843528,
+    "hospital": "CHU UCL NAMUR",
+    "TOTAAL BEDDEN": 386
+  },
+  {
+    "id": 36,
+    "lat": 50.5808446,
+    "long": 5.4938849,
+    "hospital": "CENTRE HOSPITALIER BOIS DE L'ABBAYE",
+    "TOTAAL BEDDEN": 327
+  },
+  {
+    "id": 37,
+    "lat": 50.6269474,
+    "long": 5.7227731,
+    "hospital": "CENTRE HOSPITALIER BOIS DE L'ABBAYE",
+    "TOTAAL BEDDEN": 100
+  },
+  {
+    "id": 38,
+    "lat": 50.6680449,
+    "long": 4.560548,
+    "hospital": "CLINIQUE SAINT PIERRE",
+    "TOTAAL BEDDEN": 425
+  },
+  {
+    "id": 39,
+    "lat": 51.2857696,
+    "long": 4.64141,
+    "hospital": "WOONZORG- & REVALIDATIECENTRUM \"DE DENNEN\"",
+    "TOTAAL BEDDEN": 38
+  },
+  {
+    "id": 40,
+    "lat": 51.2206661,
+    "long": 3.1933863,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST.-JAN BRUGGE-OOSTENDE",
+    "TOTAAL BEDDEN": 727
+  },
+  {
+    "id": 41,
+    "lat": 51.2130758,
+    "long": 3.2255249,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST.-JAN BRUGGE-OOSTENDE",
+    "TOTAAL BEDDEN": 139
+  },
+  {
+    "id": 42,
+    "lat": 51.2223739,
+    "long": 2.9136052,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST.-JAN BRUGGE-OOSTENDE",
+    "TOTAAL BEDDEN": 329
+  },
+  {
+    "id": 43,
+    "lat": 50.8662616,
+    "long": 2.8959622,
+    "hospital": "JAN YPERMAN ZIEKENHUIS Vzw",
+    "TOTAAL BEDDEN": 506
+  },
+  {
+    "id": 44,
+    "lat": 50.8558958,
+    "long": 2.7443587,
+    "hospital": "JAN YPERMAN ZIEKENHUIS Vzw",
+    "TOTAAL BEDDEN": null
+  },
+  {
+    "id": 45,
+    "lat": 50.7801737,
+    "long": 3.043793,
+    "hospital": "JAN YPERMAN ZIEKENHUIS Vzw",
+    "TOTAAL BEDDEN": 24
+  },
+  {
+    "id": 46,
+    "lat": 51.3323254,
+    "long": 4.9209433,
+    "hospital": "ALGEMEEN ZIEKENHUIS TURNHOUT",
+    "TOTAAL BEDDEN": 305
+  },
+  {
+    "id": 47,
+    "lat": 51.3138986,
+    "long": 4.9437965,
+    "hospital": "ALGEMEEN ZIEKENHUIS TURNHOUT",
+    "TOTAAL BEDDEN": 342
+  },
+  {
+    "id": 48,
+    "lat": 50.5133955,
+    "long": 5.2397138,
+    "hospital": "CENTRE HOSPITALIER REGIONAL DE HUY",
+    "TOTAAL BEDDEN": 317
+  },
+  {
+    "id": 49,
+    "lat": 50.8344886,
+    "long": 4.3459418,
+    "hospital": "CENTRE HOSPITALIER UNIV. ST.-PIERRE",
+    "TOTAAL BEDDEN": 431
+  },
+  {
+    "id": 50,
+    "lat": 50.8435492,
+    "long": 4.3493339,
+    "hospital": "CENTRE HOSPITALIER UNIV. ST.-PIERRE",
+    "TOTAAL BEDDEN": 151
+  },
+  {
+    "id": 51,
+    "lat": 50.8863049,
+    "long": 4.3328281,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE BRUGMANN",
+    "TOTAAL BEDDEN": 631
+  },
+  {
+    "id": 52,
+    "lat": 50.8712722,
+    "long": 4.3866584,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE BRUGMANN",
+    "TOTAAL BEDDEN": 126
+  },
+  {
+    "id": 53,
+    "lat": 50.9073079,
+    "long": 4.3922922,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE BRUGMANN",
+    "TOTAAL BEDDEN": 96
+  },
+  {
+    "id": 54,
+    "lat": 50.8339215,
+    "long": 4.3471576,
+    "hospital": "INSTITUT JULES BORDET",
+    "TOTAAL BEDDEN": 160
+  },
+  {
+    "id": 55,
+    "lat": 50.834962,
+    "long": 4.389228,
+    "hospital": "HOPITAUX IRIS SUD - IRIS ZIEKENHUIZEN ZUID",
+    "TOTAAL BEDDEN": null
+  },
+  {
+    "id": 56,
+    "lat": 50.8333315,
+    "long": 4.2928436,
+    "hospital": "HOPITAUX IRIS SUD - IRIS ZIEKENHUIZEN ZUID",
+    "TOTAAL BEDDEN": 170
+  },
+  {
+    "id": 57,
+    "lat": 50.8157582,
+    "long": 4.341704,
+    "hospital": "HOPITAUX IRIS SUD - IRIS ZIEKENHUIZEN ZUID",
+    "TOTAAL BEDDEN": 195
+  },
+  {
+    "id": 58,
+    "lat": 50.8251858,
+    "long": 4.3787626,
+    "hospital": "HOPITAUX IRIS SUD - IRIS ZIEKENHUIZEN ZUID",
+    "TOTAAL BEDDEN": 185
+  },
+  {
+    "id": 59,
+    "lat": 50.9981308,
+    "long": 3.7699959,
+    "hospital": "PROVINCIAAL ZORGCENTRUM LEMBERGE APB",
+    "TOTAAL BEDDEN": 63
+  },
+  {
+    "id": 60,
+    "lat": 50.4781424,
+    "long": 4.2059956,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE TIVOLI",
+    "TOTAAL BEDDEN": 518
+  },
+  {
+    "id": 61,
+    "lat": 51.1394129,
+    "long": 4.9007423,
+    "hospital": "HEILIG HART ZIEKENHUIS Vzw",
+    "TOTAAL BEDDEN": 451
+  },
+  {
+    "id": 62,
+    "lat": 51.1743625,
+    "long": 4.4180904,
+    "hospital": "GZA- ZIEKENHUIZEN",
+    "TOTAAL BEDDEN": 580
+  },
+  {
+    "id": 63,
+    "lat": 51.2059492,
+    "long": 4.412103,
+    "hospital": "GZA- ZIEKENHUIZEN",
+    "TOTAAL BEDDEN": 336
+  },
+  {
+    "id": 64,
+    "lat": 51.0250801,
+    "long": 5.3157996,
+    "hospital": "GZA- ZIEKENHUIZEN",
+    "TOTAAL BEDDEN": 96
+  },
+  {
+    "id": 65,
+    "lat": 51.3223407,
+    "long": 4.9477781,
+    "hospital": "HEILIG HARTZIEKENHUIS V.Z.W.",
+    "TOTAAL BEDDEN": 183
+  },
+  {
+    "id": 66,
+    "lat": 50.435894,
+    "long": 4.6263807,
+    "hospital": "CHR SAMBRE ET MEUSE",
+    "TOTAAL BEDDEN": 297
+  },
+  {
+    "id": 67,
+    "lat": 50.3995854,
+    "long": 4.7014318,
+    "hospital": "CHR SAMBRE ET MEUSE",
+    "TOTAAL BEDDEN": 6
+  },
+  {
+    "id": 68,
+    "lat": 50.8397009,
+    "long": 5.5177944,
+    "hospital": "A.Z. RIVIERENLAND",
+    "TOTAAL BEDDEN": 161
+  },
+  {
+    "id": 69,
+    "lat": 51.0537829,
+    "long": 4.3575766,
+    "hospital": "A.Z. RIVIERENLAND",
+    "TOTAAL BEDDEN": 72
+  },
+  {
+    "id": 70,
+    "lat": 50.736392,
+    "long": 4.2257915,
+    "hospital": "A.Z. SINT-MARIA",
+    "TOTAAL BEDDEN": 350
+  },
+  {
+    "id": 71,
+    "lat": 50.8723741,
+    "long": 4.6997577,
+    "hospital": "REGIONAAL ZIEKENHUIS HEILIG HART",
+    "TOTAAL BEDDEN": 287
+  },
+  {
+    "id": 72,
+    "lat": 50.810785,
+    "long": 4.934169,
+    "hospital": "REGIONAAL ZIEKENHUIS HEILIG HART TIENEN",
+    "TOTAAL BEDDEN": 216
+  },
+  {
+    "id": 73,
+    "lat": 50.8154886,
+    "long": 4.9396052,
+    "hospital": "REGIONAAL ZIEKENHUIS HEILIG HART TIENEN",
+    "TOTAAL BEDDEN": 87
+  },
+  {
+    "id": 74,
+    "lat": 50.9936354,
+    "long": 4.8478078,
+    "hospital": "REGIONAAL ZIEKENHUIS HEILIG HART TIENEN",
+    "TOTAAL BEDDEN": null
+  },
+  {
+    "id": 75,
+    "lat": 50.854399,
+    "long": 4.3603807,
+    "hospital": "KLINIEK ST.-JAN - CLINIQUE ST. JEAN",
+    "TOTAAL BEDDEN": 394
+  },
+  {
+    "id": 76,
+    "lat": 50.8561639,
+    "long": 4.3692754,
+    "hospital": "KLINIEK ST.-JAN - CLINIQUE ST. JEAN",
+    "TOTAAL BEDDEN": 76
+  },
+  {
+    "id": 77,
+    "lat": 50.8753292,
+    "long": 4.3361539,
+    "hospital": "KLINIEK ST.-JAN - CLINIQUE ST. JEAN",
+    "TOTAAL BEDDEN": 78
+  },
+  {
+    "id": 78,
+    "lat": 50.8051948,
+    "long": 4.3684585,
+    "hospital": "EUROPAZIEKENHUIZEN - CLINIQUES DE L'EUROPE",
+    "TOTAAL BEDDEN": 424
+  },
+  {
+    "id": 79,
+    "lat": 50.8432344,
+    "long": 4.4001301,
+    "hospital": "EUROPAZIEKENHUIZEN - CLINIQUES DE L'EUROPE",
+    "TOTAAL BEDDEN": 291
+  },
+  {
+    "id": 80,
+    "lat": 51.1927389,
+    "long": 5.3883664,
+    "hospital": "REVALIDATIE & MS CENTRUM",
+    "TOTAAL BEDDEN": 120
+  },
+  {
+    "id": 81,
+    "lat": 50.9397322,
+    "long": 3.1185947,
+    "hospital": "ALGEMEEN ZIEKENHUIS DELTA",
+    "TOTAAL BEDDEN": 492
+  },
+  {
+    "id": 82,
+    "lat": 50.8499547,
+    "long": 3.2698694,
+    "hospital": "ALGEMEEN ZIEKENHUIS DELTA",
+    "TOTAAL BEDDEN": 357
+  },
+  {
+    "id": 83,
+    "lat": 50.7922418,
+    "long": 3.1226688,
+    "hospital": "ALGEMEEN ZIEKENHUIS DELTA",
+    "TOTAAL BEDDEN": 198
+  },
+  {
+    "id": 84,
+    "lat": 50.9380747,
+    "long": 3.1154934,
+    "hospital": "ALGEMEEN ZIEKENHUIS DELTA",
+    "TOTAAL BEDDEN": 159
+  },
+  {
+    "id": 85,
+    "lat": 50.765668,
+    "long": 3.5914909,
+    "hospital": "ST.-JOZEFSKLINIEK Vzw",
+    "TOTAAL BEDDEN": 271
+  },
+  {
+    "id": 86,
+    "lat": 50.9438949,
+    "long": 4.0539701,
+    "hospital": "ONZE LIEVE VROUWZIEKENHUIS",
+    "TOTAAL BEDDEN": 622
+  },
+  {
+    "id": 87,
+    "lat": 50.9098004,
+    "long": 4.1956862,
+    "hospital": "ONZE LIEVE VROUWZIEKENHUIS",
+    "TOTAAL BEDDEN": 192
+  },
+  {
+    "id": 88,
+    "lat": 51.1915154,
+    "long": 2.8423674,
+    "hospital": "ONZE LIEVE VROUWZIEKENHUIS",
+    "TOTAAL BEDDEN": 30
+  },
+  {
+    "id": 89,
+    "lat": 50.9860816,
+    "long": 3.5280189,
+    "hospital": "ST.-VINCENTIUSZIEKENHUIS",
+    "TOTAAL BEDDEN": 170
+  },
+  {
+    "id": 90,
+    "lat": 51.1851255,
+    "long": 3.2491382,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST. LUCAS",
+    "TOTAAL BEDDEN": 412
+  },
+  {
+    "id": 91,
+    "lat": 50.8861247,
+    "long": 4.3094405,
+    "hospital": "UNIVERSITAIR ZIEKENHUIS BRUSSEL",
+    "TOTAAL BEDDEN": 721
+  },
+  {
+    "id": 92,
+    "lat": 50.4771791,
+    "long": 4.2165565,
+    "hospital": "CENTRES HOSPITALIERS JOLIMONT",
+    "TOTAAL BEDDEN": 542
+  },
+  {
+    "id": 93,
+    "lat": 50.3458971,
+    "long": 4.2606331,
+    "hospital": "CENTRES HOSPITALIERS JOLIMONT",
+    "TOTAAL BEDDEN": 142
+  },
+  {
+    "id": 94,
+    "lat": 50.8885194,
+    "long": 4.3290211,
+    "hospital": "HOPITAL UNIVERSITAIRE DES ENFANTS REINE FABIOLA (HUDERF)",
+    "TOTAAL BEDDEN": 178
+  },
+  {
+    "id": 95,
+    "lat": 50.6480226,
+    "long": 5.5554732,
+    "hospital": "CENTRE HOSPITALIER CHRETIEN",
+    "TOTAAL BEDDEN": 285
+  },
+  {
+    "id": 96,
+    "lat": 50.6409101,
+    "long": 5.5346375,
+    "hospital": "CENTRE HOSPITALIER CHRETIEN",
+    "TOTAAL BEDDEN": 199
+  },
+  {
+    "id": 97,
+    "lat": 50.691017,
+    "long": 5.243802,
+    "hospital": "CENTRE HOSPITALIER CHRETIEN",
+    "TOTAAL BEDDEN": 87
+  },
+  {
+    "id": 98,
+    "lat": 50.6861141,
+    "long": 5.549563,
+    "hospital": "CENTRE HOSPITALIER CHRETIEN",
+    "TOTAAL BEDDEN": 245
+  },
+  {
+    "id": 99,
+    "lat": 50.7363757,
+    "long": 5.6887277,
+    "hospital": "CENTRE HOSPITALIER CHRETIEN",
+    "TOTAAL BEDDEN": 110
+  },
+  {
+    "id": 100,
+    "lat": 50.57771,
+    "long": 5.862809,
+    "hospital": "CENTRE HOSPITALIER CHRETIEN",
+    "TOTAAL BEDDEN": 118
+  },
+  {
+    "id": 101,
+    "lat": 50.2278195,
+    "long": 5.3233301,
+    "hospital": "VIVALIA - INSTITUT FAMENNE-ARDENNE-CONDROZ",
+    "TOTAAL BEDDEN": 175
+  },
+  {
+    "id": 102,
+    "lat": 50.1589764,
+    "long": 5.6833593,
+    "hospital": "VIVALIA - INSTITUT FAMENNE-ARDENNE-CONDROZ",
+    "TOTAAL BEDDEN": 96
+  },
+  {
+    "id": 103,
+    "lat": 50.4607262,
+    "long": 4.8423796,
+    "hospital": "CHU UCL NAMUR",
+    "TOTAAL BEDDEN": 305
+  },
+  {
+    "id": 104,
+    "lat": 50.4568014,
+    "long": 4.8390318,
+    "hospital": "CHU UCL NAMUR",
+    "TOTAAL BEDDEN": 10
+  },
+  {
+    "id": 105,
+    "lat": 49.9251647,
+    "long": 5.3814327,
+    "hospital": "VIVALIA - CENTRE HOSPITALIER DE L'ARDENNE",
+    "TOTAAL BEDDEN": 317
+  },
+  {
+    "id": 106,
+    "lat": 50.8415788,
+    "long": 3.5997529,
+    "hospital": "ALGEMEEN ZIEKENHUIS OUDENAARDE",
+    "TOTAAL BEDDEN": 235
+  },
+  {
+    "id": 107,
+    "lat": 50.9348698,
+    "long": 4.0181449,
+    "hospital": "ALGEMEEN STEDELIJK ZIEKENHUIS",
+    "TOTAAL BEDDEN": 344
+  },
+  {
+    "id": 108,
+    "lat": 51.3225267,
+    "long": 4.9475236,
+    "hospital": "ALGEMEEN STEDELIJK ZIEKENHUIS",
+    "TOTAAL BEDDEN": 160
+  },
+  {
+    "id": 109,
+    "lat": 51.0104168,
+    "long": 3.8980436,
+    "hospital": "ALGEMEEN STEDELIJK ZIEKENHUIS",
+    "TOTAAL BEDDEN": 64
+  },
+  {
+    "id": 110,
+    "lat": 50.9278583,
+    "long": 4.4180343,
+    "hospital": "ALGEMEEN ZIEKENHUIS VILVOORDE",
+    "TOTAAL BEDDEN": 406
+  },
+  {
+    "id": 111,
+    "lat": 50.8643014,
+    "long": 3.8165937,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST.-ELISABETH",
+    "TOTAAL BEDDEN": 333
+  },
+  {
+    "id": 112,
+    "lat": 51.1539261,
+    "long": 4.4071805,
+    "hospital": "REVALIDATIEZIEKENHUIS \"REVARTE\"",
+    "TOTAAL BEDDEN": 194
+  },
+  {
+    "id": 113,
+    "lat": 50.4851816,
+    "long": 5.4311214,
+    "hospital": "CENTRE NEUROLOGIQUE ET DE READAPTATION FONCTIONNELLE",
+    "TOTAAL BEDDEN": 150
+  },
+  {
+    "id": 114,
+    "lat": 50.9110645,
+    "long": 5.3451905,
+    "hospital": "JESSAZIEKENHUIS",
+    "TOTAAL BEDDEN": 302
+  },
+  {
+    "id": 115,
+    "lat": 50.9259632,
+    "long": 5.3420969,
+    "hospital": "JESSAZIEKENHUIS",
+    "TOTAAL BEDDEN": 589
+  },
+  {
+    "id": 116,
+    "lat": 50.8843121,
+    "long": 4.7162222,
+    "hospital": "JESSAZIEKENHUIS",
+    "TOTAAL BEDDEN": 90
+  },
+  {
+    "id": 117,
+    "lat": 49.6780956,
+    "long": 5.8206915,
+    "hospital": "VIVALIA - CLINIQUES DU SUD-LUXEMBOURG",
+    "TOTAAL BEDDEN": 307
+  },
+  {
+    "id": 118,
+    "lat": 49.5531794,
+    "long": 5.5248813,
+    "hospital": "VIVALIA - CLINIQUES DU SUD-LUXEMBOURG",
+    "TOTAAL BEDDEN": 96
+  },
+  {
+    "id": 119,
+    "lat": 50.7492721,
+    "long": 3.219642,
+    "hospital": "CENTRE HOSPITALIER DE MOUSCRON",
+    "TOTAAL BEDDEN": 355
+  },
+  {
+    "id": 120,
+    "lat": 50.8349177,
+    "long": 4.3562835,
+    "hospital": "CENTRE DE SANTE DES FAGNES",
+    "TOTAAL BEDDEN": 144
+  },
+  {
+    "id": 121,
+    "lat": 50.4602026,
+    "long": 3.9567819,
+    "hospital": "C.H.U. ET PSYCHIATRIE DE MONS-BORINAGE",
+    "TOTAAL BEDDEN": 415
+  },
+  {
+    "id": 122,
+    "lat": 50.278188,
+    "long": 6.1270144,
+    "hospital": "KLINIK ST.-JOSEF",
+    "TOTAAL BEDDEN": 143
+  },
+  {
+    "id": 123,
+    "lat": 50.6315732,
+    "long": 6.0261312,
+    "hospital": "KLINIK ST.-JOSEF",
+    "TOTAAL BEDDEN": 13
+  },
+  {
+    "id": 124,
+    "lat": 50.2648289,
+    "long": 4.9444384,
+    "hospital": "CHU UCL NAMUR",
+    "TOTAAL BEDDEN": 211
+  },
+  {
+    "id": 125,
+    "lat": 50.2638315,
+    "long": 4.9241658,
+    "hospital": "CHU UCL NAMUR",
+    "TOTAAL BEDDEN": 24
+  },
+  {
+    "id": 126,
+    "lat": 51.1242923,
+    "long": 4.2722686,
+    "hospital": "ALGEMEEN ZIEKENHUIS LOKEREN",
+    "TOTAAL BEDDEN": 170
+  },
+  {
+    "id": 127,
+    "lat": 50.4542577,
+    "long": 3.9600001,
+    "hospital": "CHR MONS - HAINAUT",
+    "TOTAAL BEDDEN": 257
+  },
+  {
+    "id": 128,
+    "lat": 50.4173699,
+    "long": 3.8069967,
+    "hospital": "CHR MONS - HAINAUT",
+    "TOTAAL BEDDEN": 169
+  },
+  {
+    "id": 129,
+    "lat": 51.0618304,
+    "long": 3.721311,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST. LUCAS ",
+    "TOTAAL BEDDEN": 625
+  },
+  {
+    "id": 130,
+    "lat": 51.0603847,
+    "long": 3.7216915,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST. LUCAS",
+    "TOTAAL BEDDEN": 160
+  },
+  {
+    "id": 131,
+    "lat": 51.1574816,
+    "long": 4.4108984,
+    "hospital": "UNIVERSITAIR ZIEKENHUIS ANTWERPEN",
+    "TOTAAL BEDDEN": 573
+  },
+  {
+    "id": 132,
+    "lat": 51.1846342,
+    "long": 4.8356473,
+    "hospital": "ALGEMEEN ZIEKENHUIS HERENTALS",
+    "TOTAAL BEDDEN": 243
+  },
+  {
+    "id": 133,
+    "lat": 51.0620315,
+    "long": 2.6662813,
+    "hospital": "AZ WEST",
+    "TOTAAL BEDDEN": 224
+  },
+  {
+    "id": 134,
+    "lat": 51.1055854,
+    "long": 4.3708686,
+    "hospital": "A.Z. RIVIERENLAND",
+    "TOTAAL BEDDEN": 207
+  },
+  {
+    "id": 135,
+    "lat": 50.8785827,
+    "long": 4.674548,
+    "hospital": "UNIVERSITAIRE ZIEKENHUIZEN K.U.L.",
+    "TOTAAL BEDDEN": 1473
+  },
+  {
+    "id": 136,
+    "lat": 50.8804411,
+    "long": 4.6955284,
+    "hospital": "UNIVERSITAIRE ZIEKENHUIZEN K.U.L.",
+    "TOTAAL BEDDEN": 56
+  },
+  {
+    "id": 137,
+    "lat": 50.861855,
+    "long": 4.7999964,
+    "hospital": "UNIVERSITAIRE ZIEKENHUIZEN K.U.L.",
+    "TOTAAL BEDDEN": 235
+  },
+  {
+    "id": 138,
+    "lat": 50.361933,
+    "long": 4.364199,
+    "hospital": "C.H. UNIVERSITAIRE ANDRE VESALE",
+    "TOTAAL BEDDEN": 371
+  },
+  {
+    "id": 139,
+    "lat": 50.361933,
+    "long": 4.364199,
+    "hospital": "C.H. UNIVERSITAIRE ANDRE VESALE",
+    "TOTAAL BEDDEN": 173
+  },
+  {
+    "id": 140,
+    "lat": 50.816023,
+    "long": 4.3999304,
+    "hospital": "CHIREC",
+    "TOTAAL BEDDEN": 438
+  },
+  {
+    "id": 141,
+    "lat": 50.5953543,
+    "long": 4.3177933,
+    "hospital": "CENTRES HOSPITALIERS JOLIMONT",
+    "TOTAAL BEDDEN": 201
+  },
+  {
+    "id": 142,
+    "lat": 50.9577435,
+    "long": 5.5172322,
+    "hospital": "ZIEKENHUIS OOST - LIMBURG",
+    "TOTAAL BEDDEN": 670
+  },
+  {
+    "id": 143,
+    "lat": 50.9095865,
+    "long": 5.6280657,
+    "hospital": "ZIEKENHUIS OOST - LIMBURG",
+    "TOTAAL BEDDEN": 141
+  },
+  {
+    "id": 144,
+    "lat": 51.0702374,
+    "long": 3.0987247,
+    "hospital": "ALGEMEEN ZIEKENHUIS DELTA",
+    "TOTAAL BEDDEN": 211
+  },
+  {
+    "id": 145,
+    "lat": 51.3378072,
+    "long": 3.304204,
+    "hospital": "ALGEMEEN ZIEKENHUIS ZENO",
+    "TOTAAL BEDDEN": 179
+  },
+  {
+    "id": 146,
+    "lat": 51.3080014,
+    "long": 3.1247034,
+    "hospital": "ALGEMEEN ZIEKENHUIS ZENO",
+    "TOTAAL BEDDEN": 155
+  },
+  {
+    "id": 147,
+    "lat": 50.7986981,
+    "long": 3.1225878,
+    "hospital": "ST.-ANDRIESZIEKENHUIS",
+    "TOTAAL BEDDEN": 266
+  },
+  {
+    "id": 148,
+    "lat": 50.8015643,
+    "long": 3.2651731,
+    "hospital": "ALGEMEEN ZIEKENHUIS GROENINGE",
+    "TOTAAL BEDDEN": 954
+  },
+  {
+    "id": 149,
+    "lat": 50.8296996,
+    "long": 3.2609199,
+    "hospital": "ALGEMEEN ZIEKENHUIS GROENINGE",
+    "TOTAAL BEDDEN": 100
+  },
+  {
+    "id": 150,
+    "lat": 50.8995889,
+    "long": 3.4166116,
+    "hospital": "O.L.V. VAN LOURDES ZIEKENHUIS WAREGEM",
+    "TOTAAL BEDDEN": 267
+  },
+  {
+    "id": 151,
+    "lat": 50.8551053,
+    "long": 4.4470992,
+    "hospital": "CLINIQUES UNIVERSITAIRES ST.-LUC",
+    "TOTAAL BEDDEN": 973
+  },
+  {
+    "id": 152,
+    "lat": 50.8132361,
+    "long": 4.2684293,
+    "hospital": "CLINIQUES UNIVERSITAIRES DE BRUXELLES - HOPITAL ERASME",
+    "TOTAAL BEDDEN": 864
+  },
+  {
+    "id": 153,
+    "lat": 50.8863049,
+    "long": 4.3328281,
+    "hospital": "CLINIQUES UNIVERSITAIRES DE BRUXELLES - HOPITAL ERASME",
+    "TOTAAL BEDDEN": 117
+  },
+  {
+    "id": 154,
+    "lat": 50.8507453,
+    "long": 4.4220235,
+    "hospital": "CLINIQUES UNIVERSITAIRES DE BRUXELLES - HOPITAL ERASME",
+    "TOTAAL BEDDEN": 95
+  },
+  {
+    "id": 155,
+    "lat": 50.4806575,
+    "long": 4.7703199,
+    "hospital": "CLINIQUE NOTRE-DAME DE GRACE",
+    "TOTAAL BEDDEN": 224
+  },
+  {
+    "id": 156,
+    "lat": 50.4703389,
+    "long": 3.8412474,
+    "hospital": "CENTRE HOSPITALIER EPICURA",
+    "TOTAAL BEDDEN": 237
+  },
+  {
+    "id": 157,
+    "lat": 50.4138674,
+    "long": 4.1644372,
+    "hospital": "CENTRE HOSPITALIER EPICURA",
+    "TOTAAL BEDDEN": 332
+  },
+  {
+    "id": 158,
+    "lat": 50.8345774,
+    "long": 4.3329772,
+    "hospital": "CENTRE HOSPITALIER EPICURA",
+    "TOTAAL BEDDEN": null
+  },
+  {
+    "id": 159,
+    "lat": 50.6520999,
+    "long": 5.5779004,
+    "hospital": "CENTRE HOSPITALIER REGIONAL DE LA CITADELLE",
+    "TOTAAL BEDDEN": 862
+  },
+  {
+    "id": 160,
+    "lat": 50.671941,
+    "long": 5.638868,
+    "hospital": "CENTRE HOSPITALIER REGIONAL DE LA CITADELLE",
+    "TOTAAL BEDDEN": 35
+  },
+  {
+    "id": 161,
+    "lat": 50.8046015,
+    "long": 4.2210469,
+    "hospital": "REVALIDATIEZIEKENHUIS INKENDAAL",
+    "TOTAAL BEDDEN": 178
+  },
+  {
+    "id": 162,
+    "lat": 51.2189802,
+    "long": 2.9333611,
+    "hospital": "ALGEMEEN ZIEKENHUIS DAMIAAN",
+    "TOTAAL BEDDEN": 523
+  },
+  {
+    "id": 163,
+    "lat": 50.8291592,
+    "long": 3.2754935,
+    "hospital": "GEZONDHEIDSZORG HEILIGE FAMILIE",
+    "TOTAAL BEDDEN": 120
+  },
+  {
+    "id": 164,
+    "lat": 50.6137188,
+    "long": 3.3871079,
+    "hospital": "CENTRE HOSPITALIER DE WALLONIE PICARDE - Chwapi",
+    "TOTAAL BEDDEN": 187
+  },
+  {
+    "id": 165,
+    "lat": 50.503887,
+    "long": 4.469936,
+    "hospital": "CENTRE HOSPITALIER DE WALLONIE PICARDE - Chwapi",
+    "TOTAAL BEDDEN": 419
+  },
+  {
+    "id": 166,
+    "lat": 50.5931775,
+    "long": 3.4021265,
+    "hospital": "CENTRE HOSPITALIER DE WALLONIE PICARDE - Chwapi",
+    "TOTAAL BEDDEN": 149
+  },
+  {
+    "id": 167,
+    "lat": 51.2742932,
+    "long": 4.6444488,
+    "hospital": "ALGEMEEN ZIEKENHUIS ST.-JOZEF",
+    "TOTAAL BEDDEN": 250
+  },
+  {
+    "id": 168,
+    "lat": 50.855819,
+    "long": 4.3698063,
+    "hospital": "VALISANA ASBL",
+    "TOTAAL BEDDEN": 100
+  },
+  {
+    "id": 169,
+    "lat": 50.8670101,
+    "long": 4.3063362,
+    "hospital": "VALISANA ASBL",
+    "TOTAAL BEDDEN": 175
+  },
+  {
+    "id": 170,
+    "lat": 50.7018603,
+    "long": 4.5940362,
+    "hospital": "ALGEMEEN ZIEKENHUIS GLORIEUX",
+    "TOTAAL BEDDEN": 346
+  },
+  {
+    "id": 171,
+    "lat": 51.1614494,
+    "long": 4.1498227,
+    "hospital": "ALGEMEEN ZIEKENHUIS NIKOLAAS",
+    "TOTAAL BEDDEN": 708
+  },
+  {
+    "id": 172,
+    "lat": 51.2100649,
+    "long": 4.2510047,
+    "hospital": "ALGEMEEN ZIEKENHUIS NIKOLAAS",
+    "TOTAAL BEDDEN": 102
+  },
+  {
+    "id": 173,
+    "lat": 51.3223261,
+    "long": 4.9474155,
+    "hospital": "ALGEMEEN ZIEKENHUIS NIKOLAAS",
+    "TOTAAL BEDDEN": 0
+  },
+  {
+    "id": 174,
+    "lat": 51.0257591,
+    "long": 3.7281658,
+    "hospital": "UNIVERSITAIR ZIEKENHUIS GENT",
+    "TOTAAL BEDDEN": 1061
+  },
+  {
+    "id": 175,
+    "lat": 51.0583802,
+    "long": 4.4548234,
+    "hospital": "KONINGIN ELISABETH INSTITUUT",
+    "TOTAAL BEDDEN": 165
+  },
+  {
+    "id": 176,
+    "lat": 51.2133791,
+    "long": 2.8733756,
+    "hospital": "BUNDELING ZORGINITIATIEVEN OOSTENDE",
+    "TOTAAL BEDDEN": 125
+  },
+  {
+    "id": 177,
+    "lat": 51.206274,
+    "long": 4.4704842,
+    "hospital": "A.Z. MONICA",
+    "TOTAAL BEDDEN": 265
+  },
+  {
+    "id": 178,
+    "lat": 51.2017601,
+    "long": 4.4102536,
+    "hospital": "A.Z. MONICA",
+    "TOTAAL BEDDEN": 201
+  },
+  {
+    "id": 179,
+    "lat": 51.0168645,
+    "long": 4.5591061,
+    "hospital": "IMELDA  ZIEKENHUIS",
+    "TOTAAL BEDDEN": 502
+  },
+  {
+    "id": 180,
+    "lat": 50.9182222,
+    "long": 4.4769482,
+    "hospital": "NATIONAAL MULTIPLE SCLEROSE CENTRUM Vzw",
+    "TOTAAL BEDDEN": 120
+  },
+  {
+    "id": 181,
+    "lat": 50.4772791,
+    "long": 4.8806743,
+    "hospital": "CLINIQUE ST.-LUC",
+    "TOTAAL BEDDEN": 302
+  },
+  {
+    "id": 182,
+    "lat": 50.59139,
+    "long": 5.57132,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE DE LIEGE",
+    "TOTAAL BEDDEN": 595
+  },
+  {
+    "id": 183,
+    "lat": 50.6237132,
+    "long": 5.6359743,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE DE LIEGE",
+    "TOTAAL BEDDEN": 253
+  },
+  {
+    "id": 184,
+    "lat": 50.5322077,
+    "long": 5.5780433,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE DE LIEGE",
+    "TOTAAL BEDDEN": 40
+  },
+  {
+    "id": 185,
+    "lat": 51.1595323,
+    "long": 5.0001056,
+    "hospital": "ALGEMEEN ZIEKENHUIS  ST.-DIMPNA",
+    "TOTAAL BEDDEN": 294
+  },
+  {
+    "id": 186,
+    "lat": 51.298141,
+    "long": 4.4901935,
+    "hospital": "ALGEMEEN ZIEKENHUIS KLINA V.Z.W.",
+    "TOTAAL BEDDEN": 451
+  },
+  {
+    "id": 187,
+    "lat": 51.3593383,
+    "long": 4.5550236,
+    "hospital": "ALGEMEEN ZIEKENHUIS KLINA V.Z.W.",
+    "TOTAAL BEDDEN": 8
+  },
+  {
+    "id": 188,
+    "lat": 51.3087659,
+    "long": 4.5456523,
+    "hospital": "ALGEMEEN ZIEKENHUIS KLINA V.Z.W.",
+    "TOTAAL BEDDEN": 122
+  },
+  {
+    "id": 189,
+    "lat": 50.9885852,
+    "long": 5.0508623,
+    "hospital": "ALGEMEEN ZIEKENHUIS DIEST",
+    "TOTAAL BEDDEN": 174
+  },
+  {
+    "id": 190,
+    "lat": 50.9817636,
+    "long": 5.0531023,
+    "hospital": "ALGEMEEN ZIEKENHUIS DIEST",
+    "TOTAAL BEDDEN": 40
+  },
+  {
+    "id": 191,
+    "lat": 51.0504157,
+    "long": 3.7008914,
+    "hospital": "ALGEMEEN ZIEKENHUIS JAN PALFIJN",
+    "TOTAAL BEDDEN": 526
+  },
+  {
+    "id": 192,
+    "lat": 51.0461409,
+    "long": 5.3172668,
+    "hospital": "ST. FRANCISKUSZIEKENHUIS",
+    "TOTAAL BEDDEN": 268
+  },
+  {
+    "id": 193,
+    "lat": 50.8234022,
+    "long": 5.1860706,
+    "hospital": "ST. TRUDO ZIEKENHUIS",
+    "TOTAAL BEDDEN": 310
+  },
+  {
+    "id": 194,
+    "lat": 50.7891128,
+    "long": 5.4836272,
+    "hospital": "ALGEMEEN ZIEKENHUIS VESALIUS",
+    "TOTAAL BEDDEN": 326
+  },
+  {
+    "id": 195,
+    "lat": 50.8719003,
+    "long": 5.5133122,
+    "hospital": "ALGEMEEN ZIEKENHUIS VESALIUS",
+    "TOTAAL BEDDEN": null
+  },
+  {
+    "id": 196,
+    "lat": 51.1000752,
+    "long": 5.7666623,
+    "hospital": "ZIEKENHUIS MAAS EN KEMPEN ",
+    "TOTAAL BEDDEN": 213
+  },
+  {
+    "id": 197,
+    "lat": 50.5150423,
+    "long": 4.0118706,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE DE CHARLEROI",
+    "TOTAAL BEDDEN": 539
+  },
+  {
+    "id": 198,
+    "lat": 50.4061107,
+    "long": 4.3992417,
+    "hospital": "CENTRE HOSPITALIER UNIVERSITAIRE DE CHARLEROI",
+    "TOTAAL BEDDEN": 291
+  },
+  {
+    "id": 199,
+    "lat": 51.2121818,
+    "long": 5.4170402,
+    "hospital": "MARIAZIEKENHUIS NOORD-LIMBURG",
+    "TOTAAL BEDDEN": 333
+  },
+  {
+    "id": 200,
+    "lat": 50.8421567,
+    "long": 4.3346882,
+    "hospital": "FOYER HORIZON",
+    "TOTAAL BEDDEN": 6
+  },
+  {
+    "id": 201,
+    "lat": 50.8451469,
+    "long": 4.3172126,
+    "hospital": "CENTRE HOSPITALIER INTERREGIONAL EDITH CAVELL (SARE)",
+    "TOTAAL BEDDEN": 327
+  },
+  {
+    "id": 202,
+    "lat": 50.8694657,
+    "long": 4.3175349,
+    "hospital": "CENTRE HOSPITALIER INTERREGIONAL EDITH CAVELL (SARE)",
+    "TOTAAL BEDDEN": 0
+  },
+  {
+    "id": 203,
+    "lat": 50.8364081,
+    "long": 4.3154323,
+    "hospital": "CENTRE HOSPITALIER INTERREGIONAL EDITH CAVELL (SARE)",
+    "TOTAAL BEDDEN": 287
+  },
+  {
+    "id": 204,
+    "lat": 50.633856,
+    "long": 3.777627,
+    "hospital": "CENTRE HOSPITALIER EPICURA",
+    "TOTAAL BEDDEN": 237
+  },
+  {
+    "id": 205,
+    "lat": 50.4818217,
+    "long": 3.9494828,
+    "hospital": "CENTRE HOSPITALIER EPICURA",
+    "TOTAAL BEDDEN": 0
+  },
+  {
+    "id": 206,
+    "lat": 51.0692027,
+    "long": 3.7023176,
+    "hospital": "PSYCHIATRISCH CENTRUM DR. GUISLAIN",
+    "TOTAAL BEDDEN": 172
+  },
+  {
+    "id": 207,
+    "lat": 50.8901277,
+    "long": 2.9374302,
+    "hospital": "PSYCHIATRISCH CENTRUM DR. GUISLAIN",
+    "TOTAAL BEDDEN": 119
+  },
+  {
+    "id": 208,
+    "lat": 51.0188168,
+    "long": 3.714323,
+    "hospital": "PSYCHIATRISCH CENTRUM DR. GUISLAIN",
+    "TOTAAL BEDDEN": 20
+  },
+  {
+    "id": 209,
+    "lat": 50.8505897,
+    "long": 2.8842714,
+    "hospital": "KLINIEK ST. JOZEF",
+    "TOTAAL BEDDEN": 197
+  },
+  {
+    "id": 210,
+    "lat": 51.1623031,
+    "long": 4.5044403,
+    "hospital": "PSYCHIATRISCH CENTRUM MULTIVERSUM",
+    "TOTAAL BEDDEN": 233
+  },
+  {
+    "id": 211,
+    "lat": 51.1852244,
+    "long": 4.4500347,
+    "hospital": "PSYCHIATRISCH CENTRUM MULTIVERSUM",
+    "TOTAAL BEDDEN": 358
+  },
+  {
+    "id": 212,
+    "lat": 50.4986347,
+    "long": 4.2219773,
+    "hospital": "CENTRE PSYCHIATRIQUE ST.-BERNARD",
+    "TOTAAL BEDDEN": 291
+  },
+  {
+    "id": 213,
+    "lat": 50.5417554,
+    "long": 3.3992013,
+    "hospital": "HOPITAL PSYCHIATRIQUE ST.-CHARLES",
+    "TOTAAL BEDDEN": 44
+  },
+  {
+    "id": 214,
+    "lat": 50.2845642,
+    "long": 5.7882236,
+    "hospital": "CENTRE HOSPITALIER SPECIALISE  \" L'ACCUEIL\"",
+    "TOTAAL BEDDEN": 413
+  },
+  {
+    "id": 215,
+    "lat": 50.9315402,
+    "long": 5.6686644,
+    "hospital": "OPENBAAR PSYCHIATRISCH ZORGCENTRUM REKEM",
+    "TOTAAL BEDDEN": 288
+  },
+  {
+    "id": 216,
+    "lat": 50.8815101,
+    "long": 3.7804432,
+    "hospital": "P.C. ST.-FRANCISCUS - DE PELGRIM",
+    "TOTAAL BEDDEN": 43
+  },
+  {
+    "id": 217,
+    "lat": 50.8808852,
+    "long": 3.7804578,
+    "hospital": "P.C. ST.-FRANCISCUS - DE PELGRIM",
+    "TOTAAL BEDDEN": 120
+  },
+  {
+    "id": 218,
+    "lat": 50.503887,
+    "long": 4.469936,
+    "hospital": "P.C. ST. FRANCISCUS - DE PELGRIM",
+    "TOTAAL BEDDEN": 60
+  },
+  {
+    "id": 219,
+    "lat": 50.6789183,
+    "long": 4.5915295,
+    "hospital": "CENTRE NEUROLOGIQUE WILLIAM LENNOX",
+    "TOTAAL BEDDEN": 159
+  },
+  {
+    "id": 220,
+    "lat": 50.6458854,
+    "long": 4.6084523,
+    "hospital": "\"LA PETITE MAISON\" A.C.I.S.",
+    "TOTAAL BEDDEN": 63
+  },
+  {
+    "id": 221,
+    "lat": 50.803394,
+    "long": 4.3429212,
+    "hospital": "\"LE BIVOUAC\"",
+    "TOTAAL BEDDEN": 20
+  },
+  {
+    "id": 222,
+    "lat": 51.1631196,
+    "long": 4.1333475,
+    "hospital": "PSYCHIATRISCH CENTRUM ST.HIERONYMUS",
+    "TOTAAL BEDDEN": 220
+  },
+  {
+    "id": 223,
+    "lat": 50.4981181,
+    "long": 3.6062388,
+    "hospital": "CLINIQUE NEUROPSYCHIATRIQUE BONSECOURS",
+    "TOTAAL BEDDEN": 71
+  },
+  {
+    "id": 224,
+    "lat": 50.6821266,
+    "long": 4.3403753,
+    "hospital": "CENTRE HOSPITALIER LE DOMAINE",
+    "TOTAAL BEDDEN": 143
+  },
+  {
+    "id": 225,
+    "lat": 50.636202,
+    "long": 5.683089,
+    "hospital": "C.H.S. NOTRE DAME DES ANGES ",
+    "TOTAAL BEDDEN": 214
+  },
+  {
+    "id": 226,
+    "lat": 50.8823973,
+    "long": 4.3166956,
+    "hospital": "CLINIQUE SANS SOUCI",
+    "TOTAAL BEDDEN": 145
+  },
+  {
+    "id": 227,
+    "lat": 50.7862857,
+    "long": 4.3670286,
+    "hospital": "PARHELIE ASBL",
+    "TOTAAL BEDDEN": 34
+  },
+  {
+    "id": 228,
+    "lat": 51.3024229,
+    "long": 4.7547848,
+    "hospital": "KARUS",
+    "TOTAAL BEDDEN": 182
+  },
+  {
+    "id": 229,
+    "lat": 50.805265,
+    "long": 4.3449021,
+    "hospital": "EPSYLON Asbl",
+    "TOTAAL BEDDEN": 100
+  },
+  {
+    "id": 230,
+    "lat": 51.2765007,
+    "long": 4.6438398,
+    "hospital": "PSYCHIATRISCH CENTRUM BETHANIE",
+    "TOTAAL BEDDEN": 577
+  },
+  {
+    "id": 231,
+    "lat": 51.1770109,
+    "long": 4.7623642,
+    "hospital": "PSYCHIATRISCH CENTRUM BETHANIE",
+    "TOTAAL BEDDEN": 44
+  },
+  {
+    "id": 232,
+    "lat": 50.8409027,
+    "long": 4.3517502,
+    "hospital": "CPI \"LES GOELANDS\"",
+    "TOTAAL BEDDEN": 25
+  },
+  {
+    "id": 233,
+    "lat": 51.1528419,
+    "long": 4.9824379,
+    "hospital": "OPENBAAR PSYCHIATRISCH ZORGCENTRUM GEEL",
+    "TOTAAL BEDDEN": 747
+  },
+  {
+    "id": 234,
+    "lat": 50.3684063,
+    "long": 4.4360922,
+    "hospital": "GRAND HOPITAL DE CHARLEROI",
+    "TOTAAL BEDDEN": 36
+  },
+  {
+    "id": 235,
+    "lat": 50.9872433,
+    "long": 5.06,
+    "hospital": "PSYCHIATRISCH  ZIEKENHUIS ST. ANNENDAEL",
+    "TOTAAL BEDDEN": 178
+  },
+  {
+    "id": 236,
+    "lat": 50.8905481,
+    "long": 4.5530047,
+    "hospital": "UPC KU LEUVEN",
+    "TOTAAL BEDDEN": 481
+  },
+  {
+    "id": 237,
+    "lat": 50.8785827,
+    "long": 4.674548,
+    "hospital": "UPC KU LEUVEN",
+    "TOTAAL BEDDEN": 115
+  },
+  {
+    "id": 238,
+    "lat": 50.9203598,
+    "long": 4.3593215,
+    "hospital": "PSYCHIATRISCHE ZIEKENHUIS ST.-ALEXIUS",
+    "TOTAAL BEDDEN": 169
+  },
+  {
+    "id": 239,
+    "lat": 50.854442,
+    "long": 4.3919121,
+    "hospital": "CENTRE HOPITALIER JEAN TITECA",
+    "TOTAAL BEDDEN": 255
+  },
+  {
+    "id": 240,
+    "lat": 50.8082679,
+    "long": 4.944588,
+    "hospital": "PSYCHIATRISCHE KLINIEK  BROEDERS ALEXIANEN",
+    "TOTAAL BEDDEN": 248
+  },
+  {
+    "id": 241,
+    "lat": 50.882675,
+    "long": 4.6986336,
+    "hospital": "PSYCHIATRISCHE KLINIEK  BROEDERS ALEXIANEN",
+    "TOTAAL BEDDEN": 52
+  },
+  {
+    "id": 242,
+    "lat": 50.7861274,
+    "long": 4.3666537,
+    "hospital": "EPSYLON Asbl",
+    "TOTAAL BEDDEN": 172
+  },
+  {
+    "id": 243,
+    "lat": 50.4723487,
+    "long": 4.517566,
+    "hospital": "\"FEUX FOLLETS\"",
+    "TOTAAL BEDDEN": 20
+  },
+  {
+    "id": 244,
+    "lat": 50.5841468,
+    "long": 3.6193903,
+    "hospital": "HOPITAL PSYCHIATRIQUE ST.-JEAN DE DIEU",
+    "TOTAAL BEDDEN": 163
+  },
+  {
+    "id": 245,
+    "lat": 50.4619859,
+    "long": 3.9808563,
+    "hospital": "C.H. PSYCHIATRIQUE CHENE AUX HAIES",
+    "TOTAAL BEDDEN": 389
+  },
+  {
+    "id": 246,
+    "lat": 51.1902314,
+    "long": 4.3786363,
+    "hospital": "MEDISCH CENTRUM ST.-JOZEF",
+    "TOTAAL BEDDEN": 330
+  },
+  {
+    "id": 247,
+    "lat": 50.6735097,
+    "long": 5.9556088,
+    "hospital": "CLINIQUE PSYCHIATRIQUE FRERES ALEXIENS",
+    "TOTAAL BEDDEN": 258
+  },
+  {
+    "id": 248,
+    "lat": 50.4815923,
+    "long": 4.8266758,
+    "hospital": "HOPITAL PSYCHIATRIQUE DU BEAU VALLON",
+    "TOTAAL BEDDEN": 376
+  },
+  {
+    "id": 249,
+    "lat": 51.182128,
+    "long": 3.5734489,
+    "hospital": "PSYCHIATRISCH CENTRUM ST.-JAN",
+    "TOTAAL BEDDEN": 201
+  },
+  {
+    "id": 250,
+    "lat": 50.9938715,
+    "long": 3.7748655,
+    "hospital": "KARUS",
+    "TOTAAL BEDDEN": 258
+  },
+  {
+    "id": 251,
+    "lat": 50.9981746,
+    "long": 3.7701451,
+    "hospital": "KARUS",
+    "TOTAAL BEDDEN": 32
+  },
+  {
+    "id": 252,
+    "lat": 51.1666125,
+    "long": 4.1473124,
+    "hospital": "ALGEMEEN PSYCHIATRISCH ZIEKENHUIS SINT-LUCIA",
+    "TOTAAL BEDDEN": 258
+  },
+  {
+    "id": 253,
+    "lat": 51.0877725,
+    "long": 3.4483928,
+    "hospital": "ALGEMEEN PSYCHIATRISCH ZIEKENHUIS SINT-LUCIA",
+    "TOTAAL BEDDEN": 30
+  },
+  {
+    "id": 254,
+    "lat": 50.8490859,
+    "long": 2.8686129,
+    "hospital": "PSYCHIATRISCH ZIEKENHUIS H.-HART",
+    "TOTAAL BEDDEN": 347
+  },
+  {
+    "id": 255,
+    "lat": 51.1704487,
+    "long": 3.3306682,
+    "hospital": "PSYCHIATRISCH CENTRUM MENEN",
+    "TOTAAL BEDDEN": 233
+  },
+  {
+    "id": 256,
+    "lat": 51.1966187,
+    "long": 3.2143285,
+    "hospital": "PSYCHIATRISCH ZIEKENHUIS ONZE LIEVE VROUW",
+    "TOTAAL BEDDEN": 412
+  },
+  {
+    "id": 257,
+    "lat": 50.6454977,
+    "long": 5.592678,
+    "hospital": "HOPITAL DE JOUR UNIVERSITAIRE \"LA CLE\"",
+    "TOTAAL BEDDEN": 30
+  },
+  {
+    "id": 258,
+    "lat": 51.0918264,
+    "long": 4.4978988,
+    "hospital": "PSYCHIATRISCH ZIEKENHUIS DUFFEL",
+    "TOTAAL BEDDEN": 601
+  },
+  {
+    "id": 259,
+    "lat": 50.6153796,
+    "long": 5.5576373,
+    "hospital": "ISOSL - SANTE MENTALE",
+    "TOTAAL BEDDEN": 281
+  },
+  {
+    "id": 260,
+    "lat": 50.6490286,
+    "long": 5.5680788,
+    "hospital": "ISOSL - SANTE MENTALE",
+    "TOTAAL BEDDEN": 159
+  },
+  {
+    "id": 261,
+    "lat": 50.5967588,
+    "long": 3.391943,
+    "hospital": "CRP \"LES MARRONNIERS\"",
+    "TOTAAL BEDDEN": 416
+  },
+  {
+    "id": 262,
+    "lat": 50.6325102,
+    "long": 3.7808458,
+    "hospital": "CRP \"LES MARRONNIERS\"",
+    "TOTAAL BEDDEN": 20
+  },
+  {
+    "id": 263,
+    "lat": 50.8524631,
+    "long": 4.7520928,
+    "hospital": "UNIVERSITAIR PSYCHIATRISCH CENTRUM ST.-KAMILLUS",
+    "TOTAAL BEDDEN": 335
+  },
+  {
+    "id": 264,
+    "lat": 50.8650776,
+    "long": 4.735591,
+    "hospital": "UNIVERSITAIR PSYCHIATRISCH CENTRUM ST.-KAMILLUS",
+    "TOTAAL BEDDEN": 50
+  },
+  {
+    "id": 265,
+    "lat": 51.1882166,
+    "long": 3.8047053,
+    "hospital": "PSYCHIATRISCH CENTRUM ST.-JAN BAPTIST",
+    "TOTAAL BEDDEN": 207
+  },
+  {
+    "id": 266,
+    "lat": 51.1993816,
+    "long": 3.8100743,
+    "hospital": "PSYCHIATRISCH CENTRUM ST.-JAN BAPTIST",
+    "TOTAAL BEDDEN": 12
+  },
+  {
+    "id": 267,
+    "lat": 50.7932608,
+    "long": 4.345568,
+    "hospital": "EPSYLON Asbl",
+    "TOTAAL BEDDEN": 40
+  },
+  {
+    "id": 268,
+    "lat": 50.8330169,
+    "long": 4.306304,
+    "hospital": "L'EQUIPE",
+    "TOTAAL BEDDEN": 20
+  },
+  {
+    "id": 269,
+    "lat": 51.1157128,
+    "long": 3.3171655,
+    "hospital": "PSYCHIATRISCH CENTRUM ST.-AMANDUS",
+    "TOTAAL BEDDEN": 459
+  },
+  {
+    "id": 270,
+    "lat": 49.8363659,
+    "long": 5.2676118,
+    "hospital": "VIVALIA - CENTRE UNIVERSITAIRE PSYCHIATRIQUE",
+    "TOTAAL BEDDEN": 199
+  },
+  {
+    "id": 271,
+    "lat": 50.0108476,
+    "long": 5.3538602,
+    "hospital": "CENTRE NEUROPSYCHIATRIQUE SAINT-MARTIN",
+    "TOTAAL BEDDEN": 275
+  },
+  {
+    "id": 272,
+    "lat": 50.45279,
+    "long": 4.8661912,
+    "hospital": "CENTRE NEUROPSYCHIATRIQUE SAINT-MARTIN",
+    "TOTAAL BEDDEN": 40
+  },
+  {
+    "id": 273,
+    "lat": 51.2156239,
+    "long": 3.2016332,
+    "hospital": "PSYCHO-THERAPEUTISCH CENTRUM \"RUSTENBURG\"",
+    "TOTAAL BEDDEN": 72
+  },
+  {
+    "id": 274,
+    "lat": 50.9665877,
+    "long": 3.9697977,
+    "hospital": "PSYCHIATRISCH ZIEKENHUIS ARIADNE",
+    "TOTAAL BEDDEN": 185
+  },
+  {
+    "id": 275,
+    "lat": 50.9584586,
+    "long": 5.5200088,
+    "hospital": "KINDERPSYCHIATRISCH CENTRUM",
+    "TOTAAL BEDDEN": 27
+  },
+  {
+    "id": 276,
+    "lat": 50.8375487,
+    "long": 5.1959388,
+    "hospital": "PSYCHIATRISCH ZIEKENHUIS \"ASSTER\"",
+    "TOTAAL BEDDEN": 241
+  },
+  {
+    "id": 277,
+    "lat": 50.8123193,
+    "long": 5.1769774,
+    "hospital": "PSYCHIATRISCH ZIEKENHUIS \"ASSTER\"",
+    "TOTAAL BEDDEN": 340
+  },
+  {
+    "id": 278,
+    "lat": 51.0620705,
+    "long": 3.7235938,
+    "hospital": "PSYCHIATRISCH CENTRUM GENT - SLEIDINGE Vzw",
+    "TOTAAL BEDDEN": 125
+  },
+  {
+    "id": 279,
+    "lat": 51.8088377,
+    "long": 3.9350518,
+    "hospital": "PSYCHIATRISCH CENTRUM GENT - SLEIDINGE Vzw",
+    "TOTAAL BEDDEN": 195
+  },
+  {
+    "id": 280,
+    "lat": 50.8319139,
+    "long": 4.363956,
+    "hospital": "PSYCHO-SOCIAAL CENTRUM SINT-ALEXIUS",
+    "TOTAAL BEDDEN": 44
+  },
+  {
+    "id": 281,
+    "lat": 51.2245398,
+    "long": 4.4365073,
+    "hospital": "ZIEKENHUISNETWERK ANTWERPEN",
+    "TOTAAL BEDDEN": 313
+  }
+ ]
