@@ -1,10 +1,9 @@
 FROM node:8.11.3
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-
-RUN npm install -qy
 COPY . .
+RUN npm install -qy && chmod +x startup.sh
+
 
 CMD ["npm", "start"]
 

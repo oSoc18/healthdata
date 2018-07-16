@@ -15,9 +15,9 @@ services:
       - db
   client:
     build: frontend/.
-    command: npm install && npm start
     volumes:
-      - ./frontend/:/usr/src/app
+      - ./frontend:/usr/src/app
+    command: ./startup.sh
     ports:
       - "9000:9000"
     depends_on:
