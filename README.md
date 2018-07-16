@@ -6,7 +6,14 @@ This project uses [docker](https://docs.docker.com/install/) and  [docker-compos
 
 ```
 docker-compose up -d
-drc exec api python manage.py migrate # only when you need to run migrations (make sure the db is up)
+docker-compose exec api python manage.py migrate # only when you need to run migrations (make sure the db is up)
 ```
+
+#### To run the frontend locally with hot reloading:
+
+Requires Node version >= 8.0.0
+
+`yarn` or `npm install`  
+`yarn start` or `npm start`
 
 The backend should be available on http://localhost:8000 and the frontend should be available on http://localhost:9000
