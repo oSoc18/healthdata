@@ -9,7 +9,7 @@ docker-compose up -d
 docker-compose exec api python manage.py migrate # only when you need to run migrations (make sure the db is up)
 ```
 
-Go to : http://localhost:8000/importHospitals to import the hospitals.csv files
+Go to : http://localhost:8000/api/importHospitals to import the hospitals.csv files
 
 To access the api : http://localhost:8000/api/hospitals
 
