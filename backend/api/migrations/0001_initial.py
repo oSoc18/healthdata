@@ -12,10 +12,13 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Song',
+            name='Hospitals',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('file_type', models.CharField(max_length=10)),
+                ('name', models.CharField(max_length=500)),
+                ('latitude', models.CharField(max_length=250)),
+                ('longitude', models.CharField(max_length=250)),
+                ('nbBeds', models.IntegerField()),
             ],
         ),
     ]
