@@ -5,7 +5,7 @@ import HospitalMarker from './HospitalMarker';
 import Hospital from '../models/Hospital';
 
 import 'leaflet/dist/leaflet.css';
-import '../assets/css/Map.css';
+import '../assets/css/map.css';
 
 const MapLeaflet = ({ hospitals }) => {
   const position = [50.5039, 4.4699];

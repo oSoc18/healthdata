@@ -12,7 +12,6 @@ from rest_framework.parsers import JSONParser
 from api.models import Hospital
 from api.serializers import HospitalSerializer
 
-# Create your views here.
 def importHospitals(request):
     csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'csvFiles', 'hospitals.csv'))
     reader = csv.DictReader(csvFile)
@@ -23,7 +22,7 @@ def importHospitals(request):
         else:
             p = Hospital(name=row['name'], latitude=row['lat'], longitude=row['long'], nbBeds=int(row['beds']))
         p.save()
-    return HttpResponse("<h1>Imported succesfully</h1>")
+    return HttpResponse("<h1>Imported Successfully</h1>")
 
 def isInt(value):
     try:

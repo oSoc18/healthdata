@@ -1,0 +1,10 @@
+digraph {
+	rankdir=LR
+	BEGIN [shape=point]
+	BEGIN -> 0
+	0 [label=generate_data]
+	0 -> 1
+	1 [label=uppercase]
+	1 -> 2
+	2 [label=output]
+}

@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-import MapLeaflet from './components/MapLeaflet';
 import Hospital from './models/Hospital';
+import MapLeaflet from './components/MapLeaflet';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+
+// CSS
+import './assets/css/main.css';
 
 class App extends Component {
   constructor() {
@@ -31,7 +37,10 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Navbar />
+        <Sidebar />
         <MapLeaflet hospitals={hospitals} />
+        <Footer />
       </div>
     );
   }
