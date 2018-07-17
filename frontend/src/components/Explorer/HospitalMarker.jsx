@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CircleMarker, Popup } from 'react-leaflet';
-import Hospital from '../models/Hospital';
+import Hospital from '../../models/Hospital';
 
 const HospitalMarker = ({ hospital }) => {
   const center = [hospital.lat, hospital.long];

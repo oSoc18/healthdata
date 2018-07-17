@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Map, TileLayer } from 'react-leaflet';
 import HospitalMarker from './HospitalMarker';
-import Hospital from '../models/Hospital';
+import Hospital from '../../models/Hospital';
 
 import 'leaflet/dist/leaflet.css';
-import '../assets/css/map.css';
+import '../../assets/css/map.css';
 
 const MapLeaflet = ({ hospitals }) => {
   const position = [50.5039, 4.4699];
