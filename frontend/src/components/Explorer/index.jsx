@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BaseAPI from '../../api/BaseAPI';
 import Hospital from '../../models/Hospital';
 import Map from './Map';
 import Navbar from '../Navbar';
@@ -17,8 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:9000/hospitals.json')
-      .then(r => r.json())
+    new BaseAPI().getHospitals()
       .then((data) => {
         const hospitals = data.map(hospital => new Hospital(hospital));
         this.setState({ hospitals });
