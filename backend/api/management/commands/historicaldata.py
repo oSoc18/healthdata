@@ -26,5 +26,5 @@ def download_excels(url):
 class Command(ETLCommand):
     def get_graph(self, **options):
         graph = bonobo.Graph()
-        graph.add_chain(get_excel_urls, bonobo.Limit(10), download_excels, bonobo.PrettyPrinter())
+        graph.add_chain(get_excel_urls, bonobo.Limit(50), download_excels, bonobo.PrettyPrinter())
         return graph
