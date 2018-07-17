@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../assets/css/sidebar.css';
+import '../../assets/css/explorer/sidebar.css';
 
 const Sidebar = () => (
   <div className="sidebar">

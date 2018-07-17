@@ -8,6 +8,7 @@ import Footer from '../Footer';
 
 // CSS
 import '../../assets/css/main.css';
+import '../../assets/css/explorer/main.css';
 
 class App extends Component {
   constructor() {
@@ -38,8 +39,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <Sidebar />
-        <Map hospitals={hospitals} />
+        <main>
+          <Sidebar />
+          <Map hospitals={hospitals} />
+        </main>
         <Footer />
       </div>
     );
