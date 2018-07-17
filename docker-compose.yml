@@ -3,9 +3,9 @@ version: '3'
 services:
   db:
     image: postgres
+    restart: unless-stopped
   api:
     build: backend/.
-    command: python3 manage.py runserver 0.0.0.0:8000
     restart: unless-stopped
     volumes:
       - ./backend/:/usr/src/app
