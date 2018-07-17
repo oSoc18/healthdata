@@ -8,7 +8,7 @@ const Sidebar = () => (
       &#10006;
     </button>
     <h1>
-      Welcome to HomoBelgicus
+      Welcome to HealthStory
     </h1>
     <p>
       Find out more information about Belgian hospitals.
