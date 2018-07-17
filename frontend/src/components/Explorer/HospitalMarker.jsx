@@ -8,7 +8,7 @@ const HospitalMarker = ({ hospital }) => {
   return (
     <CircleMarker center={center} radius={3}>
       <Popup>
-        {hospital.hospital}
+        {hospital.name}
       </Popup>
     </CircleMarker>
   );
