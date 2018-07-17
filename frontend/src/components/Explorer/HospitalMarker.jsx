@@ -4,7 +4,7 @@ import { CircleMarker, Popup } from 'react-leaflet';
 import Hospital from '../../models/Hospital';
 
 const HospitalMarker = ({ hospital }) => {
-  const center = [hospital.lat, hospital.long];
+  const center = [hospital.latitude, hospital.longitude];
   return (
     <CircleMarker center={center} radius={3}>
       <Popup>

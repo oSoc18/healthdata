@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Hospital from '../../models/Hospital';
-import MapLeaflet from './MapLeaflet';
+import Map from './Map';
 import Navbar from '../Navbar';
 import Sidebar from './Sidebar';
 import Footer from '../Footer';
@@ -39,7 +39,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Sidebar />
-        <MapLeaflet hospitals={hospitals} />
+        <Map hospitals={hospitals} />
         <Footer />
       </div>
     );
