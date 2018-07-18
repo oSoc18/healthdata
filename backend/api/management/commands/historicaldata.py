@@ -18,7 +18,9 @@ def get_excel_urls():
 def download_excels(url):
     r = requests.get(url, stream=True)
     index = url.rfind('/') + 1
-    local_filename = os.path.join(settings.BASE_DIR, 'api', 'source-data', url[index:])
+    if not os.path.exists(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals')):
+        os.makedirs(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals'))
+    local_filename = os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals', url[index:])
     with open(local_filename , 'wb') as f:
         for chunk in r.iter_content(chunk_size=1024):
             if chunk: # filter out keep-alive new chunks
@@ -29,7 +31,7 @@ def convert_excels(filename):
     wb = xlrd.open_workbook(filename)
     sh = wb.sheet_by_index(0)
 
-    fh = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', "hospitalsDetailed.csv"), "wb")
+    fh = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals', "hospitalsDetailed.csv"), "wb")
     csv_out = unicodecsv.writer(fh, encoding='utf-8')
 
     for row_number in range(sh.nrows):
