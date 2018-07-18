@@ -16,3 +16,11 @@ class Population(models.Model):
     name = models.CharField(max_length = 600)
     year = models.IntegerField()
     amount = models.IntegerField()
+
+
+class PopulationDetailed(models.Model):
+    name = models.CharField(max_length = 600)
+    year = models.IntegerField()
+    amount = models.IntegerField()
+    age = models.IntegerField(null=True)
+    gender = models.CharField(max_length = 600, null = True))
