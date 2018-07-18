@@ -1,18 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
+import { observer } from 'mobx-react';
 import HospitalMarker from './HospitalMarker';
-import Hospital from '../../models/Hospital';
 import provincesGeoJSON from '../../assets/data/be-provinces.geo.json';
 
 import 'leaflet/dist/leaflet.css';
 import '../../assets/css/explorer/map.css';
 import Province from '../../models/Province';
 
-const MapLeaflet = ({ hospitals }) => {
-  const position = [50.52, 4.3517];
-
+const MapLeaflet = ({ store }) => {
   const provinces = [];
+  const { hospitals } = store;
+
   const getColor = feature => ((feature.properties.TX_PROV_DESCR_EN === 'Antwerp') ? 'red' : 'yellow');
   const styleMap = feature => ({
     fillColor: getColor(feature),
@@ -29,7 +28,7 @@ const MapLeaflet = ({ hospitals }) => {
   };
 
   return (
-    <Map className="leaflet-container" center={position} zoom={8} dragging={false} zoomControl={false} scrollWheelZoom={false}>
+    <Map className="leaflet-container" center={[50.52, 4.3517]} zoom={8} dragging={false} zoomControl={false} scrollWheelZoom={false}>
       <TileLayer
         url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
       />
@@ -45,8 +44,4 @@ const MapLeaflet = ({ hospitals }) => {
   );
 };
 
-MapLeaflet.propTypes = {
-  hospitals: PropTypes.arrayOf(PropTypes.instanceOf(Hospital)).isRequired
-};
-
-export default MapLeaflet;
+export default observer(MapLeaflet);

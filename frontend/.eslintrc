@@ -16,6 +16,7 @@
         "ObjectPattern": { "multiline": true },
         "ImportDeclaration": "never",
         "ExportDeclaration": { "multiline": true, "minProperties": 5 }
-    }]
+      }],
+      "react/prop-types": ["error", { "ignore": ["store"] }]
     }
   }
