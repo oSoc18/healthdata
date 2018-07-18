@@ -1,6 +1,6 @@
 import requests
 import numpy as np
-import pandas as pd 
+import pandas as pd
 import bonobo
 import os
 import csv
@@ -49,10 +49,10 @@ def get_data_by_province(province_name):
     year = np.array([2010,2011,2012,2013,2014,2015,2016,2017])
     amount = np.array(data)
     c = np.column_stack([name,year, amount])
-    np.savetxt(os.path.join(settings.BASE_DIR, 'api', 'source-data', province_name +'.csv'), c, delimiter=',', header="name, year, amount", comments="", fmt='%s')
+    np.savetxt(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'population', province_name +'.csv'), c, delimiter=',', header="name, year, amount", comments="", fmt='%s')
     return c
 
-  
+
 
 def parse_population_data():
     #name = ["Bruxelles", "Antwerpen", "Limburg", "Oost_Vlaanderen", "Vlaams_Brabant", "West_Vlaanderen", "Brabant_Wallon", "Hainaut", "Liege", "Luxembourg", "Namur"]
@@ -74,8 +74,8 @@ def parse_population_data():
             get_data_by_province("Luxembourg"),
             get_data_by_province("Namur")
     ))
-    np.savetxt(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'all_province.csv'), a, delimiter=',', header="name, year, amount", comments="", fmt='%s')
-    csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'all_province.csv'))
+    np.savetxt(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'population', 'all_province.csv'), a, delimiter=',', header="name, year, amount", comments="", fmt='%s')
+    csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'population', 'all_province.csv'))
     reader = csv.DictReader(csvFile)
     for row in reader:
         yield row
@@ -96,4 +96,3 @@ class Command(ETLCommand):
             load_population_data
         )
         return graph
-
