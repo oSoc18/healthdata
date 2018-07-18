@@ -11,3 +11,8 @@ class Hospital(models.Model):
     def __str__(self):
         template = '{0.name} {0.latitude} {0.longitude} {0.nbBeds}'
         return template.format(self)
+
+class Population(models.Model):
+	name = models.CharField(max_length = 600)
+	year = models.IntegerField()
+	amount = models.IntegerField()

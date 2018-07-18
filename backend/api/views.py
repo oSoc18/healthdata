@@ -6,8 +6,8 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from api.models import Hospital
-from api.serializers import HospitalSerializer
+from api.models import Hospital, Population
+from api.serializers import HospitalSerializer, PopulationSerializer
 
 def isInt(value):
     try:
@@ -27,4 +27,17 @@ def hospital_detail(request, pk):
     except Hospital.DoesNotExist:
         raise Http404("Hospital not found")
     serializer = HospitalSerializer(hospital)
+    return JsonResponse(serializer.data)
+
+def population_data(request):
+    population = Population.objects.all()
+    serializer = PopulationSerializer(population, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
+def population_detail(request, pk):
+    try:
+        population = Population.objects.get(pk=pk)
+    except Population.DoesNotExist:
+        raise Http404("Population not found")
+    serializer = PopulationSerializer(population)
     return JsonResponse(serializer.data)
