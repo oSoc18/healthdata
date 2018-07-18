@@ -1,6 +1,6 @@
 import requests
 import numpy as np
-import pandas as pd 
+import pandas as pd
 import bonobo
 import os
 import csv
@@ -61,28 +61,24 @@ def get_feature_data_by_province(province_name, sex, age):
 def parse_feature_population_data():
     my_data = ["Bruxelles", "Antwerpen", "Limburg", "Oost_Vlaanderen", "Vlaams_Brabant", "West_Vlaanderen", "Brabant_Wallon", "Hainaut", "Liege", "Luxembourg", "Namur"]
     # for female
-    for age in range(1,5): 
-        print(age)
-            for i in range(len(my_data)): 
-                exec(f'{my_data[i]}_{age}_f_2017 = get_data_by_province(province_name = my_data[i], sex="F", age = age)')
-        
-    # for male        
-    for age in range(1,5): 
-        print(age)
-            for i in range(len(my_data)): 
-                exec(f'{my_data[i]}_{age}_m_2017 = get_data_by_province(province_name = my_data[i], sex="M", age = age)')
-  
-
-    # for total      
-    for age in range(1,5): 
-        print(age)
-        for i in range(len(my_data)): 
-            exec(f'{my_data[i]}_{age}_t_2017 = get_data_by_province(province_name = my_data[i], sex="T", age = age)')
-       
-
-    c = np.empty(shape=(0,5)) 
     for age in range(1,5):
-        print(age)
+        for i in range(len(my_data)):
+            exec(f'{my_data[i]}_{age}_f_2017 = get_feature_data_by_province(province_name = my_data[i], sex="F", age = age)')
+
+    # for male
+    for age in range(1,5):
+        for i in range(len(my_data)):
+            exec(f'{my_data[i]}_{age}_m_2017 = get_feature_data_by_province(province_name = my_data[i], sex="M", age = age)')
+
+
+    # for total
+    for age in range(1,5):
+        for i in range(len(my_data)):
+            exec(f'{my_data[i]}_{age}_t_2017 = get_feature_data_by_province(province_name = my_data[i], sex="T", age = age)')
+
+
+    c = np.empty(shape=(0,5))
+    for age in range(1,5):
         for i in range(len(my_data)):
             exec(f'a = np.concatenate(({my_data[i]}_{age}_f_2017, {my_data[i]}_{age}_m_2017, {my_data[i]}_{age}_t_2017))')
             exec(f'c = np.concatenate((c,a))')
@@ -95,11 +91,11 @@ def parse_feature_population_data():
 
 def transform_feature_population_data(row):
     p = PopulationDetailed(name=row['name'], year=row[' year'], amount=row[' amount'], age=row[' age'], gender=row[' gender'])
-    yield p 
-    
+    yield p
+
 def load_feature_population_data(population):
     PopulationDetailed.save()
-        
+
 class Command(ETLCommand):
     def get_graph(self, **options):
         graph = bonobo.Graph()
@@ -108,5 +104,4 @@ class Command(ETLCommand):
             transform_feature_population_data,
             load_feature_population_data
         )
-        return graph        
-        
+        return graph
