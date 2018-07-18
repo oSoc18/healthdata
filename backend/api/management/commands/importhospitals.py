@@ -43,7 +43,10 @@ def transform_hospital_data(row):
         pass
 
 def load_hospital_data(hospital):
-    hospital.save()
+    try:
+        hospital.save() #todo: find a way to ignore duplicate VESTIGINGSNR
+    except:
+        pass
 # https://fair-acc.healthdata.be/api/3/action/group_package_show?id=469baf11-ddd1-4c30-9ad3-a21a7d0f7397
 class Command(ETLCommand):
     def get_graph(self, **options):
