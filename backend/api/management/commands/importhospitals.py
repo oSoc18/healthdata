@@ -15,6 +15,7 @@ def isInt(value):
         return False
 
 def parse_hospital_data():
+    Hospital.objects.all().delete() #delete all the data from db before importing the csv
     csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitalsDetailed.csv'))
     reader = csv.DictReader(csvFile)
     for row in reader:
@@ -24,7 +25,7 @@ def transform_hospital_data(row):
     geolocator = Nominatim()
     location = geolocator.geocode(row["ADRES"] + " " + row["POST"] + " " + row["GEMEENTE "])
     if not location:
-        lat = ""
+        lat = "" #todo : add google api in case Nominatim does not work
         long = ""
     else:
         lat = location.latitude
