@@ -49,6 +49,8 @@ def get_data_by_province(province_name):
     year = np.array([2010,2011,2012,2013,2014,2015,2016,2017])
     amount = np.array(data)
     c = np.column_stack([name,year, amount])
+    if not os.path.exists(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'population')):
+        os.makedirs(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'population'))
     np.savetxt(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'population', province_name +'.csv'), c, delimiter=',', header="name, year, amount", comments="", fmt='%s')
     return c
 
