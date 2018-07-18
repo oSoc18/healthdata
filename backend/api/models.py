@@ -13,6 +13,6 @@ class Hospital(models.Model):
         return template.format(self)
 
 class Population(models.Model):
-	name = models.CharField(max_length = 600)
-	year = models.IntegerField()
-	amount = models.IntegerField()
+    name = models.CharField(max_length = 600)
+    year = models.IntegerField()
+    amount = models.IntegerField()

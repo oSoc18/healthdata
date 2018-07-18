@@ -41,3 +41,17 @@ def population_detail(request, pk):
         raise Http404("Population not found")
     serializer = PopulationSerializer(population)
     return JsonResponse(serializer.data)
+
+
+def populationdetailed_data(request):
+    populationdetailed = PopulationDetailed.objects.all()
+    serializer = PopulationDetailedSerializer(populationdetailed, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
+def population_detail(request, pk):
+    try:
+        populationdetailed = PopulationDetailed.objects.get(pk=pk)
+    except PopulationDetailed.DoesNotExist:
+        raise Http404("Populationdetailed not found")
+    serializer = PopulationDetailedSerializer(populationdetailed)
+    return JsonResponse(serializer.data)
