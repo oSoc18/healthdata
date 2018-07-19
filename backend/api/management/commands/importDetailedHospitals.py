@@ -1,10 +1,14 @@
+import re
 import bonobo
 import os
 import csv
+import xlrd
+
 from geopy.geocoders import Nominatim
 from bonobo.contrib.django import ETLCommand
 from api.models import Hospital
 from django.conf import settings
+from datetime import date
 
 def isInt(value):
     try:
@@ -14,15 +18,27 @@ def isInt(value):
         return False
 
 def parse_hospital_data():
-    Hospital.objects.all().delete() #delete all the data from db before importing the csv
-    csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitalsDetailed.csv'))
-    reader = csv.DictReader(csvFile)
-    for row in reader:
-        yield row
+    year = date.today().year
+    dataDir = os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals')
+    latest_month = 0
+    latest_file = ''
+    for root, dirs, files in os.walk(dataDir):
+        for name in files:
+            match = re.match(r'Adressenlijst%20(\d{2})_(\d{4}).*', name)
+            if match is not None and int(match.group(2)) == year:
+                if latest_month < int(match.group(1)):
+                    latest_month =  int(match.group(1))
+                    latest_file = name
+    filename = os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals', latest_file)
+    wb = xlrd.open_workbook(filename, 'wb')
+    sh = wb.sheet_by_index(0)
+    headers = sh.row_values(0)
+    for row_number in range(2,sh.nrows):
+        yield dict(zip(headers, sh.row_values(row_number)))
 
 def transform_hospital_data(row):
     geolocator = Nominatim()
-    location = geolocator.geocode(row["ADRES"] + " " + row["POST"] + " " + row["GEMEENTE "])
+    location = geolocator.geocode(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "])
     if not location:
         lat = "" #todo : add google api in case Nominatim does not work
         long = ""

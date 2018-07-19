@@ -9,8 +9,8 @@ docker-compose up -d
 docker-compose exec api python manage.py migrate # only when you need to run migrations (make sure the db is up)
 
 #import data using bonobo
-docker-compose exec api python manage.py importhospitals
 docker-compose exec api python manage.py historicaldata
+docker-compose exec api python manage.py importDetailedHospitals
 ```
 
 To access the api : http://localhost:8000/api/hospitals
