@@ -15,4 +15,4 @@ class PopulationSerializer(serializers.ModelSerializer):
 class PopulationDetailedSerializer(serializers.ModelSerializer):
     class Meta:
         model = PopulationDetailed
-        fields = ('id', 'name', 'year', 'amount', 'age', 'gender')
+        fields = ('id', 'name', 'year', 'amount', 'age', 'gender', 'code')
