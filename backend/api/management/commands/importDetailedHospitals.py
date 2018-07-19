@@ -41,7 +41,7 @@ def transform_hospital_data(row):
     geolocator = Nominatim()
     location = geolocator.geocode(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium")
     if not location:
-        googleResponse = geocode.get_google_results(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium", "AIzaSyC9D0vXh84s4FYro6IiZDA08xDOf5ac6Z8")
+        googleResponse = geocode.get_google_results(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium")
         lat = googleResponse["latitude"]
         long = googleResponse["longitude"]
     else:
