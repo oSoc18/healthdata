@@ -19,4 +19,4 @@ class PopulationDetailedSerializer(serializers.ModelSerializer):
 class DepressionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Depression
-        fields = ('id', 'gender', 'agegroup', 'crude', 'province')
+        fields = ('id', 'gender', 'agegroup', 'crude', 'province', 'year')

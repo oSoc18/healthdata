@@ -29,3 +29,4 @@ class Depression(models.Model):
     agegroup = models.CharField(max_length = 500)
     crude = models.DecimalField(decimal_places=5, max_digits=10)
     province = models.CharField(max_length = 500)
+    year = models.IntegerField(null=True)

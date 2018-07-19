@@ -14,7 +14,7 @@ def parse_depression_data():
         yield row
 
 def transform_depression_data(row):
-    p = Depression(gender=row['gender'], agegroup=row['agegroup'], crude=row['crude'], province=row['province'])
+    p = Depression(gender=row['gender'], agegroup=row['agegroup'], crude=row['crude'], province=row['province'], year=row['year'])
     yield p
 
 def load_depression_data(hospital):
