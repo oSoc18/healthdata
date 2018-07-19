@@ -9,10 +9,11 @@ from bonobo.contrib.django import ETLCommand
 from api.models import Hospital
 from django.conf import settings
 from datetime import date
+from api.utils import geocode
 
 def isInt(value):
     try:
-        int(eval(value))
+        int(eval(str(value)))
         return True
     except:
         return False
@@ -38,20 +39,21 @@ def parse_hospital_data():
 
 def transform_hospital_data(row):
     geolocator = Nominatim()
-    location = geolocator.geocode(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "])
+    location = geolocator.geocode(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium")
     if not location:
-        lat = "" #todo : add google api in case Nominatim does not work
-        long = ""
+        googleResponse = geocode.get_google_results(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium", "AIzaSyC9D0vXh84s4FYro6IiZDA08xDOf5ac6Z8")
+        lat = googleResponse["latitude"]
+        long = googleResponse["longitude"]
     else:
         lat = location.latitude
         long = location.longitude
-    if not isInt(row['TOTAAL BEDDEN']):
+    if not isInt(str(row['TOTAAL BEDDEN'])):
         beds = 0
     else:
-        beds = int(eval(row["TOTAAL BEDDEN"]))
+        beds = int(eval(str(row["TOTAAL BEDDEN"])))
     try:
         p = Hospital(name=row['ZIEKENHUIS '], latitude=lat, longitude=long, nbBeds=beds,
-            siteNbr=int(eval(row["VESTIGINGSNR"])), address=row["ADRES"], postalCode=int(eval(row["POST"])),
+            siteNbr=int(eval(str(row["VESTIGINGSNR"]))), address=row["ADRES"], postalCode=int(eval(str(row["POST"]))),
             town=row["GEMEENTE "], website=row["WEBSITE"], telephone=row["TELEFOON"], province=row["PROVINCIE "], type=row["SOORT ZIEKENHUIS"])
         yield p
     except:
