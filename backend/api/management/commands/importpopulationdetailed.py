@@ -1,6 +1,4 @@
 import requests
-import numpy as np
-import pandas as pd
 import bonobo
 import os
 import csv
@@ -13,38 +11,14 @@ from django.conf import settings
 def ask_for_data(inform):
     response = requests.get("http://ec.europa.eu/eurostat/wdds/rest/data/v2.1/json/en/demo_r_d2jan?", params = inform)
     data = response.json()
-    return data["value"].get("0", "")
-
-def convert_province_to_code(name):
-    if name == "Bruxelles":
-        return "BE1"
-    elif name == "Antwerpen":
-        return "BE21"
-    elif name == "Limburg":
-        return "BE22"
-    elif name == "Oost_Vlaanderen":
-        return "BE23"
-    elif name == "Vlaams_Brabant":
-        return "BE24"
-    elif name == "West_Vlaanderen":
-        return "BE25"
-    elif name == "Brabant_Wallon":
-        return "BE31"
-    elif name == "Hainaut":
-        return "BE32"
-    elif name == "Liege":
-        return "BE33"
-    elif name == "Luxembourg":
-        return "BE34"
-    elif name == "Namur":
-        return "BE35"
+    inform['amount'] = data["value"].get("0", "")
+    yield inform
 
 def convert_age_to_code(age):
     return ("Y" + str(age))
 
 # for one year most recent only
-def get_feature_data_by_province(province_name, sex, age):
-    geo = convert_province_to_code(province_name)
+def get_feature_data_by_province(geo, sex, age):
     age_input = convert_age_to_code(age)
     data = []
     parameters = {"geo": geo, "sex": sex, "precision":1, "unit": "NR", "age":age_input, "time":2017}
@@ -58,40 +32,18 @@ def get_feature_data_by_province(province_name, sex, age):
     #np.savetxt(os.path.join(settings.BASE_DIR, 'api', 'source-data', province_name + sex + age + '.csv'), c, delimiter=',', header="name, year, amount", comments="", fmt='%s')
     return c
 
-# solve exec doesn't work in a function problem
-my_data = ["Bruxelles", "Antwerpen", "Limburg", "Oost_Vlaanderen", "Vlaams_Brabant", "West_Vlaanderen", "Brabant_Wallon", "Hainaut", "Liege", "Luxembourg", "Namur"]
-# for female
-for age in range(1,97):
-    print("female", age)
-    for i in range(len(my_data)):
-        exec(f'{my_data[i]}_{age}_f_2017 = get_feature_data_by_province(province_name = my_data[i], sex="F", age = age)')
-# for male
-for age in range(1,97):
-    print("male", age)
-    for i in range(len(my_data)):
-        exec(f'{my_data[i]}_{age}_m_2017 = get_feature_data_by_province(province_name = my_data[i], sex="M", age = age)')
-# for total
-for age in range(1,97):
-    print("all", age)
-    for i in range(len(my_data)):
-        exec(f'{my_data[i]}_{age}_t_2017 = get_feature_data_by_province(province_name = my_data[i], sex="T", age = age)')
 
-c = np.empty(shape=(0,5))
-for age in range(1,97):
-    for i in range(len(my_data)):
-        exec(f'a = np.concatenate(({my_data[i]}_{age}_f_2017, {my_data[i]}_{age}_m_2017, {my_data[i]}_{age}_t_2017))')
-        exec(f'c = np.concatenate((c,a))')
-np.savetxt(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'feature_population.csv'), c, delimiter=',', header="name, year, amount, age, gender", comments="", fmt='%s')
-
-
-def parse_feature_population_data():
-    csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'feature_population.csv'))
-    reader = csv.DictReader(csvFile)
-    for row in reader:
-        yield row
+def build_params():
+    codes = ['BE1','BE21','BE22','BE23','BE24','BE25','BE31','BE32','BE33','BE34','BE35']
+    names = ['Bruxelles', 'Antwerpen', 'Limburg', 'Oost_Vlaanderen', 'Vlaams_Brabant', 'West_Vlaanderen', 'Brabant_Wallon', 'Hainaut', 'Liege', 'Luxembourg', 'Namur']
+    codes_to_names=dict(zip(codes,names))
+    for age in range(1,97):
+        for code in codes:
+            for gender in ['M','F']:
+                yield {'geo': code, 'sex': gender, 'precision': 1, 'unit': 'NR', 'age': 'Y'+str(age), 'rawAge': age, 'time': 2017, 'name': codes_to_names[code]}
 
 def transform_feature_population_data(row):
-    p = PopulationDetailed(name=row['name'], year=row[' year'], amount=row[' amount'], age=row[' age'], gender=row[' gender'])
+    p = PopulationDetailed(name=row['name'], code=row['geo'], year=row['time'], amount=row['amount'], age=row['rawAge'], gender=row['sex'])
     yield p
 
 def load_feature_population_data(population):
@@ -101,8 +53,10 @@ class Command(ETLCommand):
     def get_graph(self, **options):
         graph = bonobo.Graph()
         graph.add_chain(
-            parse_feature_population_data,
+            build_params,
+            ask_for_data,
             transform_feature_population_data,
             load_feature_population_data
         )
         return graph
+
