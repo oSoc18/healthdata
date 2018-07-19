@@ -18,7 +18,6 @@ def parse_hospital_data():
     csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals.csv'))
     reader = csv.DictReader(csvFile)
     for row in reader:
-        row = row.strip()
         yield row
 
 def transform_hospital_data(row):
