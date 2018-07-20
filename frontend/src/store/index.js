@@ -1,15 +1,13 @@
-import { observable, configure } from 'mobx';
+import { configure } from 'mobx';
 
 import API from '../api/BaseAPI';
 import Hospital from '../models/Hospital';
-import Province from '../models/Province';
 
 configure({ enforceActions: true });
 
 class Store {
   demographics = [];
   hospitals = [];
-  @observable provinces = [];
 
   static init = async () => {
     const api = new API();
@@ -28,12 +26,6 @@ class Store {
   _addHospital = (...hospitals) => {
     hospitals.forEach((hospital) => {
       this.hospitals.push(new Hospital(hospital));
-    });
-  }
-
-  addProvince = (...provinces) => {
-    provinces.forEach((province) => {
-      this.provinces.push(new Province(province.properties));
     });
   }
 }

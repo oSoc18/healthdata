@@ -8,30 +8,6 @@ import 'leaflet/dist/leaflet.css';
 import '../../assets/css/explorer/map.css';
 
 const MapLeaflet = ({ store }) => {
-  store.addProvince(...provincesGeoJSON.features);
-
-  const getProvinceById = id => store.provinces.find(province => province.id === id);
-
-  const getColor = (province) => {
-    if (province.selected) return 'yellow';
-    return '';
-  };
-
-  const toggleProvinceSelection = (province) => {
-    province.toggleSelection();
-    province.layer.setStyle({
-      fillColor: getColor(province)
-    });
-  };
-
-  const onEachProvince = (feature, layer) => {
-    const province = getProvinceById(feature.properties.ID);
-    layer.on({
-      click: () => { toggleProvinceSelection(province); }
-    });
-    province.setLayer(layer);
-  };
-
   const { hospitals } = store;
   return (
     <Map className="leaflet-container" center={[50.52, 4.3517]} zoom={8} dragging={false} zoomControl={false} scrollWheelZoom={false}>
@@ -45,7 +21,6 @@ const MapLeaflet = ({ store }) => {
           weight: 3,
           opacity: 0.65
         }}
-        onEachFeature={onEachProvince}
       />
       {
         hospitals.map(hospital => <HospitalMarker key={hospital.id} hospital={hospital} />)
