@@ -1,11 +1,20 @@
-import uuid from 'uuid';
+import { observable, action } from 'mobx';
 
 export default class Province {
-  constructor(province, layer) {
+  @observable selected = true;
+
+  constructor(province) {
     Object.keys(province).forEach((prop) => {
       this[prop] = province[prop];
     });
-    this.mapLayer = layer;
-    this.id = uuid();
+    this.id = this.ID;
+  }
+
+  @action setLayer = (layer) => {
+    this.layer = layer;
+  }
+
+  @action toggleSelection = () => {
+    this.selected = !this.selected;
   }
 }

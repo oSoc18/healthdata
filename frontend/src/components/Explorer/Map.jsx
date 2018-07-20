@@ -6,27 +6,33 @@ import provincesGeoJSON from '../../assets/data/be-provinces.geo.json';
 
 import 'leaflet/dist/leaflet.css';
 import '../../assets/css/explorer/map.css';
-import Province from '../../models/Province';
 
 const MapLeaflet = ({ store }) => {
-  const provinces = [];
-  const { hospitals } = store;
+  store.addProvince(...provincesGeoJSON.features);
 
-  const getColor = feature => ((feature.properties.TX_PROV_DESCR_EN === 'Antwerp') ? 'red' : 'yellow');
-  const styleMap = feature => ({
-    fillColor: getColor(feature),
-    weight: 3,
-    opacity: 0.65
-  });
+  const getProvinceById = id => store.provinces.find(province => province.id === id);
 
-  const onEachProvince = (feature, layer) => {
-    const province = feature.properties.TX_PROV_DESCR_EN;
-    provinces.push(new Province(feature.properties, layer));
-    layer.on({
-      click: () => { console.log(province); }
+  const getColor = (province) => {
+    if (province.selected) return 'yellow';
+    return '';
+  };
+
+  const toggleProvinceSelection = (province) => {
+    province.toggleSelection();
+    province.layer.setStyle({
+      fillColor: getColor(province)
     });
   };
 
+  const onEachProvince = (feature, layer) => {
+    const province = getProvinceById(feature.properties.ID);
+    layer.on({
+      click: () => { toggleProvinceSelection(province); }
+    });
+    province.setLayer(layer);
+  };
+
+  const { hospitals } = store;
   return (
     <Map className="leaflet-container" center={[50.52, 4.3517]} zoom={8} dragging={false} zoomControl={false} scrollWheelZoom={false}>
       <TileLayer
@@ -34,7 +40,11 @@ const MapLeaflet = ({ store }) => {
       />
       <GeoJSON
         data={provincesGeoJSON}
-        style={styleMap}
+        style={{
+          fillColor: 'yellow',
+          weight: 3,
+          opacity: 0.65
+        }}
         onEachFeature={onEachProvince}
       />
       {
