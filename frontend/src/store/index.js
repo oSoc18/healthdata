@@ -1,4 +1,4 @@
-import { observable, configure } from 'mobx';
+import { configure } from 'mobx';
 
 import API from '../api/BaseAPI';
 import Hospital from '../models/Hospital';
@@ -6,17 +6,20 @@ import Hospital from '../models/Hospital';
 configure({ enforceActions: true });
 
 class Store {
+  demographics = [];
+  hospitals = [];
+
   static init = async () => {
     const api = new API();
     const initialState = {};
+    initialState.demographics = await api.getDemographics();
     initialState.hospitals = await api.getHospitals();
     return new Store(initialState);
   };
 
-  @observable hospitals = [];
-
-  constructor({ hospitals }) {
+  constructor({ demographics, hospitals }) {
     this.api = new API();
+    this.demographics = [...demographics];
     this._addHospital(...hospitals);
   }
 
