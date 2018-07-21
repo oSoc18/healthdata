@@ -1,3 +1,13 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -103,7 +113,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-.DS_Store
-
 # downloaded files
+api/source-data/hospitals
 api/source-data/population

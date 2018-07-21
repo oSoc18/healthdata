@@ -41,9 +41,13 @@ def population_detail(request, pk):
         raise Http404("Population not found")
     serializer = PopulationSerializer(population)
     return JsonResponse(serializer.data)
+<<<<<<< HEAD
 
 
 
+=======
+
+>>>>>>> develop
 def populationDetailed_data(request):
     population = PopulationDetailed.objects.all()
     serializer = PopulationDetailedSerializer(population, many=True)
@@ -56,6 +60,7 @@ def populationDetailed_detail(request, pk):
         raise Http404("Populationdeatiled not found")
     serializer = PopulationDetailedSerializer(population)
     return JsonResponse(serializer.data)
+<<<<<<< HEAD
 
 
 def depression_data(request):
@@ -70,3 +75,5 @@ def depression_detail(request, pk):
         raise Http404("Depression not found")
     serializer = DepressionSerializer(population)
     return JsonResponse(serializer.data)
+=======
+>>>>>>> develop

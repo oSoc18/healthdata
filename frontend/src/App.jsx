@@ -4,11 +4,11 @@ import Home from './components/Home';
 import Explorer from './components/Explorer';
 import NotFound from './components/404';
 
-const App = () => (
+const App = ({ store }) => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/:path(|index|home)" component={Home} />
-      <Route exact path="/:path(explorer)" component={Explorer} />
+      <Route exact path="/:path(explorer)" render={() => <Explorer store={store} />} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
