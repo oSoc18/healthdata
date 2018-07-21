@@ -6,8 +6,8 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from api.models import Hospital
-from api.serializers import HospitalSerializer, HospitalDetailSerializer
+from api.models import Hospital, Population, PopulationDetailed
+from api.serializers import HospitalSerializer, PopulationSerializer, PopulationDetailedSerializer
 
 def isInt(value):
     try:
@@ -29,7 +29,28 @@ def hospital_detail(request, pk):
     serializer = HospitalSerializer(hospital)
     return JsonResponse(serializer.data)
 
-def detailedHospital_list(request):
-    hospitals = Hospital.objects.all()
-    serializer = HospitalDetailSerializer(hospitals, many=True)
+def population_data(request):
+    population = Population.objects.all()
+    serializer = PopulationSerializer(population, many=True)
     return JsonResponse(serializer.data, safe=False)
+
+def population_detail(request, pk):
+    try:
+        population = Population.objects.get(pk=pk)
+    except Population.DoesNotExist:
+        raise Http404("Population not found")
+    serializer = PopulationSerializer(population)
+    return JsonResponse(serializer.data)
+    
+def populationDetailed_data(request):
+    population = PopulationDetailed.objects.all()
+    serializer = PopulationDetailedSerializer(population, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
+def populationDetailed_detail(request, pk):
+    try:
+        population = PopulationDetailed.objects.get(pk=pk)
+    except PopulationDetailed.DoesNotExist:
+        raise Http404("Populationdeatiled not found")
+    serializer = PopulationDetailedSerializer(population)
+    return JsonResponse(serializer.data)

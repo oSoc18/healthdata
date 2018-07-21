@@ -11,7 +11,7 @@ const Navbar = () => (
           <img src={imgLogo} alt="img of logo" />
         </li>
         <li>
-          <a href="#" className="title">Homobelgicus</a>
+          <a href="#" className="title">HealthStory</a>
         </li>
         <li className="right">
           <a href="#">nl</a>

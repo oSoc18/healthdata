@@ -1,7 +1,6 @@
 import bonobo
 import requests
 import os
-from django.conf import settings
 from bonobo.contrib.django import ETLCommand
 from django.conf import settings
 
