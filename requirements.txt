@@ -35,7 +35,6 @@ requests==2.19.1
 semantic-version==2.6.0
 six==1.11.0
 stevedore==1.28.0
-unicodecsv==0.14.1
 Unidecode==1.0.22
 urllib3==1.23
 websocket-client==0.48.0
