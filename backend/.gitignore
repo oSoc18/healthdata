@@ -116,3 +116,5 @@ venv.bak/
 # downloaded files
 api/source-data/hospitals
 api/source-data/population
+
+.DS_Store
