@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Map, TileLayer, GeoJSON } from 'react-leaflet';
 import { observer } from 'mobx-react';
 import bbox from '@turf/bbox';
+import MarkerClusterGroup from 'react-leaflet-markercluster';
 import HospitalMarker from './HospitalMarker';
 import provincesGeoJSON from '../../assets/data/be-provinces.geo.json';
 
 import 'leaflet/dist/leaflet.css';
+import 'react-leaflet-markercluster/dist/styles.min.css';
 import '../../assets/css/explorer/map.css';
 
 class MapLeaflet extends Component {
@@ -42,9 +44,15 @@ class MapLeaflet extends Component {
             opacity: 0.6
           }}
         />
-        {
-          hospitals.map(hospital => <HospitalMarker key={hospital.id} hospital={hospital} />)
-        }
+        <MarkerClusterGroup
+          disableClusteringAtZoom={10}
+          spiderfyOnMaxZoom={false}
+          showCoverageOnHover={false}
+        >
+          {
+            hospitals.map(hospital => <HospitalMarker key={hospital.id} hospital={hospital} />)
+          }
+        </MarkerClusterGroup>
       </Map>
     );
   }
