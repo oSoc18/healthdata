@@ -12,11 +12,10 @@ const ComparisonPerAgePerProvince = (props) => {
 
     <div>
       <div className="journey_content">
-        {/* <p>
-          -% of people with depression from the same age group and same province.
-      </p> */}
-      <p>
-        X % at the age of the {this.props.age} year olds that live in {this.props.province} have depression. 
+      <h1>Comparison per age per province</h1>
+        <p>
+          {props.testVal}
+          X % at the age of the <span className="red bold">{props.age}</span> year olds that live in {props.province} have depression.
       </p>
         <button type="button" className="redButtonLink" onClick={() => props.onClick()}>Start your journey</button>
       </div>
