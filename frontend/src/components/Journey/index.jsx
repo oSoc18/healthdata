@@ -18,13 +18,14 @@ class Journey extends React.Component {
   constructor() {
     super();
     this.state = {
-      screenDisplayed: 1,
+      screenDisplayed: 4,
       name: null,
       age: null,
       gender: null,
       province: null
     };
   }
+
   receiveDataAndGoNext(age, gender, province) {
     this.setState({ age });
     this.setState({ gender });
@@ -48,13 +49,13 @@ class Journey extends React.Component {
         {this.state.screenDisplayed === 2 && <WhatIsDepression onClick={() => this.nextScreen()} />}
         {this.state.screenDisplayed === 3 && <Persona onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
 
-        {this.state.screenDisplayed === 4 && <ComparisonPerAgePerProvince onClick={() => this.nextScreen()} />}
-        {this.state.screenDisplayed === 5 && <ComparisonWomenPerProvince onClick={() => this.nextScreen()} />}
-        {this.state.screenDisplayed === 6 && <ComparisonMenPerProvince onClick={() => this.nextScreen()} />}
+        {this.state.screenDisplayed === 4 && <ComparisonPerAgePerProvince onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 5 && <ComparisonWomenPerProvince onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 6 && <ComparisonMenPerProvince onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
 
-        {this.state.screenDisplayed === 7 && <ComparisonSameAgeBelgium onClick={() => this.nextScreen()} />}
+        {this.state.screenDisplayed === 7 && <ComparisonSameAgeBelgium onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
         {this.state.screenDisplayed === 8 && <ComparisonProvince onClick={() => this.nextScreen()} name={this.state.name} age={this.state.age} province={this.state.province} gender={this.state.gender} />}
-        {this.state.screenDisplayed === 9 && <ComparisonBelgium onClick={() => this.nextScreen()} />}
+        {this.state.screenDisplayed === 9 && <ComparisonBelgium onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
 
         {this.state.screenDisplayed === 10 && <YouAreNotAlone onClick={() => this.nextScreen()} name={this.state.name} age={this.state.age} province={this.state.province} gender={this.state.gender} />}
         {this.state.screenDisplayed === 11 && <div>Nothing to show</div>}
