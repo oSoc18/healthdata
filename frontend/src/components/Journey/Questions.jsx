@@ -73,22 +73,19 @@ class Questions extends React.Component {
 
                 <select id="inp3" onChange={(event) => this.updateVal3(event.target.value)}>
                   <option value="null">Won't say</option>
-                  <option value="Antwerp">Antwerp</option>
-                  <option value="East Flanders">East Flanders</option>
-                  <option value="Flemish Brabant">Flemish Brabant</option>
-                  <option value="Limburg">Limburg</option>
-                  <option value="West Flanders">West Fladers</option>
-                  <option value="Liege">Liege</option>
-                  <option value="Hainaut">Hainaut</option>
-                  <option value="Luxembourg">Luxembourg</option>
-                  <option value="Namur">Namur</option>
-                  <option value="Walloon Brabant">Walloon Brabant</option>
-
+                  <option value="antwerp">Antwerp</option>
+                  <option value="oost-vlaanderen">East Flanders</option>
+                  <option value="vlaams brabant">Flemish Brabant</option>
+                  <option value="limburg">Limburg</option>
+                  <option value="west-vlaanderen">West Fladers</option>
+                  <option value="liege">Liege</option>
+                  <option value="hainout">Hainaut</option>
+                  <option value="luxembourg">Luxembourg</option>
+                  <option value="namur">Namur</option>
+                  <option value="Brabant Wallon">Walloon Brabant</option>
+                  <option value="brussels">Brussels</option>
                 </select>
-
                 <p>
-                  {/* <button id="continue_button" style={{ display: "none" }} className="redButtonLink" onClick={() => this.NextScreenAndSendData()}>Start your journey <i className="fa fa-angle-right bold"></i></button> */}
-                  {/* <br/> */}
                   <button id="continue_button" className="redButtonLink" onClick={() => this.NextScreenAndSendData()}>Start your journey <i className="fa fa-angle-right bold"></i></button>
                 </p>
 
