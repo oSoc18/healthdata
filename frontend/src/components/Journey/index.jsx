@@ -18,10 +18,10 @@ class Journey extends React.Component {
   constructor() {
     super();
 
-    let name = "test";
-    let age = 23;
-    let province = "west-vlaanderen";
-    let gender = "M";
+    let name = null;
+    let age = null;
+    let province = null;
+    let gender = null;
 
     this.state = {
       screenDisplayed: 1,
@@ -33,6 +33,8 @@ class Journey extends React.Component {
     };
     // console.log(this.state);
   }
+
+  
 
 
   receiveDataAndGoNext(age, gender, province) {

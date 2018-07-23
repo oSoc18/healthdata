@@ -7,64 +7,54 @@ class ComparisonPerAgePerProvince extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "grr"
+      value: ""
     }
-
-    // this.setState({ value: "lol" })
-    let that = this;
-    that.state.value = "jk;lfdsakjl;sdafjklasfdkjsdaflL";
-    console.log(this.props.gender);
-    console.log(this.props.province);
-
-    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}`)
-      .then(
-        function (response) {
-          if (response.status !== 200) {
-            console.log('Looks like there was a problem. Status Code: ' +
-              response.status);
-            return;
-          }
-          response.json()
-            .then(function (data) {
-              console.log(data[0].gender);
-
-              that.state.value = data[0].gender;
-              // that.setState(data);  
-            })
-        }
-      )
-      .catch(function (err) {
-        console.log('Fetch Error :-S', err);
-      })
-
   }
 
   componentDidMount() {
-    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}`)
+    console.log(this.props.province);
+    console.log(this.props.age);
+
+    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&agegroup=${'15-24'}&year=2013`)
       .then(response => response.json())
-      .then(data => this.setState({ value: data[0].gender}));
+      .then((data) => {
+        console.log(data);
+
+        let total = 0;
+        let dataLength = data.length;
+        for (let i = 0; i < dataLength; i++) {
+          total += parseFloat(data[i].crude);
+        }
+
+        this.setState({
+          value: total / dataLength
+        })
+
+      }
+
+      );
 
 
-      // fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}`)
-      // .then(
-      //   function (response) {
-      //     if (response.status !== 200) {
-      //       console.log('Looks like there was a problem. Status Code: ' +
-      //         response.status);
-      //       return;
-      //     }
-      //     response.json()
-      //       .then(function (data) {
-      //         console.log(data[0].gender);
+    // fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}`)
+    // .then(
+    //   function (response) {
+    //     if (response.status !== 200) {
+    //       console.log('Looks like there was a problem. Status Code: ' +
+    //         response.status);
+    //       return;
+    //     }
+    //     response.json()
+    //       .then(function (data) {
+    //         console.log(data[0].gender);
 
-      //         that.state.value = data[0].gender;
-      //         // that.setState(data);  
-      //       })
-      //   }
-      // )
-      // .catch(function (err) {
-      //   console.log('Fetch Error :-S', err);
-      // })
+    //         that.state.value = data[0].gender;
+    //         // that.setState(data);  
+    //       })
+    //   }
+    // )
+    // .catch(function (err) {
+    //   console.log('Fetch Error :-S', err);
+    // })
   }
 
   render() {
@@ -77,7 +67,7 @@ class ComparisonPerAgePerProvince extends React.Component {
         <div className="journey_content">
           <h1>Comparison per age per province</h1>
           <p>
-            {(this.state.value) ? this.state.value : "null"}% at the age of the <span className="red bold">{this.props.age}</span> year olds that live in {this.props.province} have depression.
+            <span className="bold red"> {(this.state.value) ? this.state.value : "Error "}%</span> at the age of the <span className="red bold">{this.props.age}</span> year olds that live in {this.props.province} have depression.
           </p>
           <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>Start your journey</button>
         </div>

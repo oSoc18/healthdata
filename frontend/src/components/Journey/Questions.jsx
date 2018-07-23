@@ -10,7 +10,7 @@ class Questions extends React.Component {
     this.state = {
       value1: 27, // age
       value2: 'male', // gender
-      value3: 'Brussels' // location
+      value3: 'brussels' // location
     };
   }
 
@@ -30,7 +30,7 @@ class Questions extends React.Component {
   }
 
   updateVal3(val) {
-    if (val == "null") this.setState({ value3: 'Brussels' });
+    if (val == "null") this.setState({ value3: 'brussels' });
     else this.setState({ value3: val });
   }
 
