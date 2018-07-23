@@ -39,7 +39,13 @@ class PopulationDetailed(models.Model):
     amount = models.IntegerField()
     age = models.IntegerField(null=True)
     gender = models.CharField(max_length = 600, null = True)
-    code = models.CharField(max_length = 5)
+
+class Cancer(models.Model):
+    agegroup = models.CharField(max_length = 600)
+    gender = models.CharField(max_length = 600)
+    region = models.CharField(max_length = 600)
+    cancer = models.CharField(max_length = 600)
+    value = models.CharField(max_length = 600)
 
 class Depression(models.Model):
     gender = models.CharField(max_length = 500)

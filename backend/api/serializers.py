@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from api.models import Hospital
-from api.models import Bed, Depression
+from api.models import Bed, Depression, Cancer
 from api.models import Population, PopulationDetailed
 
 class HospitalSerializer(serializers.ModelSerializer):
@@ -22,6 +22,11 @@ class PopulationDetailedSerializer(serializers.ModelSerializer):
     class Meta:
         model = PopulationDetailed
         fields = ('id', 'name', 'year', 'amount', 'age', 'gender')
+
+class CancerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cancer
+        fields = ('id', 'agegroup', 'gender', 'region', 'cancer', 'value')
 
 class DepressionSerializer(serializers.ModelSerializer):
     class Meta:
