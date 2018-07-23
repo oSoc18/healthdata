@@ -20,6 +20,7 @@ class MapLeaflet extends Component {
       bounds: [corner1, corner2]
     };
   }
+
   render() {
     const { hospitals } = this.props.store;
     return (

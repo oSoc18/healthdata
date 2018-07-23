@@ -4,3 +4,12 @@
   margin: 0 auto;
   z-index: 0;
 }
+
+.marker-cluster span {
+  color: #fff;
+}
+
+.marker-cluster-small, .marker-cluster-small div,
+.marker-cluster-medium, .marker-cluster-medium div {
+  background-color: rgba(255,100,100,.6);
+}
