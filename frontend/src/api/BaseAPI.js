@@ -10,4 +10,8 @@ export default class BaseAPI {
   getHospitals() {
     return fetch(`${this.BASE_URL}/hospitals`, { headers: this.headers }).then(r => r.json());
   }
+
+  getDemographics() {
+    return fetch(`${this.BASE_URL}/population`, { headers: this.headers }).then(r => r.json());
+  }
 }
