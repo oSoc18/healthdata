@@ -5,12 +5,15 @@ import csv
 import xlrd
 
 from geopy.geocoders import Nominatim
+import geopy
 from bonobo.contrib.django import ETLCommand
-from api.models import Hospital
+from api.models import Hospital, HospitalNetwork
 from django.conf import settings
 from datetime import date
 from api.utils import geocode
 
+geopy.geocoders.options.default_user_agent = 'healthstory-data-import'
+geopy.geocoders.options.default_timeout = 30
 def isInt(value):
     try:
         int(eval(str(value)))
@@ -37,6 +40,14 @@ def parse_hospital_data():
     for row_number in range(2,sh.nrows):
         yield dict(zip(headers, sh.row_values(row_number)))
 
+def get_network(id,name):
+    try:
+        network = HospitalNetwork.objects.get(pk=id)
+    except:
+        network = HospitalNetwork(name=name,id=id)
+        network.save()
+    return network
+
 def transform_hospital_data(row):
     geolocator = Nominatim()
     try:
@@ -52,18 +63,35 @@ def transform_hospital_data(row):
     else:
         beds = int(eval(str(row["TOTAAL BEDDEN"])))
     try:
-        p = Hospital(name=row['ZIEKENHUIS '], latitude=lat, longitude=long, nbBeds=beds,
-            siteNbr=int(eval(str(row["VESTIGINGSNR"]))), address=row["ADRES"], postalCode=int(eval(str(row["POST"]))),
-            town=row["GEMEENTE "], website=row["WEBSITE"], telephone=row["TELEFOON"], province=row["PROVINCIE "], type=row["SOORT ZIEKENHUIS"])
-        yield p
+        if isInt(row['ERK']):
+            network = get_network(int(row['ERK']),row['ZIEKENHUIS '])
+            cleaned_name = row['CAMPUS'].strip()
+            name = cleaned_name if cleaned_name else row['ZIEKENHUIS '].strip()
+            p = Hospital(
+                network=network,
+                latitude=lat,
+                longitude=long,
+                nbBeds=beds,
+                siteNbr=row["VESTIGINGSNR"],
+                address=row["ADRES"],
+                postalCode=int(row["POST"]),
+                town=row["GEMEENTE "],
+                website=row["WEBSITE"],
+                telephone=row["TELEFOON"],
+                province=row["PROVINCIE "],
+                name=name,
+                type=row["SOORT ZIEKENHUIS"]
+            )
+            yield p
     except:
+        print('failed for ')
+        print(row)
+        print(sys.exc_info()[0])
         pass
 
 def load_hospital_data(hospital):
-    try:
-        hospital.save() #todo: find a way to ignore duplicate VESTIGINGSNR
-    except:
-        pass
+    hospital.save() #todo: find a way to ignore duplicate VESTIGINGSNR
+
 # https://fair-acc.healthdata.be/api/3/action/group_package_show?id=469baf11-ddd1-4c30-9ad3-a21a7d0f7397
 class Command(ETLCommand):
     def get_graph(self, **options):

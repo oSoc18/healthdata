@@ -23,6 +23,7 @@ docker-compose exec api python manage.py migrate # only when you need to run mig
 #import data using bonobo
 docker-compose exec api python manage.py historicaldata
 docker-compose exec api python manage.py importDetailedHospitals
+docker-compose exec api python manage.py importbedshistory
 docker-compose exec api python manage.py importpopulation
 docker-compose exec api python manage.py importpopulationdetailed
 docker-compose exec api python manage.py importdepression
@@ -30,11 +31,13 @@ docker-compose exec api python manage.py importcancer
 ```
 
 To access the apis :
-http://localhost:8000/api/hospitals
-http://localhost:8000/api/population
-http://localhost:8000/api/populationdetailed
-http://localhost:8000/api/depression
-http://localhost:8000/api/cancer
+* http://localhost:8000/api/hospitals
+* http://localhost:8000/api/population
+* http://localhost:8000/api/populationdetailed
+* http://localhost:8000/api/depression
+* http://localhost:8000/api/cancer
+* http://localhost:8000/api/hospital-networks
+* http://localhost:8000/api/hospital-networks/[id]/beds (optional query params: type, year)
 
 depression_data.csv comes from : https://hisia.wiv-isp.be/SitePages/Home.aspx
 cancer.csv comes from : http://www.kankerregister.org/default.aspx?url=Statistiques_tableaux%20annuelle

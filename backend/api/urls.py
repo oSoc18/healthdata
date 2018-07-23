@@ -13,4 +13,6 @@ urlpatterns = [
 	url('populationdetailed/', views.populationDetailed_data),
 	url('depression/(?P<pk>[0-9]+)/$', views.depression_detail),
     url('depression', views.depression_data),
+    url('hospital-networks/(?P<pk>.*)/beds$', views.beds_per_network),
+    url('hospital-networks/', views.hospitalNetwork_list),
 ]

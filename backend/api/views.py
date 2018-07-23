@@ -6,8 +6,9 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from api.models import Hospital, Population, PopulationDetailed, Depression, Cancer
-from api.serializers import HospitalSerializer, PopulationSerializer, PopulationDetailedSerializer, DepressionSerializer, CancerSerializer
+from api.models import Bed, Hospital, HospitalNetwork, Population, PopulationDetailed, Depression, Cancer
+from api.serializers import HospitalSerializer, HospitalNetworkSerializer, PopulationSerializer, PopulationDetailedSerializer
+from api.serializers import CancerSerializer, DepressionSerializer, HospitalNetworkSerializer, BedSerializer
 
 def isInt(value):
     try:
@@ -15,7 +16,6 @@ def isInt(value):
         return True
     except:
         return False
-
 def hospital_list(request):
     hospitals = Hospital.objects.all()
     serializer = HospitalSerializer(hospitals, many=True)
@@ -79,3 +79,18 @@ def depression_detail(request, pk):
         raise Http404("Depression not found")
     serializer = DepressionSerializer(population)
     return JsonResponse(serializer.data)
+
+def hospitalNetwork_list(request):
+    networks = HospitalNetwork.objects.all()
+    serializer = HospitalNetworkSerializer(networks, many=True)
+    return JsonResponse(serializer.data, safe=False)
+
+def beds_per_network(request, pk):
+    network = HospitalNetwork.objects.get(pk=pk)
+    beds = Bed.objects.filter(network=network)
+    if request.GET.get('year') is not None:
+        beds = beds.filter(year=int(request.GET.get('year'))) # todo probably unsafe
+    if request.GET.get('type') is not None:
+        beds = beds.filter(type=request.GET.get('type')) # todo probably unsafe
+    serializer = BedSerializer(beds, many=True)
+    return JsonResponse(serializer.data, safe=False)
