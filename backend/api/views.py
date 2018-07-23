@@ -66,10 +66,18 @@ def cancer_detail(request, pk):
     except Cancer.DoesNotExist:
         raise Http404("Populationdeatiled not found")
     serializer = CancerSerializer(population)
-    
+
 def depression_data(request):
-    population = Depression.objects.all()
-    serializer = DepressionSerializer(population, many=True)
+    data = Depression.objects.all()
+    if request.GET.get('year') is not None:
+        data = data.filter(year=int(request.GET.get('year')))
+    if request.GET.get('agegroup') is not None:
+        data = data.filter(agegroup=request.GET.get('agegroup')) # todo probably unsafe
+    if request.GET.get('province') is not None:
+        data = data.filter(province=request.GET.get('province')) # todo probably unsafe
+    if request.GET.get('gender') is not None:
+        data = data.filter(gender=request.GET.get('gender'))
+    serializer = DepressionSerializer(data, many=True)
     return JsonResponse(serializer.data, safe=False)
 
 def depression_detail(request, pk):
