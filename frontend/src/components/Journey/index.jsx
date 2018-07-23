@@ -97,9 +97,6 @@ class Journey extends React.Component {
               // };
 
 
-
-
-
               that.setState({ results: "testter" });
 
 
