@@ -39,14 +39,14 @@ def parse_hospital_data():
 
 def transform_hospital_data(row):
     geolocator = Nominatim()
-    location = geolocator.geocode(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium")
-    if not location:
-        googleResponse = geocode.get_google_results(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium")
-        lat = googleResponse["latitude"]
-        long = googleResponse["longitude"]
-    else:
+    try:
+        location = geolocator.geocode(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium")
         lat = location.latitude
         long = location.longitude
+    except:
+        googleResponse = geocode.get_google_results(row["ADRES"] + " " + str(row["POST"]) + " " + row["GEMEENTE "] + " " + ", Belgium", os.environ['GOOGLE_API_KEY'])
+        lat = googleResponse["latitude"]
+        long = googleResponse["longitude"]
     if not isInt(str(row['TOTAAL BEDDEN'])):
         beds = 0
     else:

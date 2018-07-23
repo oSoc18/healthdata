@@ -4,6 +4,17 @@ This repository holds the code for the healthdata project, aka Health Story. It 
 ## running the project
 This project uses [docker](https://docs.docker.com/install/) and  [docker-compose](https://docs.docker.com/compose/install/).
 
+Add your Google API Key :
+  - create a "docker-compose.override.yml" with:
+  ```
+  version: '3'
+
+  services:
+    api:
+      environment:
+        - "GOOGLE_API_KEY=YOUR_KEY"
+  ```
+
 ```
 docker-compose build
 docker-compose up -d
