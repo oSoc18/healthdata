@@ -5,6 +5,7 @@ This repository holds the code for the healthdata project, aka Health Story. It 
 This project uses [docker](https://docs.docker.com/install/) and  [docker-compose](https://docs.docker.com/compose/install/).
 
 ```
+docker-compose build
 docker-compose up -d
 docker-compose exec api python manage.py migrate # only when you need to run migrations (make sure the db is up)
 
