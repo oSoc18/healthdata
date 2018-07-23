@@ -19,6 +19,7 @@
       }],
       "react/prop-types": ["error", { "ignore": ["store"] }],
       "lines-between-class-members": 0,
-      "react/destructuring-assignment": 0
+      "react/destructuring-assignment": 0,
+      "react/jsx-one-expression-per-line": 0
     }
   }

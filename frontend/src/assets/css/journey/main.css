@@ -1,0 +1,63 @@
+.mainLeft, .mainRight {
+    height: calc(100vh - 3.8em);
+}
+
+.mainExplorer, .mainJourney {
+    padding: 3em;
+    height: calc(50% - 6em);
+}
+
+.mainExplorer {
+    background-color: white;
+}
+
+.mainJourney {
+    background-color: #ff6464;
+    color: white;
+}
+
+/* take me on a journey button */
+
+.mainJourney a {
+    text-decoration: none;
+    color: #ff6464;
+    background-color: white;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.mainJourney a:hover {
+    transition: 0.3s;
+    background-color: #ff6464;
+    color: white;
+}
+
+.mainExplorer p, .mainJourney p {
+    max-width: 20em;
+}
+
+.mainExplorer h1, .mainJourney h1 {
+    max-width: 15em;
+}
+
+.mainRight {
+    background-color: #f1f1f1;
+}
+
+/* take me on a journey button */
+
+.mainExplorer a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff6464;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    border-radius: 20px;
+    border: 2px solid #ff6464;
+}
+
+.mainExplorer a:hover {
+    transition: 0.3s;
+    background-color: white;
+    color: #ff6464;
+}

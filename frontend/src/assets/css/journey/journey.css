@@ -1,0 +1,49 @@
+.journey_content {
+    padding: 3em;
+}
+
+.flex-container {
+    display: flex;
+    /* background-color: DodgerBlue; */
+}
+
+.flex-container>div {
+    width: 100%;
+}
+
+.red {
+    color: #ff6464;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.redUnderline {
+    border-bottom: #ff6464 5px solid;
+}
+
+.redLink {
+    text-decoration: none;
+    color: white;
+    background-color: #ff6464;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    border-radius: 20px;
+    border: 2px solid #ff6464;
+}
+
+.redButtonLink {
+    text-decoration: none;
+    color: white;
+    background-color: #ff6464;
+    line-height: 1.5;
+    font-size: 1em;
+    border-radius: 20px;
+    border: 2px solid #ff6464;
+}
+
+.redLink:hover, .redButtonLink:hover {
+    transition: 0.3s;
+    background-color: white;
+    color: #ff6464;
+}

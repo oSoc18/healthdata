@@ -1,0 +1,70 @@
+.questions {
+    /* padding: 3%; */
+}
+
+.questionsLeft, .questionsRight {
+    height: calc(100vh - 3.8em);
+}
+
+.questionsLeft {
+    /* padding: 1em; */
+    /* background-color: blue; */
+}
+
+.questionsRight {
+    background-color: #f1f1f1;
+}
+
+.questionsContent {
+    /* padding: 5em 10em 5em 10em; */
+    max-width: 25em;
+    margin: auto auto;
+}
+
+.questionsContent a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff6464;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    border-radius: 20px;
+    border: 2px solid #ff6464;
+    max-width: 8.8em;
+}
+
+.questionsContent a:hover {
+    transition: 0.3s;
+    background-color: white;
+    color: #ff6464;
+}
+
+.questionsContent label {
+    font-weight: bold;
+    font-size: 95%;
+    line-height: 2.5;
+}
+
+input, select {
+    width: 60%;
+    border: none;
+    border-bottom: solid 2px #ff6464;
+    font-size: 1em;
+    font-style: italic;
+    color: gray;
+}
+
+select {
+    position: relative;
+    top: 1.2px;
+}
+
+.thirdQuestion, .firsttwoQuestions {
+    padding-top: 3em;
+}
+
+.thirdQuestion select {
+    width: 80%;
+}
+
+.questionsExplenation{
+    text-align: justify;
+}
