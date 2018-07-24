@@ -64,11 +64,6 @@ class MapLeaflet extends Component {
             opacity: 0.6
           }}
         />
-        <MarkerClusterGroup
-          disableClusteringAtZoom={10}
-          spiderfyOnMaxZoom={false}
-          showCoverageOnHover={false}
-        >
           {
             campuses.map(campus => (
               <CampusMarker
@@ -78,9 +73,8 @@ class MapLeaflet extends Component {
               />
             ))
           }
-        </MarkerClusterGroup>
         { currentCampus && (
-          <CircleMarker position={[currentCampus.latitude, currentCampus.longitude]}>
+          <CircleMarker center={[currentCampus.latitude, currentCampus.longitude]}>
             <Popup>
               {currentCampus.name}
             </Popup>
