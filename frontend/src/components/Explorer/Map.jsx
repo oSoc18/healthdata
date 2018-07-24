@@ -4,7 +4,6 @@ import { reaction } from 'mobx';
 import { observer } from 'mobx-react';
 import bbox from '@turf/bbox';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
-import CampusMarker from './CampusMarker';
 import provincesGeoJSON from '../../assets/data/be-provinces.geo.json';
 
 import 'leaflet/dist/leaflet.css';
@@ -66,10 +65,12 @@ class MapLeaflet extends Component {
         />
           {
             campuses.map(campus => (
-              <CampusMarker
+              <CircleMarker
                 key={campus.id}
-                campus={campus}
-                onCampusSelect={this.onCampusSelect}
+                center={[campus.latitude, campus.longitude]}
+                color="#FF6464"
+                radius={2}
+                onClick={() => { this.onCampusSelect(campus); }}
               />
             ))
           }

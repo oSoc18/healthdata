@@ -73,6 +73,7 @@ button:hover {
   min-height: 3rem;
   list-style-type: none;
   cursor: pointer;
+  font-size: 0.8rem;
 }
 
 .hospital-list ul li:nth-child(even) {
