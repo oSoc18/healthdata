@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, GeoJSON, CircleMarker, Popup } from 'react-leaflet';
+import { Map, TileLayer, GeoJSON, CircleMarker, Tooltip } from 'react-leaflet';
 import { reaction } from 'mobx';
 import { observer } from 'mobx-react';
 import bbox from '@turf/bbox';
@@ -80,9 +80,9 @@ class MapLeaflet extends Component {
             radius={2}
             center={[currentCampus.latitude, currentCampus.longitude]}
           >
-            <Popup>
+            <Tooltip direction="top" permanent>
               {currentCampus.name}
-            </Popup>
+            </Tooltip>
           </CircleMarker>
         )}
       </Map>
