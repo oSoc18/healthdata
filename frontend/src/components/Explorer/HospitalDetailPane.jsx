@@ -8,7 +8,7 @@ import '../../assets/css/explorer/hospital-detail.css';
 const HospitalDetailPane = ({ store }) => (
   <div className="hospital-detail-pane">
     <CampusDetails campus={store.currentCampus} deselect={() => store.deselectCampus()} />
-    <CampusNetwork />
+    <CampusNetwork store={store} />
   </div>
 );
 

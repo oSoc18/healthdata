@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, GeoJSON } from 'react-leaflet';
+import { Map, TileLayer, GeoJSON, CircleMarker, Popup } from 'react-leaflet';
+import { reaction } from 'mobx';
 import { observer } from 'mobx-react';
 import bbox from '@turf/bbox';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
-import CampusMarker from './CampusMarker';
 import provincesGeoJSON from '../../assets/data/be-provinces.geo.json';
 
 import 'leaflet/dist/leaflet.css';
@@ -11,6 +11,19 @@ import 'react-leaflet-markercluster/dist/styles.min.css';
 import '../../assets/css/explorer/map.css';
 
 class MapLeaflet extends Component {
+  campusSelectReaction = reaction(
+    () => this.props.store.currentCampus,
+    (campus) => {
+      this.map.leafletElement.flyTo([campus.latitude, campus.longitude], 11, {
+        pan: {
+          animate: true,
+          duration: 1.5
+        },
+        zoom: { animate: true }
+      });
+    }
+  );
+
   constructor(props) {
     super(props);
     const bboxArray = bbox(provincesGeoJSON);
@@ -26,9 +39,10 @@ class MapLeaflet extends Component {
   }
 
   render() {
-    const { campuses } = this.props.store;
+    const { campuses, currentCampus } = this.props.store;
     return (
       <Map
+        ref={(c) => { this.map = c; }}
         className="leaflet-container"
         center={[50.52, 4.3517]}
         zoom={8}
@@ -36,6 +50,8 @@ class MapLeaflet extends Component {
         maxZoom={17}
         maxBounds={this.state.bounds}
         maxBoundsViscosity={0.5}
+        attributionControl={false}
+        useFlyTo
       >
         <TileLayer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png" />
         <GeoJSON
@@ -47,21 +63,28 @@ class MapLeaflet extends Component {
             opacity: 0.6
           }}
         />
-        <MarkerClusterGroup
-          disableClusteringAtZoom={10}
-          spiderfyOnMaxZoom={false}
-          showCoverageOnHover={false}
-        >
-          {
-            campuses.map(campus => (
-              <CampusMarker
-                key={campus.id}
-                campus={campus}
-                onCampusSelect={this.onCampusSelect}
-              />
-            ))
-          }
-        </MarkerClusterGroup>
+        {
+          campuses.map(campus => (
+            <CircleMarker
+              key={campus.id}
+              center={[campus.latitude, campus.longitude]}
+              color="#FF6464"
+              radius={2}
+              onClick={() => { this.onCampusSelect(campus); }}
+            />
+          ))
+        }
+        { currentCampus && (
+          <CircleMarker
+            color="#FF6464"
+            radius={2}
+            center={[currentCampus.latitude, currentCampus.longitude]}
+          >
+            <Popup>
+              {currentCampus.name}
+            </Popup>
+          </CircleMarker>
+        )}
       </Map>
     );
   }

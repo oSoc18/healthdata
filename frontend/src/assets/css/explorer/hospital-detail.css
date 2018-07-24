@@ -55,8 +55,31 @@ button:hover {
   margin-bottom: 0.8rem;
   display: block;
 }
-
-.campus-network {
+.hospital-list {
   background-color: #fff;
   height: 45%;
+  overflow: scroll;
+}
+
+.hospital-list h3 {
+  padding: 1rem;
+}
+
+.hospital-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.hospital-list li {
+  text-align: left;
+  padding: 1rem;
+  min-height: 3rem;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.hospital-list ul li:nth-child(odd) {
+  color: #fff;
+  background-color: #FF6464;
 }
