@@ -24,7 +24,7 @@ class YouAreNotAlone extends React.Component {
             <a href="http://be.brussels/vivre-a-bruxelles/famille-et-vie-privee/aide-aux-personnes-et-aux-familles/aide-psychologique">Here</a>
             , you will find the support which suits you best, depending on your will and where you live in Belgium.
           </p>
-          <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>Continue</button>
+          {/* <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>Continue</button> */}
         </div>
       </div>
     );

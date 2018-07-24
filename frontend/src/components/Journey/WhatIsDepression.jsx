@@ -19,9 +19,11 @@ class WhatIsDepression extends React.Component {
                                 Depression is a common mental illness. Depression causes severe symptoms that affect how you feel, think, and handle daily activities, such as sleeping, eating, or working.
                                 Depression causes feelings of sadness and/or a loss of interest in activities you once enjoyed.
                             </p>
-                            
+
                             <p>
-                                <button className="redButtonLink" onClick={() => this.props.onClick()}>Continue</button>
+                                <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
+                                    Continue <i className="fa fa-angle-right bold"></i>
+                                </button>
                             </p>
                         </div>
                     </div>

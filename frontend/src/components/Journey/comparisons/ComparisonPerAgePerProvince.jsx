@@ -65,7 +65,9 @@ class ComparisonPerAgePerProvince extends React.Component {
             <span className="bold red"> {(this.state.value) ? this.state.value : "Loading "}%</span> at the age of the <span className="red bold">{this.props.age}</span> year olds that live in {this.props.province} have depression.
           </p>
           <p>Data is from: {this.state.dataFromYear}</p>
-          <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>Start your journey</button>
+          <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
+            Continue <i className="fa fa-angle-right bold"></i>
+          </button>
         </div>
       </div>
     );

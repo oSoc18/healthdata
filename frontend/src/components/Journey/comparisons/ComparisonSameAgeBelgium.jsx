@@ -63,7 +63,9 @@ class ComparisonSameAgeBelgium extends React.Component {
         </p>
         <p>Year: {this.state.dataFromYear}</p>
 
-        <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>Start your journey</button>
+        <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
+          Continue <i className="fa fa-angle-right bold"></i>
+        </button>
       </div>
     </div>
     );

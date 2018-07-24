@@ -58,7 +58,9 @@ class ComparisonWomenPerProvince extends React.Component {
         <div className="journey_content">
           <p> <span className="bold red"> {(this.state.value) ? this.state.value : "Loading "}%</span> of <span className="red bold">women</span> have depression in <span className="red bold">{this.props.province}</span></p>
           <p>Year: {this.state.dataFromYear}</p>
-          <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>Start your journey</button>
+          <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
+            Continue <i className="fa fa-angle-right bold"></i>
+          </button>
         </div>
       </div>
     );

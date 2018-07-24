@@ -24,14 +24,14 @@ class Persona extends React.Component {
 
               <h1><span className="redUnderline">Me</span>et {this.state.name} ...</h1>
               <p className="bold personaDiagnosis">
-                  Diagnosis: Major depressive disorder
+                Diagnosis: Major depressive disorder
               </p>
               <div className="personaContent">
                 <p>
                   {this.state.name} is a <span className="bold red">{this.state.age}</span> year old <span className="bold red">{this.state.isMale ? 'male' : 'female'}</span> living in <span className="bold red">{this.state.province}</span>.
                 </p>
                 <p>
-                    A few years ago, {this.state.name} <span className="bold red">stopped feeling happiness and joy</span>.
+                  A few years ago, {this.state.name} <span className="bold red">stopped feeling happiness and joy</span>.
                 </p>
                 <ul>
                   <li>Lost appetite</li>
@@ -47,7 +47,7 @@ class Persona extends React.Component {
                 <ul>
                   <li>Lost his interest</li>
                   <li>
-                      Doesn’t have the energy to do anything anymore.
+                    Doesn’t have the energy to do anything anymore.
                   </li>
                 </ul>
                 <p>
@@ -56,7 +56,9 @@ class Persona extends React.Component {
 
               </div>
               <p>
-                <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>Start your journey</button>
+                <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
+                  Continue <i className="fa fa-angle-right bold"></i>
+                </button>
               </p>
             </div>
           </div>

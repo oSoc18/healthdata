@@ -89,7 +89,9 @@ class ComparisonProvince extends React.Component {
                         })
 
                     }
-                    <button className="redButtonLink" onClick={() => this.props.onClick()}>Continue</button>
+                    <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
+                        Continue <i className="fa fa-angle-right bold"></i>
+                    </button>
                 </div>
             </div>
         )

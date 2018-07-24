@@ -12,11 +12,22 @@ class ComparisonMenPerProvince extends React.Component {
   }
 
   componentDidMount() {
-    this.processData("2013");
+    // this.fetchData().then((data) => {
+    //   this.processData(data)
+    //   console.log(data);
+    // })
+
+    let data = this.processData("2013");
+    this.setState({data})
+  }
+
+  fetchData() {
+    return fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&gender=M&year=${year}`)
+      .then(response => response.json());
   }
 
   processData(year) {
-    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&gender=M&year=${year}`)
+    return fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&gender=M&year=${year}`)
       .then(response => response.json())
       .then((data) => {
         console.log(data);
@@ -49,6 +60,7 @@ class ComparisonMenPerProvince extends React.Component {
           this.setState({ value: avg });
           this.setState({ dataFromYear: year })
         }
+        
       });
   }
   render() {
@@ -59,7 +71,7 @@ class ComparisonMenPerProvince extends React.Component {
           <p>Year: {this.state.dataFromYear}</p>
 
           <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
-            Start your journey
+            Continue <i className="fa fa-angle-right bold"></i>
           </button>
         </div>
       </div>
