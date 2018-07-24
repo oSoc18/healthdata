@@ -71,10 +71,12 @@ class MapLeaflet extends Component {
         >
           {
             campuses.map(campus => (
-              <CampusMarker
+              <CircleMarker
                 key={campus.id}
-                campus={campus}
-                onCampusSelect={this.onCampusSelect}
+                center={[campus.latitude, campus.longitude]}
+                color="#FF6464"
+                radius={2}
+                onClick={() => { this.onCampusSelect(campus); }}
               />
             ))
           }
