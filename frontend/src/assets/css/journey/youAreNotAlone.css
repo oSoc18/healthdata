@@ -1,3 +1,8 @@
-.notAloneBg img{
- width: 100%;
+.notAloneBg img {
+  width: 100%;
+}
+
+.notAloneContent {  
+  max-width: 25em;
+  margin: auto auto;
 }

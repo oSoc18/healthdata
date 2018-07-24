@@ -14,15 +14,17 @@ class WhatIsDepression extends React.Component {
                     <div className="personaRight">
                         <Timeline />
                         <div className="personaContent">
-                            <h1>What is depression?</h1>
+                            <h1><span className="redUnderline">Me</span>et {this.props.name}</h1>
                             <p>
-                                Depression is a common mental illness. Depression causes severe symptoms that affect how you feel, think, and handle daily activities, such as sleeping, eating, or working.
-                                Depression causes feelings of sadness and/or a loss of interest in activities you once enjoyed.
+                                John is a <span className="bold red">{this.props.age}</span> year old man living in {this.props.gender == "male" ? "man" : "woman"} living in <span className="red bold">{this.props.province}</span>. He enjoys little things in life, he loves to cook, go to the cinema and have friends home for dinner.
+                            </p>
+                            <p>
+                                However things changed a few years ago...
                             </p>
 
                             <p>
                                 <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
-                                    Continue <i className="fa fa-angle-right bold"></i>
+                                    next chapter <i className="fa fa-angle-right bold"></i>
                                 </button>
                             </p>
                         </div>

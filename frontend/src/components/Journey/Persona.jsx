@@ -22,45 +22,29 @@ class Persona extends React.Component {
             <Timeline />
             <div className="personaContent">
 
-              <h1><span className="redUnderline">Me</span>et {this.state.name} ...</h1>
-              <p className="bold personaDiagnosis">
-                Diagnosis: Major depressive disorder
+              <h1><span className="redUnderline">{this.state.name}</span> feels unwell</h1>
+              {/* {this.state.isMale ? 'He' : 'She'} */}
+              <p className="justify">
+                For some years now, John has had a strange feeling. He cannot explain why he feels that way. Most of the time, he can hardly sleep, has little energy, low self-esteem and does not eat much.
               </p>
-              <div className="personaContent">
-                <p>
-                  {this.state.name} is a <span className="bold red">{this.state.age}</span> year old <span className="bold red">{this.state.isMale ? 'male' : 'female'}</span> living in <span className="bold red">{this.state.province}</span>.
-                </p>
-                <p>
-                  A few years ago, {this.state.name} <span className="bold red">stopped feeling happiness and joy</span>.
-                </p>
-                <ul>
-                  <li>Lost appetite</li>
-                  <li>Negative feelings</li>
-                </ul>
-
-                {this.state.isMale ? 'He' : 'She'} got diagnosed with <span className="bold red">dysthymia</span>.
-
-
-                <p>
-                  During the fall, {this.state.name} felt even worse. {this.state.isMale ? 'He' : 'She'} started feeling worse, {this.state.isMale ? 'he' : "she"} was suffering from recurrent depressive disorder. Now, {this.state.name} feels depressed
-                </p>
-                <ul>
-                  <li>Lost his interest</li>
-                  <li>
-                    Doesn’t have the energy to do anything anymore.
-                  </li>
-                </ul>
-                <p>
-                  {this.state.isMale ? 'He' : 'She'} is currently suffering from a major depressive disorder.
-                </p>
-
-              </div>
+              <p>John suffers from <span className="red bold">dysthymia</span>.</p>
+              <p className="justify">
+                John’s state deteriorated over time before he feltas he does today. When this feeling started occuring, he thought it would not last, so he did not complain about it.
+              </p>
+              <p className="red bold">
+                Is that really the case?
+              </p>
               <p>
-                <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
-                  Continue <i className="fa fa-angle-right bold"></i>
+                <button type="button" className="redButtonLink">
+                  <i className="fa fa-angle-left bold"></i> previous chapter 
+                </button> <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
+                  next chapter <i className="fa fa-angle-right bold"></i>
                 </button>
               </p>
+
+
             </div>
+
           </div>
         </div>
       </div>

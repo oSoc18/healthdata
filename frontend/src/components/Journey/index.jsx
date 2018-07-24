@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../Navbar';
-import Footer from '../Footer';
 import Questions from './Questions';
 import Persona from './Persona';
 
@@ -24,7 +23,7 @@ class Journey extends React.Component {
     let gender = null;
 
     this.state = {
-      screenDisplayed: 10,
+      screenDisplayed: 1,
       name: name,
       age: age,
       gender: gender,
@@ -54,13 +53,19 @@ class Journey extends React.Component {
       screenDisplayed: prevState.screenDisplayed + 1
     }));
   }
+  
+  // prevScreen() {
+  //   this.setState(prevState => ({
+  //     screenDisplayed: prevState.screenDisplayed - 1
+  //   }));
+  // }
 
   render() {
     return (
       <div>
         <Navbar />
         {this.state.screenDisplayed === 1 && <Questions onClick={(age, gender, province, agegroup) => this.receiveDataAndGoNext(age, gender, province, agegroup)} />}
-        {this.state.screenDisplayed === 2 && <WhatIsDepression onClick={() => this.nextScreen()} />}
+        {this.state.screenDisplayed === 2 && <WhatIsDepression onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
         {this.state.screenDisplayed === 3 && <Persona onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
 
         {this.state.screenDisplayed === 4 && <ComparisonPerAgePerProvince onClick={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
