@@ -6,11 +6,11 @@ import Campus from '../../models/Campus';
 const CampusMarker = ({ campus, onCampusSelect }) => {
   const center = [campus.latitude, campus.longitude];
   return (
-    <CircleMarker center={center} radius={2} color="#FF6464" onClick={() => { onCampusSelect(campus); }}>
-      {/* <Popup>
+    <CircleMarker center={center} radius={2} color="#FF6464" onClick={() => { onCampusSelect(campus); }} />
+    /* <Popup>
         {campus.name}
-      </Popup> */}
-    </CircleMarker>
+      </Popup>
+    </CircleMarker> */
   );
 };
 

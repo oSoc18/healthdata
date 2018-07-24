@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Map, TileLayer, GeoJSON } from 'react-leaflet';
+import { Map, TileLayer, GeoJSON, CircleMarker, Popup } from 'react-leaflet';
 import { reaction } from 'mobx';
 import { observer } from 'mobx-react';
 import bbox from '@turf/bbox';
@@ -20,9 +20,7 @@ class MapLeaflet extends Component {
           animate: true,
           duration: 1.5
         },
-        zoom: {
-          animate: true
-        }
+        zoom: { animate: true }
       });
     }
   );
@@ -42,7 +40,7 @@ class MapLeaflet extends Component {
   }
 
   render() {
-    const { campuses } = this.props.store;
+    const { campuses, currentCampus } = this.props.store;
     return (
       <Map
         ref={(c) => { this.map = c; }}
@@ -81,6 +79,13 @@ class MapLeaflet extends Component {
             ))
           }
         </MarkerClusterGroup>
+        { currentCampus && (
+          <CircleMarker position={[currentCampus.latitude, currentCampus.longitude]}>
+            <Popup>
+              {currentCampus.name}
+            </Popup>
+          </CircleMarker>
+        )}
       </Map>
     );
   }
