@@ -1,29 +1,63 @@
-import { observable, configure } from 'mobx';
+import { observable, action, computed, configure, runInAction } from 'mobx';
 
 import API from '../api/BaseAPI';
 import Hospital from '../models/Hospital';
+import Department from '../models/Department';
 
 configure({ enforceActions: true });
 
 class Store {
-  static init = async () => {
-    const api = new API();
-    const initialState = {};
-    initialState.hospitals = await api.getHospitals();
-    return new Store(initialState);
-  };
-
   @observable hospitals = [];
+  @observable departments = [];
+  @observable initialized = false;
 
-  constructor({ hospitals }) {
+  constructor() {
     this.api = new API();
-    this._addHospital(...hospitals);
   }
 
+  initialize = async () => {
+    const hospitals = await this.api.getHospitals();
+    this._addHospital(...hospitals);
+
+    const campuses = await this.api.getCampuses();
+    campuses.map(this._addCampusToHospital);
+
+    // Takes ~ 20 seconds to load -> disabled until optimized
+    /*
+    const departments = await this.api.getDepartments();
+    this.departments = this._addDepartment(...departments);
+    */
+    runInAction('Explorer ready', () => {
+      this.initialized = true;
+    });
+  }
+
+  @action
   _addHospital = (...hospitals) => {
     hospitals.forEach((hospital) => {
       this.hospitals.push(new Hospital(hospital));
     });
+  }
+
+  @action
+  _addCampusToHospital = (campus) => {
+    const hospital = this.hospitals.find(hospi => hospi.id === campus.network);
+    hospital.addCampus(campus);
+  }
+
+  @action
+  _addDepartment = (...departments) => {
+    departments.forEach((department) => {
+      this.departments.push(new Department(department));
+    });
+  }
+
+  @computed get campuses() {
+    let res = [];
+    this.hospitals.forEach((hospital) => {
+      res = res.concat(hospital.campuses);
+    });
+    return res;
   }
 }
 

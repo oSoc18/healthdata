@@ -3,9 +3,8 @@ import os
 import csv
 
 from bonobo.contrib.django import ETLCommand
-from api.models import Hospital
 from django.conf import settings
-from api.models import Hospital
+from api.models import Cancer
 
 def isInt(value):
     try:
@@ -14,29 +13,29 @@ def isInt(value):
     except:
         return False
 
-def parse_hospital_data():
-    csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals.csv'))
+def parse_cancer_data():
+    csvFile = open(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'cancer.csv'))
     reader = csv.DictReader(csvFile)
     for row in reader:
         yield row
 
-def transform_hospital_data(row):
-    if not isInt(row['beds']):
+def transform_cancer_data(row):
+    if not isInt(row['value']):
         #if number of beds not provided
-        p = Hospital(name=row['name'], latitude=row['lat'], longitude=row['long'], nbBeds=0)
+        p = Cancer(agegroup=row['agegroup'], gender=row['gender'], region=row['region'], cancer=row['cancer'], value='not available')
     else:
-        p = Hospital(name=row['name'], latitude=row['lat'], longitude=row['long'], nbBeds=int(row['beds']))
+        p = Cancer(agegroup=row['agegroup'], gender=row['gender'], region=row['region'], cancer=row['cancer'], value=row['value'])
     yield p
 
-def load_hospital_data(hospital):
+def load_cancer_data(hospital):
     hospital.save()
 # https://fair-acc.healthdata.be/api/3/action/group_package_show?id=469baf11-ddd1-4c30-9ad3-a21a7d0f7397
 class Command(ETLCommand):
     def get_graph(self, **options):
         graph = bonobo.Graph()
         graph.add_chain(
-            parse_hospital_data,
-            transform_hospital_data,
-            load_hospital_data
+            parse_cancer_data,
+            transform_cancer_data,
+            load_cancer_data
         )
         return graph

@@ -5,7 +5,7 @@ const Footer = () => (
   <footer>
     A project by HealthData and Open Summer of Code 2018
     <span className="footerIcons right">
-      X X
+    <i className="fa fa-twitter"></i> <i className="fa fa-facebook"></i>
     </span>
   </footer>
 );

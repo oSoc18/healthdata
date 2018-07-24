@@ -1,22 +1,29 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 import Map from './Map';
 import Navbar from '../Navbar';
-import Sidebar from './Sidebar';
-import Footer from '../Footer';
+import HospitalDetailPane from './HospitalDetailPane';
+import DepartmentsPane from './DepartmentsPane';
 
-// CSS
 import '../../assets/css/main.css';
 import '../../assets/css/explorer/main.css';
 
 const Explorer = ({ store }) => (
   <div className="App">
     <Navbar />
-    <main>
-      <Sidebar />
-      <Map store={store} />
-    </main>
-    <Footer />
+    {store.initialized ? (
+      <main>
+        <HospitalDetailPane />
+        <Map store={store} />
+        <DepartmentsPane />
+      </main>
+    ) : (
+      <main className="loading">
+        <span className="spin" />
+        <h3>HealthStory Explorer is loading...</h3>
+      </main>
+    )}
   </div>
 );
 
-export default Explorer;
+export default observer(Explorer);

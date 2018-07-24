@@ -15,16 +15,19 @@ def get_excel_urls():
 def download_excels(url):
     r = requests.get(url, stream=True)
     index = url.rfind('/') + 1
-    local_filename = os.path.join(settings.BASE_DIR, 'api', 'source-data', url[index:])
+    if not os.path.exists(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals')):
+        os.makedirs(os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals'))
+    local_filename = os.path.join(settings.BASE_DIR, 'api', 'source-data', 'hospitals', url[index:])
     with open(local_filename , 'wb') as f:
         for chunk in r.iter_content(chunk_size=1024):
             if chunk: # filter out keep-alive new chunks
                 f.write(chunk)
-    return local_filename
+    yield local_filename
+
 # https://fair-acc.healthdata.be/api/3/action/group_package_show?id=469baf11-ddd1-4c30-9ad3-a21a7d0f7397
 # returns all historical data
 class Command(ETLCommand):
     def get_graph(self, **options):
         graph = bonobo.Graph()
-        graph.add_chain(get_excel_urls, bonobo.Limit(10), download_excels, bonobo.PrettyPrinter())
+        graph.add_chain(get_excel_urls, download_excels)
         return graph

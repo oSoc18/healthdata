@@ -1,0 +1,26 @@
+.personaLeft, .personaRight {
+    height: calc(100vh - 3.8em);
+}
+
+.personaRight {
+    /*  */
+}
+
+.personaContent {
+    max-width: 25em;
+    margin: auto;
+}
+
+.personaDiagnosis {
+    font-size: 80%;
+}
+
+.personaContent p {
+    text-align: justify;
+    padding-top: 3em;
+    line-height: 1.5;
+}
+
+/* .personaDiagnosis {
+    line-height: 4;
+} */
