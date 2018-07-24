@@ -40,6 +40,7 @@ class PopulationDetailed(models.Model):
     amount = models.IntegerField()
     age = models.IntegerField(null=True)
     gender = models.CharField(max_length = 600, null = True)
+    code = models.CharField(max_length = 5, null=True)
 
 class Cancer(models.Model):
     agegroup = models.CharField(max_length = 600)
