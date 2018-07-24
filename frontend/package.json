@@ -33,6 +33,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "babel-preset-mobx": "^1.0.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",

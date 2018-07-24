@@ -8,8 +8,9 @@ import Store from './store';
 
 dotenv.config();
 
-Store.init().then((store) => {
-  // eslint-disable-next-line react/jsx-filename-extension
-  ReactDOM.render(<App store={store} />, document.getElementById('root'));
-  registerServiceWorker();
-});
+const store = new Store();
+store.initialize();
+
+// eslint-disable-next-line react/jsx-filename-extension
+ReactDOM.render(<App store={store} />, document.getElementById('root'));
+registerServiceWorker();

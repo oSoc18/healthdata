@@ -3,7 +3,7 @@ import { Map, TileLayer, GeoJSON } from 'react-leaflet';
 import { observer } from 'mobx-react';
 import bbox from '@turf/bbox';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
-import HospitalMarker from './HospitalMarker';
+import CampusMarker from './CampusMarker';
 import provincesGeoJSON from '../../assets/data/be-provinces.geo.json';
 
 import 'leaflet/dist/leaflet.css';
@@ -22,7 +22,7 @@ class MapLeaflet extends Component {
   }
 
   render() {
-    const { hospitals } = this.props.store;
+    const { campuses } = this.props.store;
     return (
       <Map
         className="leaflet-container"
@@ -33,9 +33,7 @@ class MapLeaflet extends Component {
         maxBounds={this.state.bounds}
         maxBoundsViscosity={0.5}
       >
-        <TileLayer
-          url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
-        />
+        <TileLayer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png" />
         <GeoJSON
           data={provincesGeoJSON}
           style={{
@@ -51,7 +49,7 @@ class MapLeaflet extends Component {
           showCoverageOnHover={false}
         >
           {
-            hospitals.map(hospital => <HospitalMarker key={hospital.id} hospital={hospital} />)
+            campuses.map(campus => <CampusMarker key={campus.id} campus={campus} />)
           }
         </MarkerClusterGroup>
       </Map>
