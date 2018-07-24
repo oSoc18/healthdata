@@ -12,8 +12,9 @@ class ComparisonPerAgePerProvince extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props.agegroup);
 
-    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&agegroup=${'15-24'}&year=2013`)
+    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&agegroup=${this.props.agegroup}&year=2013`)
       .then(response => response.json())
       .then((data) => {
         console.log(data);
@@ -31,7 +32,6 @@ class ComparisonPerAgePerProvince extends React.Component {
   }
 
   render() {
-
 
     return (
       <div>

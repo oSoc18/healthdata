@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../assets/css/journey/questions.css';
-import { Link } from 'react-router-dom';
 
 
 class Questions extends React.Component {
@@ -8,19 +7,26 @@ class Questions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value1: 27, // age
+      value1: 37, // age
       value2: 'male', // gender
-      value3: 'brussels' // location
+      value3: 'brussels', // location
+      agegroup: '35-44'
     };
   }
 
   NextScreenAndSendData() {
-    this.props.onClick(this.state.value1, this.state.value2, this.state.value3);
+    this.props.onClick(this.state.value1, this.state.value2, this.state.value3, this.state.agegroup);
   }
 
   updateVal1(val) {
-    if (val <= 0 || val >= 121) this.setState({ value1: 27 });
-    else this.setState({ value1: val });
+    if (val == "null") {
+      this.setState({ value1: 37 });
+      this.setState({ agegroup: "35-44" });
+    }
+    else {
+      this.setState({ value1: parseInt(val.substring(0, 2)) + 3 });
+      this.setState({ agegroup: val });
+    }
   }
 
   updateVal2(val) {
@@ -52,7 +58,16 @@ class Questions extends React.Component {
                   <div>
                     <label htmlFor="inp1">What's your age?</label>
                     <br />
-                    <input type="number" id="inp1" defaultValue="0" min="0" max="120" onChange={(event) => this.updateVal1(event.target.value)} />
+                    {/* <input type="number" id="inp1" defaultValue="0" min="0" max="120" onChange={(event) => this.updateVal1(event.target.value)} /> */}
+                    <select id="inp1" onChange={(event) => this.updateVal1(event.target.value)}>
+                      <option value="null">Won't say</option>
+                      <option value="15-24">15-24</option>
+                      <option value="25-34">25-34</option>
+                      <option value="35-44">35-44</option>
+                      <option value="45-54">45-54</option>
+                      <option value="65-74">65-74</option>
+                      <option value="75+">75+</option>
+                    </select>
                   </div>
                 </div>
                 <div>

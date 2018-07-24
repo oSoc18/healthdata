@@ -11,7 +11,7 @@ class ComparisonSameAgeBelgium extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://192.168.99.100:8000/api/depression?agegroup=${'15-24'}&year=2013`)
+    fetch(`http://192.168.99.100:8000/api/depression?agegroup=${this.props.agegroup}&year=2013`)
       .then(response => response.json())
       .then((data) => {
         console.log(data);

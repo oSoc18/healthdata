@@ -51,7 +51,7 @@ class ComparisonProvince extends React.Component {
         return (
             <div>
                 <div className="journey_content">
-                    <h1>Comparison over provinces</h1>
+                    <h1>Comparison over your province</h1>
                     <p>
                         {this.state.value}% of people with depression in Belgium
                     </p>
