@@ -4,7 +4,7 @@ import os
 import csv
 
 from bonobo.contrib.django import ETLCommand
-from api.models import PopulationDetailed
+from api.models import Population
 from django.conf import settings
 
 
@@ -43,7 +43,7 @@ def build_params():
                 yield {'geo': code, 'sex': gender, 'precision': 1, 'unit': 'NR', 'age': 'Y'+str(age), 'rawAge': age, 'time': 2017, 'name': codes_to_names[code]}
 
 def transform_feature_population_data(row):
-    p = PopulationDetailed(name=row['name'], code=row['geo'], year=row['time'], amount=row['amount'], age=row['rawAge'], gender=row['sex'])
+    p = Population(name=row['name'], code=row['geo'], year=row['time'], amount=row['amount'], age=row['rawAge'], gender=row['sex'])
     yield p
 
 def load_feature_population_data(population):
@@ -59,4 +59,3 @@ class Command(ETLCommand):
             load_feature_population_data
         )
         return graph
-
