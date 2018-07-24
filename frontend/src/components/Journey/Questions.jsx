@@ -92,7 +92,7 @@ class Questions extends React.Component {
                   <option value="oost-vlaanderen">East Flanders</option>
                   <option value="vlaams brabant">Flemish Brabant</option>
                   <option value="limburg">Limburg</option>
-                  <option value="west-vlaanderen">West Fladers</option>
+                  <option value="west-vlaanderen">West Flanders</option>
                   <option value="liege">Liege</option>
                   <option value="hainout">Hainaut</option>
                   <option value="luxembourg">Luxembourg</option>

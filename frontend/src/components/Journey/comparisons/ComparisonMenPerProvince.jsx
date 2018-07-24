@@ -6,7 +6,8 @@ class ComparisonMenPerProvince extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ""
+      value: "",
+      dataFromYear: "2013"
     }
   }
 
@@ -14,8 +15,8 @@ class ComparisonMenPerProvince extends React.Component {
     this.processData("2013");
   }
 
-  processData() {
-    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&gender=M&year=2013`)
+  processData(year) {
+    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&gender=M&year=${year}`)
       .then(response => response.json())
       .then((data) => {
         console.log(data);
@@ -26,9 +27,28 @@ class ComparisonMenPerProvince extends React.Component {
           total += parseFloat(data[i].crude);
         }
 
-        this.setState({
-          value: Math.round((total / dataLength) * 100) / 100
-        })
+        let avg = Math.round((total / dataLength) * 100) / 100;
+        console.log(avg + "- " + year);
+        if (avg > 15 || avg < 3) {
+          switch (year) {
+            case "2013":
+              this.processData("2008");
+              break;
+            case "2008":
+              this.processData("2004");
+            case "2004":
+              this.processData("2001");
+            default:
+              this.setState({
+                value: avg
+              })
+              break;
+          }
+        }
+        else {
+          this.setState({ value: avg });
+          this.setState({ dataFromYear: year })
+        }
       });
   }
   render() {
@@ -36,6 +56,8 @@ class ComparisonMenPerProvince extends React.Component {
       <div>
         <div className="journey_content">
           <p> <span className="bold red"> {(this.state.value) ? this.state.value : "Loading "}%</span> of <span className="red bold">men</span> have depression in <span className="red bold">{this.props.province}</span></p>
+          <p>Year: {this.state.dataFromYear}</p>
+
           <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
             Start your journey
           </button>

@@ -13,7 +13,6 @@ class ComparisonPerAgePerProvince extends React.Component {
   }
 
   componentDidMount() {
-
     this.processData("2013");
   }
 
@@ -31,15 +30,15 @@ class ComparisonPerAgePerProvince extends React.Component {
 
         let avg = Math.round((total / dataLength) * 100) / 100;
         console.log(avg + "- " + year);
-        if (avg > 15) {
+        if (avg > 15 || avg < 3) {
           switch (year) {
             case "2013":
-              this.processData(2008);
+              this.processData("2008");
               break;
             case "2008":
-              this.processData(2004);
+              this.processData("2004");
             case "2004":
-              this.processData(2001);
+              this.processData("2001");
             default:
               this.setState({
                 value: avg

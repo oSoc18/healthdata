@@ -12,7 +12,8 @@ class ComparisonProvince extends React.Component {
             age: this.props.age,
             isMale: this.props.gender == "male" ? true : false,
             province: this.props.province,
-            value: ""
+            value: "",
+            dataFromYear: "2013"
         };
         this.fillList();
 
@@ -29,7 +30,11 @@ class ComparisonProvince extends React.Component {
 
 
     componentDidMount() {
-        fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&year=2013`)
+        this.processData("2013");
+    }
+
+    processData(year) {
+        fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&year=${year}`)
             .then(response => response.json())
             .then((data) => {
                 console.log(data);
@@ -40,10 +45,31 @@ class ComparisonProvince extends React.Component {
                     total += parseFloat(data[i].crude);
                 }
 
-                this.setState({
-                    value: Math.round((total / dataLength) * 100) / 100
-                })
+                let avg = Math.round((total / dataLength) * 100) / 100;
+                console.log(avg + "- " + year);
+                if (avg > 15 || avg < 3) {
+                    switch (year) {
+                        case "2013":
+                            this.processData("2008");
+                            break;
+                        case "2008":
+                            this.processData("2004");
+                        case "2004":
+                            this.processData("2001");
+                        default:
+                            this.setState({
+                                value: avg
+                            })
+                            break;
+                    }
+                }
+                else {
+                    this.setState({ value: avg });
+                    this.setState({ dataFromYear: year })
+                }
+
             });
+
     }
 
 
@@ -55,7 +81,7 @@ class ComparisonProvince extends React.Component {
                     <p>
                         {this.state.value}% of people with depression in Belgium
                     </p>
-
+                    <p>Year: {this.state.dataFromYear}</p>
                     <p>In {this.state.province}, {this.state.name} has <span className="red bold">{this.state.depressedPercentage}%</span> chances to meet another {this.state.age} years old, touched with depression. <br /> “x persons in blue with 100-x persons in white/red/whatever. In {this.state.province}, that’s [x*ProvincePop].</p>
                     {
                         this.state.listOfDummies.map(function (dummy) {
