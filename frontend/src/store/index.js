@@ -9,6 +9,7 @@ configure({ enforceActions: true });
 class Store {
   @observable hospitals = [];
   @observable departments = [];
+  @observable currentCampus = null;
   @observable initialized = false;
 
   constructor() {
@@ -58,6 +59,16 @@ class Store {
       res = res.concat(hospital.campuses);
     });
     return res;
+  }
+
+  @action
+  setCurrentCampus(campus) {
+    this.currentCampus = campus;
+  }
+
+  @action
+  deselectCampus() {
+    this.currentCampus = null;
   }
 }
 

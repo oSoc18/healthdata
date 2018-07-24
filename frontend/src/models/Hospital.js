@@ -13,6 +13,7 @@ export default class Hospital {
   @action
   addCampus = (...campuses) => {
     campuses.forEach((campus) => {
+      campus.hospital = this;
       this.campuses.push(new Campus(campus));
     });
   }

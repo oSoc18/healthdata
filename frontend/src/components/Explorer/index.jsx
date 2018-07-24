@@ -13,7 +13,7 @@ const Explorer = ({ store }) => (
     <Navbar />
     {store.initialized ? (
       <main>
-        <HospitalDetailPane />
+        <HospitalDetailPane store={store} />
         <Map store={store} />
         <DepartmentsPane />
       </main>

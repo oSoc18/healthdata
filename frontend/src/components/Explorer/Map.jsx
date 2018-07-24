@@ -21,6 +21,10 @@ class MapLeaflet extends Component {
     };
   }
 
+  onCampusSelect = (campus) => {
+    this.props.store.setCurrentCampus(campus);
+  }
+
   render() {
     const { campuses } = this.props.store;
     return (
@@ -49,7 +53,13 @@ class MapLeaflet extends Component {
           showCoverageOnHover={false}
         >
           {
-            campuses.map(campus => <CampusMarker key={campus.id} campus={campus} />)
+            campuses.map(campus => (
+              <CampusMarker
+                key={campus.id}
+                campus={campus}
+                onCampusSelect={this.onCampusSelect}
+              />
+            ))
           }
         </MarkerClusterGroup>
       </Map>

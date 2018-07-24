@@ -1,14 +1,15 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 import CampusDetails from './CampusDetails';
 import CampusNetwork from './CampusNetwork';
 
 import '../../assets/css/explorer/hospital-detail.css';
 
-const HospitalDetailPane = () => (
+const HospitalDetailPane = ({ store }) => (
   <div className="hospital-detail-pane">
-    <CampusDetails />
+    <CampusDetails campus={store.currentCampus} deselect={() => store.deselectCampus()} />
     <CampusNetwork />
   </div>
 );
 
-export default HospitalDetailPane;
+export default observer(HospitalDetailPane);
