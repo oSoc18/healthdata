@@ -12,18 +12,7 @@ class ComparisonMenPerProvince extends React.Component {
   }
 
   componentDidMount() {
-    // this.fetchData().then((data) => {
-    //   this.processData(data)
-    //   console.log(data);
-    // })
-
-    let data = this.processData("2013");
-    this.setState({data})
-  }
-
-  fetchData() {
-    return fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&gender=M&year=${year}`)
-      .then(response => response.json());
+    this.processData("2013");
   }
 
   processData(year) {
@@ -60,7 +49,7 @@ class ComparisonMenPerProvince extends React.Component {
           this.setState({ value: avg });
           this.setState({ dataFromYear: year })
         }
-        
+
       });
   }
   render() {
