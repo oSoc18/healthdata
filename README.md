@@ -33,7 +33,6 @@ docker-compose exec api python manage.py importcancer
 To access the apis :
 * http://localhost:8000/api/hospitals
 * http://localhost:8000/api/population
-* http://localhost:8000/api/populationdetailed
 * http://localhost:8000/api/depression (optional query params: year, agegroup, province, gender)
 * http://localhost:8000/api/cancer
 * http://localhost:8000/api/hospital-networks
