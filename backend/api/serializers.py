@@ -11,7 +11,8 @@ class PopulationSerializer(serializers.ModelSerializer):
 class PopulationDetailedSerializer(serializers.ModelSerializer):
     class Meta:
         model = PopulationDetailed
-        fields = ('id', 'name', 'year', 'amount', 'age', 'gender')
+        fields = ('id', 'name', 'year', 'amount', 'age', 'gender', 'code')
+        
 class CancerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cancer
@@ -41,5 +42,3 @@ class HospitalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hospital
         fields = ('id', 'siteNbr', 'name', 'latitude', 'longitude', 'nbBeds', 'address', 'postalCode', 'town', 'telephone', 'website', 'province', 'type','network')
-
-

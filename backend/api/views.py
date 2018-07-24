@@ -42,10 +42,23 @@ def population_detail(request, pk):
     serializer = PopulationSerializer(population)
     return JsonResponse(serializer.data)
 
+def population_grouped_per_province(popList):
+    resp = {}
+    for pop in popList:
+        if pop.code in resp:
+            resp[pop.code].append({"age": pop.age, "total":pop.amount})
+        else:
+            resp[pop.code]=[{"age": pop.age, "total":pop.amount}]
+    return resp
+
 def populationDetailed_data(request):
-    population = PopulationDetailed.objects.all()
-    serializer = PopulationDetailedSerializer(population, many=True)
-    return JsonResponse(serializer.data, safe=False)
+    male_population  = PopulationDetailed.objects.filter(gender="M")
+    female_population = PopulationDetailed.objects.filter(gender="F")
+    r = [
+        { "gender": "M", "provinces": population_grouped_per_province(male_population)},
+        { "gender": "F", "provinces": population_grouped_per_province(female_population)}
+    ]
+    return JsonResponse(r, safe=False)
 
 def populationDetailed_detail(request, pk):
     try:
