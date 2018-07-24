@@ -46,6 +46,7 @@ class MapLeaflet extends Component {
         maxZoom={17}
         maxBounds={this.state.bounds}
         maxBoundsViscosity={0.5}
+        attributionControl={false}
         useFlyTo
       >
         <TileLayer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png" />
