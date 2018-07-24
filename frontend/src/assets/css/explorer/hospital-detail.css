@@ -1,0 +1,16 @@
+.hospital-detail-pane {
+  height: 100%;
+  background-color: #303030;
+  width: 25%;
+  display: flex;
+  flex-flow: column;
+}
+
+.campus-details {
+  height: 50%;
+}
+
+.campus-network {
+  background-color: #fff;
+  height: 50%;
+}
