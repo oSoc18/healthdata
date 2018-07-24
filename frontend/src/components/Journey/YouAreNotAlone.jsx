@@ -31,8 +31,6 @@ class YouAreNotAlone extends React.Component {
                 <a href="http://be.brussels/vivre-a-bruxelles/famille-et-vie-privee/aide-aux-personnes-et-aux-familles/aide-psychologique">Here</a>
                 , you will find the support which suits you best, depending on your will and where you live in Belgium.
               </p>
-
-              <button className="redButtonLink">Previous chapter</button> <button className="redButtonLink">Next chapter</button>
             </div>
           </div>
         </div>

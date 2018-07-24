@@ -69,7 +69,6 @@ class ComparisonProvince extends React.Component {
                 }
 
             });
-
     }
 
 
@@ -79,19 +78,22 @@ class ComparisonProvince extends React.Component {
                 <div className="journey_content">
                     <h1>Comparison over your province</h1>
                     <p>
-                        {this.state.value}% of people with depression in Belgium
+                        In the whole province, that is <span className="red bold">{this.state.value}%</span> of people.
                     </p>
                     <p>Year: {this.state.dataFromYear}</p>
-                    <p>In {this.state.province}, {this.state.name} has <span className="red bold">{this.state.depressedPercentage}%</span> chances to meet another {this.state.age} years old, touched with depression. <br /> “x persons in blue with 100-x persons in white/red/whatever. In {this.state.province}, that’s [x*ProvincePop].</p>
                     {
                         this.state.listOfDummies.map(function (dummy) {
                             return dummy;
                         })
 
                     }
-                    <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
-                        Continue <i className="fa fa-angle-right bold"></i>
-                    </button>
+                    <p>
+                        <button type="button" className="redButtonLink" onClick={() => this.props.prev()}>
+                            <i className="fa fa-angle-left bold"></i> Go back
+                         </button> <button type="button" className="redButtonLink" onClick={() => this.props.next()}>
+                            Continue <i className="fa fa-angle-right bold"></i>
+                        </button>
+                    </p>
                 </div>
             </div>
         )

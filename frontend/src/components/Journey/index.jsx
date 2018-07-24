@@ -1,16 +1,18 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import Questions from './Questions';
-import Persona from './Persona';
+import Persona2 from './Persona2';
 
 import ComparisonProvince from './comparisons/ComparisonProvince';
 import ComparisonBelgium from './comparisons/ComparisonBelgium';
 import ComparisonPerAgePerProvince from './comparisons/ComparisonPerAgePerProvince';
-import ComparisonWomenPerProvince from './comparisons/ComparisonWomenPerProvince';
-import ComparisonMenPerProvince from './comparisons/ComparisonMenPerProvince';
+// import ComparisonWomenPerProvince from './comparisons/ComparisonWomenPerProvince';
+// import ComparisonMenPerProvince from './comparisons/ComparisonMenPerProvince';
+import ComparisonGenderPerProvince from './comparisons/ComparisonGenderPerProvince';
+
 import ComparisonSameAgeBelgium from './comparisons/ComparisonSameAgeBelgium';
 
-import WhatIsDepression from './WhatIsDepression';
+import Persona1 from './Persona1';
 import YouAreNotAlone from './YouAreNotAlone';
 
 class Journey extends React.Component {
@@ -53,32 +55,30 @@ class Journey extends React.Component {
       screenDisplayed: prevState.screenDisplayed + 1
     }));
   }
-  
-  // prevScreen() {
-  //   this.setState(prevState => ({
-  //     screenDisplayed: prevState.screenDisplayed - 1
-  //   }));
-  // }
+
+  prevScreen() {
+    this.setState(prevState => ({
+      screenDisplayed: prevState.screenDisplayed - 1
+    }));
+  }
 
   render() {
     return (
       <div>
         <Navbar />
         {this.state.screenDisplayed === 1 && <Questions onClick={(age, gender, province, agegroup) => this.receiveDataAndGoNext(age, gender, province, agegroup)} />}
-        {this.state.screenDisplayed === 2 && <WhatIsDepression onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
-        {this.state.screenDisplayed === 3 && <Persona onClick={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 2 && <Persona1 prev={() => this.prevScreen()} next={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 3 && <Persona2 prev={() => this.prevScreen()} next={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
 
-        {this.state.screenDisplayed === 4 && <ComparisonPerAgePerProvince onClick={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
-        {this.state.screenDisplayed === 5 && <ComparisonWomenPerProvince onClick={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
-        {this.state.screenDisplayed === 6 && <ComparisonMenPerProvince onClick={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 4 && <ComparisonPerAgePerProvince prev={() => this.prevScreen()} next={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 5 && <ComparisonProvince prev={() => this.prevScreen()} next={() => this.nextScreen()} agegroup={this.state.agegroup} name={this.state.name} age={this.state.age} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 6 && <ComparisonGenderPerProvince prev={() => this.prevScreen()} next={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
 
-        {this.state.screenDisplayed === 7 && <ComparisonSameAgeBelgium onClick={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
-        {this.state.screenDisplayed === 8 && <ComparisonProvince onClick={() => this.nextScreen()} agegroup={this.state.agegroup} name={this.state.name} age={this.state.age} province={this.state.province} gender={this.state.gender} />}
-        {this.state.screenDisplayed === 9 && <ComparisonBelgium onClick={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 7 && <ComparisonSameAgeBelgium prev={() => this.prevScreen()} next={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 8 && <ComparisonBelgium prev={() => this.prevScreen()} next={() => this.nextScreen()} agegroup={this.state.agegroup} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
 
-        {this.state.screenDisplayed === 10 && <YouAreNotAlone onClick={() => this.nextScreen()} name={this.state.name} age={this.state.age} province={this.state.province} gender={this.state.gender} />}
-        {this.state.screenDisplayed === 11 && <div>Nothing to show</div>}
-
+        {this.state.screenDisplayed === 9 && <YouAreNotAlone prev={() => this.prevScreen()} name={this.state.name} age={this.state.age} province={this.state.province} gender={this.state.gender} />}
+        {this.state.screenDisplayed === 10 && <div>Nothing to show</div>}
       </div>
     );
   }

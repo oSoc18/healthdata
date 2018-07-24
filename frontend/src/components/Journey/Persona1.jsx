@@ -1,8 +1,7 @@
 import React from 'react';
 import '../../assets/css/journey/persona.css';
-import Timeline from './Timeline';
 
-class WhatIsDepression extends React.Component {
+class Persona1 extends React.Component {
 
     render() {
         return (
@@ -12,12 +11,11 @@ class WhatIsDepression extends React.Component {
 
                     </div>
                     <div className="personaRight">
-                        <Timeline />
                         <div className="personaContent">
                             <h1><span className="redUnderline">Me</span>et {this.props.name}</h1>
                             <p>
-                                John is a <span className="bold red">{this.props.age}</span> year old man living in 
-                                {this.props.gender == "male" ? "man" : "woman"} living in <span className="red bold">{this.props.province}</span>. 
+                                John is a <span className="bold red">{this.props.age}</span> year old man living in
+                                {this.props.gender == "male" ? "man" : "woman"} living in <span className="red bold">{this.props.province}</span>.
                                 {this.props.gender == "male" ? " He" : " She"} enjoys little things in life, he loves to cook, go to the cinema and have friends home for dinner.
                             </p>
                             <p>
@@ -25,9 +23,13 @@ class WhatIsDepression extends React.Component {
                             </p>
 
                             <p>
-                                <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
-                                    next chapter <i className="fa fa-angle-right bold"></i>
-                                </button>
+                                <p>
+                                    <button type="button" className="redButtonLink" onClick={() => this.props.prev()}>
+                                        <i className="fa fa-angle-left bold"></i> Go back
+                                    </button> <button type="button" className="redButtonLink" onClick={() => this.props.next()}>
+                                        Continue <i className="fa fa-angle-right bold"></i>
+                                    </button>
+                                </p>
                             </p>
                         </div>
                     </div>
@@ -40,4 +42,4 @@ class WhatIsDepression extends React.Component {
 
 
 
-export default WhatIsDepression;
+export default Persona1;

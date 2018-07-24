@@ -62,12 +62,17 @@ class ComparisonPerAgePerProvince extends React.Component {
         <div className="journey_content">
           <h1>Comparison per age per province</h1>
           <p>
-            <span className="bold red"> {(this.state.value) ? this.state.value : "Loading "}%</span> at the age of the <span className="red bold">{this.props.age}</span> year olds that live in {this.props.province} have depression.
+            What {this.props.name} does not know, is that many people around {this.props.gender == "male" ? "him" : "her"} also suffer from with current symptoms of a depressive disorder.
+            In {this.props.province}, {this.state.value}% of the population from {this.props.name}'s age group have symptoms of a depressive disorder.
           </p>
           <p>Data is from: {this.state.dataFromYear}</p>
-          <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>
-            Continue <i className="fa fa-angle-right bold"></i>
-          </button>
+          <p>
+            <button type="button" className="redButtonLink" onClick={() => this.props.prev()}>
+              <i className="fa fa-angle-left bold"></i> Go back
+                </button> <button type="button" className="redButtonLink" onClick={() => this.props.next()}>
+              Continue <i className="fa fa-angle-right bold"></i>
+            </button>
+          </p>
         </div>
       </div>
     );
