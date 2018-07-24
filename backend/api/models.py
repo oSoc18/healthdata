@@ -2,6 +2,10 @@ from django.db import models
 import datetime
 from django.utils import timezone
 
+class Department(models.Model):
+    name = models.CharField(max_length = 600)
+    code = models.CharField(max_length = 5, unique=True)
+
 class HospitalNetwork(models.Model):
     name = models.CharField(max_length = 500)
     id = models.IntegerField(primary_key = True)
@@ -20,7 +24,6 @@ class Hospital(models.Model):
     telephone = models.CharField(max_length = 500, null=True)
     province = models.CharField(max_length = 500, null=True)
     type = models.CharField(max_length = 500, null=True)
-
 
     def __str__(self):
         template = '{0.name} {0.latitude} {0.longitude} {0.nbBeds}'
@@ -56,6 +59,5 @@ class Bed(models.Model):
     network = models.ForeignKey(HospitalNetwork, to_field="id", db_column="network_id", on_delete=models.CASCADE)
     year = models.IntegerField()
     month = models.IntegerField()
-    type = models.CharField(max_length= 20, null = True)
     amount = models.IntegerField()
-    typeName = models.CharField(max_length = 500, null = True)
+    department = models.ForeignKey(Department, to_field="code", db_column="department_id", on_delete=models.CASCADE)

@@ -6,10 +6,10 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from api.models import Bed, Hospital, HospitalNetwork, Population, PopulationDetailed, Depression, Cancer
-from api.serializers import HospitalSerializer, HospitalNetworkSerializer, PopulationSerializer, PopulationDetailedSerializer
+from api.models import Bed, Department, Hospital, HospitalNetwork, Population, PopulationDetailed, Depression, Cancer
+from api.serializers import HospitalSerializer, DepartmentSerializer,  HospitalNetworkSerializer, PopulationSerializer, PopulationDetailedSerializer
 from api.serializers import CancerSerializer, DepressionSerializer, HospitalNetworkSerializer, BedSerializer
-
+from django.db.models import Sum
 def isInt(value):
     try:
         int(value)
@@ -102,3 +102,14 @@ def beds_per_network(request, pk):
         beds = beds.filter(type=request.GET.get('type')) # todo probably unsafe
     serializer = BedSerializer(beds, many=True)
     return JsonResponse(serializer.data, safe=False)
+
+def department_list(request):
+    result = []
+    for department in Department.objects.all():
+        dep = DepartmentSerializer(department).data
+        dep['beds'] = []
+        for row in Bed.objects.distinct('year','month'):
+            r = Bed.objects.filter(department=department).filter(year=row.year).filter(month=row.month).aggregate(total=Sum('amount'))
+            dep['beds'].append({"year": row.year, "month": row.month, "total": r['total'] })
+        result.append(dep)
+    return JsonResponse(result, safe=False)

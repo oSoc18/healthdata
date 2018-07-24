@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import Hospital, HospitalNetwork
+from api.models import Hospital, HospitalNetwork, Department
 from api.models import Bed, Depression, Cancer
 from api.models import Population, PopulationDetailed
 
@@ -25,8 +25,13 @@ class DepressionSerializer(serializers.ModelSerializer):
 class BedSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bed
-        fields = ('id', 'year', 'month', 'type', 'amount','typeName')
+        fields = ('id', 'year', 'month', 'amount','department')
+        depth = 1
 
+class DepartmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Department
+        fields = ('id', 'code', 'name')
 class HospitalNetworkSerializer(serializers.ModelSerializer):
     class Meta:
         model = HospitalNetwork
@@ -36,4 +41,5 @@ class HospitalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hospital
         fields = ('id', 'siteNbr', 'name', 'latitude', 'longitude', 'nbBeds', 'address', 'postalCode', 'town', 'telephone', 'website', 'province', 'type','network')
+
 

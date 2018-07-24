@@ -38,6 +38,7 @@ To access the apis :
 * http://localhost:8000/api/cancer
 * http://localhost:8000/api/hospital-networks
 * http://localhost:8000/api/hospital-networks/[id]/beds (optional query params: type, year)
+* http://localhost:8000/api/departments
 
 depression_data.csv comes from : https://hisia.wiv-isp.be/SitePages/Home.aspx
 cancer.csv comes from : http://www.kankerregister.org/default.aspx?url=Statistiques_tableaux%20annuelle

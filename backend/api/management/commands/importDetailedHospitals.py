@@ -13,7 +13,7 @@ from datetime import date
 from api.utils import geocode
 
 geopy.geocoders.options.default_user_agent = 'healthstory-data-import'
-geopy.geocoders.options.default_timeout = 30
+geopy.geocoders.options.default_timeout = 5
 def isInt(value):
     try:
         int(eval(str(value)))
