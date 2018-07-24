@@ -44,7 +44,7 @@ class Journey extends React.Component {
     this.setState({ name: gender === 'male' ? 'John' : 'Vanessa' });
     this.setState({ agegroup });
     console.log(agegroup);
-    
+
 
     this.nextScreen();
   }
