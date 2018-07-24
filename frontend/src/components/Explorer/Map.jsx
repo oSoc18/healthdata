@@ -4,7 +4,6 @@ import { reaction } from 'mobx';
 import { observer } from 'mobx-react';
 import bbox from '@turf/bbox';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
-import CampusMarker from './CampusMarker';
 import provincesGeoJSON from '../../assets/data/be-provinces.geo.json';
 
 import 'leaflet/dist/leaflet.css';
