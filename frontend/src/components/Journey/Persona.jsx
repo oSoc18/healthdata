@@ -23,13 +23,13 @@ class Persona extends React.Component {
             <div className="personaContent">
 
               <h1><span className="redUnderline">{this.state.name}</span> feels unwell</h1>
-              {/* {this.state.isMale ? 'He' : 'She'} */}
+              
               <p className="justify">
-                For some years now, John has had a strange feeling. He cannot explain why he feels that way. Most of the time, he can hardly sleep, has little energy, low self-esteem and does not eat much.
+                For some years now, {this.props.name} has had a strange feeling. {this.state.isMale ? 'He' : 'She'} cannot explain why {this.state.isMale ? 'he' : 'she'} feels that way. Most of the time, {this.state.isMale ? 'he' : 'she'} can hardly sleep, has little energy, low self-esteem and does not eat much.
               </p>
-              <p>John suffers from <span className="red bold">dysthymia</span>.</p>
+              <p>{this.props.name} suffers from <span className="red bold">dysthymia</span>.</p>
               <p className="justify">
-                John’s state deteriorated over time before he feltas he does today. When this feeling started occuring, he thought it would not last, so he did not complain about it.
+                {this.props.name}'s state deteriorated over time before {this.state.isMale ? 'he' : 'she'} felt as {this.state.isMale ? 'he' : 'she'} does today. When this feeling started occuring, {this.state.isMale ? 'he' : 'she'} thought it would not last, so {this.state.isMale ? 'he' : 'she'} did not complain about it.
               </p>
               <p className="red bold">
                 Is that really the case?

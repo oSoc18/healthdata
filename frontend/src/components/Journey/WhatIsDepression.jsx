@@ -16,7 +16,9 @@ class WhatIsDepression extends React.Component {
                         <div className="personaContent">
                             <h1><span className="redUnderline">Me</span>et {this.props.name}</h1>
                             <p>
-                                John is a <span className="bold red">{this.props.age}</span> year old man living in {this.props.gender == "male" ? "man" : "woman"} living in <span className="red bold">{this.props.province}</span>. He enjoys little things in life, he loves to cook, go to the cinema and have friends home for dinner.
+                                John is a <span className="bold red">{this.props.age}</span> year old man living in 
+                                {this.props.gender == "male" ? "man" : "woman"} living in <span className="red bold">{this.props.province}</span>. 
+                                {this.props.gender == "male" ? " He" : " She"} enjoys little things in life, he loves to cook, go to the cinema and have friends home for dinner.
                             </p>
                             <p>
                                 However things changed a few years ago...
