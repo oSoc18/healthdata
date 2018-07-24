@@ -1,18 +1,15 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import Questions from './Questions';
+import Persona1 from './Persona1';
 import Persona2 from './Persona2';
 
 import ComparisonProvince from './comparisons/ComparisonProvince';
 import ComparisonBelgium from './comparisons/ComparisonBelgium';
 import ComparisonPerAgePerProvince from './comparisons/ComparisonPerAgePerProvince';
-// import ComparisonWomenPerProvince from './comparisons/ComparisonWomenPerProvince';
-// import ComparisonMenPerProvince from './comparisons/ComparisonMenPerProvince';
 import ComparisonGenderPerProvince from './comparisons/ComparisonGenderPerProvince';
-
 import ComparisonSameAgeBelgium from './comparisons/ComparisonSameAgeBelgium';
 
-import Persona1 from './Persona1';
 import YouAreNotAlone from './YouAreNotAlone';
 
 class Journey extends React.Component {
@@ -44,9 +41,6 @@ class Journey extends React.Component {
     this.setState({ province });
     this.setState({ name: gender === 'male' ? 'John' : 'Vanessa' });
     this.setState({ agegroup });
-    console.log(agegroup);
-
-
     this.nextScreen();
   }
 
