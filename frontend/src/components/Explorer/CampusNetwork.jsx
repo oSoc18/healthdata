@@ -7,7 +7,7 @@ const CampusNetwork = ({ store }) => {
         <ul>
           {
             store.campuses.map(campus => (
-              <li>{campus.name}</li>
+              <li onClick={() => store.setCurrentCampus(campus)} key={campus.id}>{campus.name}</li>
             ))
           }
         </ul>
