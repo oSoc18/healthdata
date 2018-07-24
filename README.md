@@ -40,15 +40,6 @@ To access the apis :
 * http://localhost:8000/api/hospital-networks/[id]/beds (optional query params: type, year)
 * http://localhost:8000/api/departments
 
-depression_data.csv comes from : https://hisia.wiv-isp.be/SitePages/Home.aspx
-cancer.csv comes from : http://www.kankerregister.org/default.aspx?url=Statistiques_tableaux%20annuelle
-
-Requires a `.env` file in the root of the frontend folder to run. This should contain your API URL as `REACT_APP_API_URL`.  
-Example if using the standard docker configuration and port:
-```
-REACT_APP_API_URL=http://localhost:8000/api
-```
-
 The backend should be available on http://localhost:8000 and the frontend should be available on http://localhost:9000
 
 #### To run the frontend locally with hot reloading:
@@ -57,3 +48,14 @@ Requires Node version >= 8.0.0
 
 `yarn` or `npm install`  
 `yarn start` or `npm start`
+
+Requires a `.env` file in the root of the frontend folder to run. This should contain your API URL as `REACT_APP_API_URL`.  
+Example if using the standard docker configuration and port:
+```
+REACT_APP_API_URL=http://localhost:8000/api
+```
+
+## data sources
+* depression_data.csv comes from : https://hisia.wiv-isp.be/SitePages/Home.aspx
+* cancer.csv comes from : http://www.kankerregister.org/default.aspx?url=Statistiques_tableaux%20annuelle
+* hospital data was retrieved from http://fair-acc.healthdata.be
