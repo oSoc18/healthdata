@@ -24,7 +24,7 @@ class Journey extends React.Component {
     let gender = null;
 
     this.state = {
-      screenDisplayed: 1,
+      screenDisplayed: 10,
       name: name,
       age: age,
       gender: gender,
@@ -73,17 +73,6 @@ class Journey extends React.Component {
 
         {this.state.screenDisplayed === 10 && <YouAreNotAlone onClick={() => this.nextScreen()} name={this.state.name} age={this.state.age} province={this.state.province} gender={this.state.gender} />}
         {this.state.screenDisplayed === 11 && <div>Nothing to show</div>}
-        <Footer />
-
-
-        {
-          /* // -% of people with depression from the same age group and same province
-        // -% of women with depression in the province
-        // -% of men with depression in the province
-        // -% of people with depression from the same age group in Belgium
-        // -% of people with depression in the province (edited) */
-          // =% comparison belgium
-        }
 
       </div>
     );

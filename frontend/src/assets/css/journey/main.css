@@ -1,5 +1,6 @@
 .mainLeft, .mainRight {
-    height: calc(100vh - 3.8em);
+    /* height: calc(100vh - 3.8em); */
+    height: auto;
 }
 
 .mainExplorer, .mainJourney {

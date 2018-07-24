@@ -33,7 +33,6 @@ const Home = () => (
         Img will come here
       </div>
     </div>
-    <Footer />
   </div>
 );
 
