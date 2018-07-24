@@ -1,7 +1,24 @@
 import React from 'react';
 
-const CampusNetwork = () => (
-  <div className="campus-network" />
-);
+const CampusNetwork = ({ store }) => {
+  if (!store.currentCampus) {
+    return (
+      <div className="hospital-list">
+        <ul>
+          {
+            store.campuses.map(campus => (
+              <li>{campus.name}</li>
+            ))
+          }
+        </ul>
+      </div>
+    );
+  }
+
+  return (
+    <div className="campus-network">
+    </div>
+  );
+};
 
 export default CampusNetwork;
