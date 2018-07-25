@@ -34,3 +34,8 @@ main.loading {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.hospital-detail-pane *, .hospital-detail-pane *::before, .hospital-detail-pane *::after,
+.departments-pane *, .hospital-detail-pane *::after, .hospital-detail-pane *::after {
+  box-sizing: border-box;
+}
