@@ -40,6 +40,6 @@ main.loading {
 }
 
 .hospital-detail-pane *, .hospital-detail-pane *::before, .hospital-detail-pane *::after,
-.departments-pane *, .hospital-detail-pane *::after, .hospital-detail-pane *::after {
+.departments-pane *, .departments-pane *::before, .departments-pane *::after {
   box-sizing: border-box;
 }
