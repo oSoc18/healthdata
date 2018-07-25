@@ -15,7 +15,7 @@ class Persona1 extends React.Component {
               <h1><span className="redUnderline">Me</span>et {this.props.name}</h1>
               <p>
                 {this.props.name} is a(n) <span className="bold red">{this.props.age}</span> year old {this.props.gender == "male" ? "man" : "woman"} living in
-                  <span className="red bold"> {this.props.province}</span>.
+                  <span className="red bold capitalize"> {this.props.province}</span>.
                   {this.props.gender == "male" ? " He" : " She"} enjoys little things in life, {this.props.gender == "male" ? " he" : "she"} loves to cook, go to the cinema and have friends home for dinner.
               </p>
               <p>

@@ -51,3 +51,7 @@
     background-color: white;
     color: #ff6464;
 }
+
+.capitalize {
+    text-transform: capitalize;
+}
