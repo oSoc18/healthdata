@@ -64,7 +64,8 @@
 .hospital-list {
   background-color: #fff;
   height: 45%;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .hospital-list h3 {

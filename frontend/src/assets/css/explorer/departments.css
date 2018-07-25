@@ -3,7 +3,8 @@
   background-color: #fff;
   width: 25%;
   padding: 2rem;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   position: relative;
 }
 
