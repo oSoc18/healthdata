@@ -12,7 +12,10 @@
   font-weight: normal;
   font-size: 1.3rem;
   margin-top: 0;
-  margin-bottom: 2.5rem;
+}
+
+.departments-pane input[type="search"] {
+  margin: 1rem 0 2rem 0;
 }
 
 .departments-chart {

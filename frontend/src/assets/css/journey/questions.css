@@ -43,18 +43,17 @@
     line-height: 2.5;
 }
 
-input, select {
+.questionsContent input, .questionsContent select {
     width: 70%;
     border: none;
     border-bottom: solid 5px #ff6464;
     font-size: 1em;
     color: gray;
     text-align-last: center;
-    
+
 }
 
-
-select {
+.questionsContent select {
     position: relative;
     top: 1.2px;
 }
@@ -95,5 +94,5 @@ select {
 .buttonredsmall{
     color: white;
     font-weight: 600;
-    font-size: 13pt; 
+    font-size: 13pt;
 }

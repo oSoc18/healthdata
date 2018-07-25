@@ -39,7 +39,18 @@ main.loading {
   100% { transform: rotate(360deg); }
 }
 
-.hospital-detail-pane *, .hospital-detail-pane *::before, .hospital-detail-pane *::after,
-.departments-pane *, .departments-pane *::before, .departments-pane *::after {
+main *, main *::before, main *::after {
   box-sizing: border-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif!important;
+  border: 1px solid#989696;
+  display: block;
+  margin: 1rem auto;
+  width: 90%;
+  font-size: 0.9rem;
+  height: 2.5rem;
+  padding: 1rem;
 }

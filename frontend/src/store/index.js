@@ -11,6 +11,7 @@ class Store {
   @observable hospitals = [];
   @observable departments = [];
   @observable currentCampus = null;
+  @observable activeHospitalSearch = '';
   @observable initialized = false;
 
   constructor() {
@@ -81,6 +82,12 @@ class Store {
 
   @computed get latestMaximumBeds() {
     return Math.max(...this.departments.map(dep => dep.latestBeds));
+  }
+
+
+  @action
+  setActiveSearch(query) {
+    this.activeHospitalSearch = query;
   }
 }
 

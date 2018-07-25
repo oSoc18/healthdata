@@ -15,6 +15,7 @@ class MapLeaflet extends Component {
     () => this.props.store.currentCampus,
     (campus) => {
       if (!campus) {
+        this.props.store.setActiveSearch('');
         return this.map.leafletElement.flyTo([50.52, 4.3517], 8, {
           pan: {
             animate: false,
@@ -51,7 +52,7 @@ class MapLeaflet extends Component {
   }
 
   render() {
-    const { campuses, currentCampus } = this.props.store;
+    const { campuses, currentCampus, activeHospitalSearch } = this.props.store;
     return (
       <Map
         ref={(c) => { this.map = c; }}
@@ -76,15 +77,17 @@ class MapLeaflet extends Component {
           }}
         />
         {
-          campuses.map(campus => (
-            <CircleMarker
-              key={campus.id}
-              center={[campus.latitude, campus.longitude]}
-              color="#FF6464"
-              radius={2}
-              onClick={() => { this.onCampusSelect(campus); }}
-            />
-          ))
+          campuses
+            .filter(c => c.name.toLowerCase().includes(activeHospitalSearch))
+            .map(campus => (
+              <CircleMarker
+                key={campus.id}
+                center={[campus.latitude, campus.longitude]}
+                color="#FF6464"
+                radius={2}
+                onClick={() => { this.onCampusSelect(campus); }}
+              />
+            ))
         }
         { currentCampus && (
           <CircleMarker
