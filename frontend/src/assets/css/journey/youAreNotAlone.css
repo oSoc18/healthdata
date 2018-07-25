@@ -1,8 +1,38 @@
-.notAloneBg img {
-  width: 100%;
+.notAloneBg{
+  background-color: #ff6464;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .notAloneContent {  
   max-width: 25em;
-  margin: auto auto;
+  margin: 0 auto;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 90vh;
+  align-items: flex-start;
+}
+
+.lineheight-last-text {
+  line-height: 1.5;
+}
+
+.go-to-button {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 5rem;
+  border-radius: 10em;
+  align-items: center;
+  font-family: montserrat;
+}
+
+.support-text {
+  margin-top: 2rem;
 }

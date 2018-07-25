@@ -1,5 +1,8 @@
 import React from 'react';
 import '../../../assets/css/journey/journey.css';
+import CompVisualization from './compVisualization/CompVisualization';
+import API from '../../../api/BaseAPI';
+import '../../../assets/css/journey/comparison.css';
 
 
 class ComparisonPerAgePerProvince extends React.Component {
@@ -10,65 +13,88 @@ class ComparisonPerAgePerProvince extends React.Component {
       value: "",
       dataFromYear: 2013
     }
+    this.api = new API();
+
   }
 
   componentDidMount() {
-    this.processData("2013");
+    this.getData("2013");
   }
 
-  processData(year) {
-    fetch(`http://192.168.99.100:8000/api/depression?province=${this.props.province}&agegroup=${this.props.agegroup}&year=${year}`)
-      .then(response => response.json())
-      .then((data) => {
-        console.log(data);
+  async getData(year) {
+    let data = await this.api.getComparisonData(`province=${this.props.province}&agegroup=${this.props.agegroup}&year=${year}`);
+    this.processData(data, year);
+  }
 
-        let total = 0;
-        let dataLength = data.length;
-        for (let i = 0; i < dataLength; i++) {
-          total += parseFloat(data[i].crude);
-        }
+  processData(data, year) {
+    let total = 0;
+    let dataLength = data.length;
 
-        let avg = Math.round((total / dataLength) * 100) / 100;
-        console.log(avg + "- " + year);
-        if (avg > 15 || avg < 3) {
-          switch (year) {
-            case "2013":
-              this.processData("2008");
-              break;
-            case "2008":
-              this.processData("2004");
-            case "2004":
-              this.processData("2001");
-            default:
-              this.setState({
-                value: avg
-              })
-              break;
-          }
-        }
-        else {
+    for (let i = 0; i < dataLength; i++) {
+      total += parseFloat(data[i].crude);
+    }
 
-          this.setState({ value: avg });
-          this.setState({ dataFromYear: year })
-        }
+    let avg = Math.round((total / dataLength) * 100) / 100;
+    if (avg > 15 || avg < 3) {
+      switch (year) {
+        case "2013":
+          this.getData("2008");
+          break;
+        case "2008":
+          this.getData("2004");
+        case "2004":
+          this.getData("2001");
+        default:
+          this.setState({
+            value: avg
+          })
+          break;
+      }
+    }
+    else {
+      this.setState({ value: avg });
+      this.setState({ dataFromYear: year })
+    }
 
-      });
   }
 
 
   render() {
     return (
-      <div>
-        <div className="journey_content">
-          <h1>Comparison per age per province</h1>
-          <p>
-            What {this.props.name} does not know, is that many people around {this.props.gender == "male" ? "him" : "her"} also suffer from with current symptoms of a depressive disorder.
-            In {this.props.province}, {this.state.value}% of the population from {this.props.name}'s age group have symptoms of a depressive disorder.
-          </p>
+      <div className="comparisonP">
+        <div className="flex-container">
+          <div className="compContent">
+            <div className="compContentContent flex-container">
+              <div style={{ padding: "1em", width: "30%" }}>
+
+              </div>
+              <div style={{ paddingRight: "1em", width: "70%"  }}>
+                <h1>Comparison per age per province</h1>
+                <p> 
+                  {this.props.name} might feel alone, but what {this.props.gender == "male" ? "he" : "she"} doesn't know is that many people around {this.props.gender == "male" ? "him" : "her"} suffer from dysthymia and have similar syptoms.
+              In <span className="capitalize">{this.props.province}</span>, <span className="red bold">{this.state.value}%</span> of the population from {this.props.name}'s age group have similar symptoms.
+            {/* What {this.props.name} does not know, is that many people around {this.props.gender == "male" ? "him" : "her"} also suffer from with current symptoms of a depressive disorder.
+            In {this.props.province}, {this.state.value}% of the population from {this.props.name}'s age group have symptoms of a depressive disorder. */}
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+          <div className="compVis">
+            <div className="compVisVis">
+              <p>{this.state.value == "" ? "Loading visualization" : <CompVisualization percent={this.state.value} />}</p>
+              <h1 className="red bold">{this.state.value}%</h1>
+            </div>
+
+          </div>
+        </div >
+
+        <div className="comparisonButtonAndFootnote">
           <p>
             <button type="button" className="redButtonLink" onClick={() => this.props.prev()}>
               <i className="fa fa-angle-left bold"></i> Go back
-                </button> <button type="button" className="redButtonLink" onClick={() => this.props.next()}>
+                  </button> <button type="button" className="redButtonLink" onClick={() => this.props.next()}>
               Continue <i className="fa fa-angle-right bold"></i>
             </button>
           </p>
@@ -90,6 +116,29 @@ export default ComparisonPerAgePerProvince;
 
 
 
+// <div>
+      //   <div className="comparisonP">
+      //     <h1>Comparison per age per province</h1>
+      //     <p>
+      //       {this.props.name} might feel alone, but what {this.props.gender == "male" ? "he" : "she"} doesn't know is that many people around {this.props.gender == "him" ? "he" : "him"} suffer from dysthymia and have similar syptoms.
+      //         In <span className="capitalize">{this.props.province}</span>, <span className="red bold">{this.state.value}%</span> of the population from {this.props.name}'s age group have similar symptoms.
+      //       {/* What {this.props.name} does not know, is that many people around {this.props.gender == "male" ? "him" : "her"} also suffer from with current symptoms of a depressive disorder.
+      //       In {this.props.province}, {this.state.value}% of the population from {this.props.name}'s age group have symptoms of a depressive disorder. */}
+      //     </p>
+      //     <p>Data is from: {this.state.dataFromYear}</p>
+      //     <p>{this.state.value == "" ? "1" : <CompVisualization percent={this.state.value} />}</p>
+
+      //     {/* What {this.props.name} does not know, is that many people around {this.props.gender == "male" ? "him" : "her"} also suffer from with current symptoms of a depressive disorder.
+      //       In {this.props.province}, {this.state.value}% of the population from {this.props.name}'s age group have symptoms of a depressive disorder. */}
+      //     <p>
+      //       <button type="button" className="redButtonLink" onClick={() => this.props.prev()}>
+      //         <i className="fa fa-angle-left bold"></i> Go back
+      //           </button> <button type="button" className="redButtonLink" onClick={() => this.props.next()}>
+      //         Continue <i className="fa fa-angle-right bold"></i>
+      //       </button>
+      //     </p>
+      //   </div>
+      // </div>
 
 
 
@@ -134,13 +183,14 @@ export default ComparisonPerAgePerProvince;
 
 
 
-// ============================================================
+
+    // ============================================================
 
 
-// let that = this;
+    // let that = this;
 
-// fetch('http://192.168.99.100:8000/api/depression?gender=M')
-//   .then(
+    // fetch('http://192.168.99.100:8000/api/depression?gender=M')
+    //   .then(
 //     function (response) {
 //       if (response.status !== 200) {
 //         console.log('Looks like there was a problem. Status Code: ' +

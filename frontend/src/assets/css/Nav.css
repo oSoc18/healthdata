@@ -35,7 +35,7 @@ nav li a {
   text-align: center;
   padding: 1.4em 2em;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 nav li .selected, nav li .title {

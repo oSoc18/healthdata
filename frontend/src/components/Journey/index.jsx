@@ -59,7 +59,7 @@ class Journey extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar active="journey" />
         {this.state.screenDisplayed === 1 && <Questions onClick={(age, gender, province, agegroup) => this.receiveDataAndGoNext(age, gender, province, agegroup)} />}
         {this.state.screenDisplayed === 2 && <Persona1 prev={() => this.prevScreen()} next={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}
         {this.state.screenDisplayed === 3 && <Persona2 prev={() => this.prevScreen()} next={() => this.nextScreen()} age={this.state.age} name={this.state.name} province={this.state.province} gender={this.state.gender} />}

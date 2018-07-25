@@ -18,7 +18,11 @@
 .questionsContent {
     /* padding: 5em 10em 5em 10em; */
     max-width: 25em;
-    margin: auto auto;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 90vh;
 }
 
 .questionsContent a {
@@ -67,32 +71,35 @@
     margin-bottom: 3.5em;
 }
 
-.questionsExplenation{
+.questionsExplenation {
     text-align: justify;
 }
 
-.Jonathan {
-    content: url(../../images/Jonathan.jpg);
-    width: 100%;
-    height: 700px;
+.question-background {
+    background-color: #ff6464;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.smallblack{
+.smallblack {
     font-size: 11pt;
-    color:black;
+    color: black;
     line-height: 25px;
     font-weight: 500;
 }
 
-.smallboldred{
+.smallboldred {
     font-size: 11pt;
-    color:#ff6464;
+    color: #ff6464;
     line-height: 25px;
     font-weight: 800;
 }
 
-.buttonredsmall{
-    color: white;
-    font-weight: 600;
+.buttonredsmall {
+    font-family: montserrat;
+    font-weight: 300;
     font-size: 13pt;
 }

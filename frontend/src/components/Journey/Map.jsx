@@ -6,9 +6,9 @@ import Footer from '../Footer';
 
 const Map = () => (
   <div>
-    <Navbar />
+    <Navbar active="none" />
     <div className="journey_content">
-        Map
+      Map
     </div>
     <Footer />
   </div>

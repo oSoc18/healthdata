@@ -10,7 +10,7 @@ import '../../assets/css/explorer/main.css';
 
 const Explorer = ({ store }) => (
   <div className="App">
-    <Navbar />
+    <Navbar active="explorer" />
     {store.initialized ? (
       <main>
         <HospitalDetailPane store={store} />

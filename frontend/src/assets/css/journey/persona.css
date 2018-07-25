@@ -1,14 +1,18 @@
+@import url('/../assets/images/HappyJohn.png');
+
 .personaLeft, .personaRight {
     height: calc(100vh - 3.8em);
 }
 
-.personaRight {
-    /*  */
-}
 
 .personaContent {
-    max-width: 25em;
-    margin: auto;
+    width: 25em;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 90vh;
 }
 
 .personaDiagnosis {
@@ -17,10 +21,61 @@
 
 .personaContent p {
     text-align: justify;
-    padding-top: 3em;
+    padding-top: 1em;
     line-height: 1.5;
 }
 
 /* .personaDiagnosis {
     line-height: 4;
 } */
+
+
+.central{
+    text-align: center;
+}
+
+.littlefont{
+    text-align: center;
+    font-size: 9pt;
+    color: black;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.middlefont{
+    font-size: 12pt;
+    color: black;
+    line-height: 25px;
+}
+
+.bold{
+    font-weight: 900;
+}
+
+.persona1-image-div {
+    background-image: url(../../images/HappyJohn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.persona1-2-image-div {
+    background-image: url(../../images/SadJhon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.persona2-image-div {
+    background-image: url(../../images/HappyJane.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.persona2-1-image-div {
+    background-image: url(../../images/SadJane.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
