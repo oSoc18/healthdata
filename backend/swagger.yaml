@@ -1,0 +1,341 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "HealtStory API"
+basePath: "/api"
+schemes:
+- "https"
+- "http"
+paths:
+  /hospitals:
+    get:
+      tags:
+        - "Hospitals"
+      summary: "Returns a list of hospitals"
+      description: "Provides all the information about all the hospitals"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "A JSON array of hospitals"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                siteNbr:
+                  type: string
+                name:
+                  type: string
+                latitude:
+                  type: string
+                longitude:
+                  type: string
+                nbBeds:
+                  type: integer
+                address:
+                  type: string
+                postalCode:
+                  type: integer
+                town:
+                  type: string
+                telephone:
+                  type: string
+                website:
+                  type: string
+                province:
+                  type: string
+                type:
+                  type: string
+                network:
+                  type: integer
+  /hospitals/{hospitalId}/:
+    get:
+      tags:
+        - "Hospitals"
+      summary: "Returns a hospital by ID"
+      produces:
+        - "application/json"
+      parameters:
+        - name: hospitalId
+          in: path
+          description: ID of hospital to fetch
+          required: true
+          type: integer
+          format: int64
+      responses:
+        200:
+          description: "Successful operation"
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              siteNbr:
+                type: string
+              name:
+                type: string
+              latitude:
+                type: string
+              longitude:
+                type: string
+              nbBeds:
+                type: integer
+              address:
+                type: string
+              postalCode:
+                type: integer
+              town:
+                type: string
+              telephone:
+                type: string
+              website:
+                type: string
+              province:
+                type: string
+              type:
+                type: string
+              network:
+                type: integer
+        404:
+          description: "Hospital Not Found"
+  /population:
+    get:
+      tags:
+        - "Population"
+      summary: "Returns the population for each province from 2010 to 2017"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "3 JSON objects. 1) Male, 2) Female, 3) Male and Female with the population for each province"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                gender:
+                  type: string
+                provinces:
+                  type: object
+                  properties:
+                    code:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          age:
+                            type: integer
+                          total:
+                            type: integer
+  /depression:
+    get:
+      tags:
+        - "Depression"
+      summary: "Returns the percentage of depressed people for each province in 2001, 2004, 2008, 2013"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A JSON array with all the percentages"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                gender:
+                  type: string
+                agegroup:
+                  type: string
+                crude:
+                  type: string
+                province:
+                  type: string
+                year:
+                  type: integer
+      parameters:
+        - in: query
+          name: year
+          type: integer
+          description: Data for a certain year 
+        - in: query
+          name: agegroup
+          type: string
+          description: Data for a certain age group
+        - in: query
+          name: province
+          type: string
+          description: Data for a certain province
+        - in: query
+          name: gender
+          type: string
+          description: Data for a certain gender
+  /cancer:
+    get:
+      tags:
+        - "Cancer"
+      summary: "Returns the amount of people having different type of cancer in Belgium"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A JSON array with the amount of each type of cancer and multiple age groups"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                agegroup:
+                  type: string
+                gender:
+                  type: string
+                region:
+                  type: string
+                cancer:
+                  type: string
+                value:
+                  type: integer
+  /cancer/{cancerId}:
+    get:
+      tags:
+        - "Cancer"
+      summary: "Returns the amount of people having different type of cancer in Belgium"
+      produces:
+        - "application/json"
+      parameters:
+        - name: cancerId
+          in: path
+          description: ID of Cancer data to fetch
+          required: true
+          type: integer
+          format: int64
+      responses:
+        200:
+          description: "A JSON array with the amount of each type of cancer and multiple age groups"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                agegroup:
+                  type: string
+                gender:
+                  type: string
+                region:
+                  type: string
+                cancer:
+                  type: string
+                value:
+                  type: integer
+        404:
+          description: "Cancer Id Not Found"
+  /hospital-networks:
+    get:
+      tags:
+        - "Hospitals"
+      summary: "Returns all the hospital networks in Belgium"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A JSON array with each hotpital network"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+  /hospital-networks/{id}/beds:
+    get:
+      tags:
+        - "Hospitals"
+      summary: "Returns all the hospital networks in Belgium"
+      produces:
+        - "application/json"
+      parameters:
+        - name: id
+          in: path
+          description: Hospital-Network ID
+          required: true
+          type: integer
+          format: int64
+        - in: query
+          name: year
+          type: integer
+          description: Amount of bed in a certain year 
+        - in: query
+          name: type
+          type: integer
+          description: Amount of bed of a certain type (Department-code) 
+      responses:
+        200:
+          description: "A JSON array with the amount of bed for each department"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                year:
+                  type: integer
+                month:
+                  type: integer
+                amount:
+                  type: integer
+                department:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    code:
+                      type: string
+  /departments:
+    get:
+      tags:
+        - "Hospitals"
+      summary: "Returns all the departments possible for a hospital in Belgium and the total amount of bed for each"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "A JSON array with each department and the total amount beds of it in Belgium"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                code:
+                  type: string
+                name:
+                  type: string
+                beds:
+                  type: object
+                  properties:
+                    year:
+                      type: integer
+                    month:
+                      type: integer
+                    total:
+                      type: integer
+                    
+      
+        
+        
+        
+        

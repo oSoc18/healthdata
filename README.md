@@ -30,6 +30,8 @@ docker-compose exec api python manage.py importdepression
 docker-compose exec api python manage.py importcancer
 ```
 
+Full API Documentation available in: /backend/swagger.yaml
+
 To access the apis :
 * http://localhost:8000/api/hospitals
 * http://localhost:8000/api/population
