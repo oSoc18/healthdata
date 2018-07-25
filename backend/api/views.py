@@ -77,8 +77,9 @@ def cancer_detail(request, pk):
     try:
         population = Cancer.objects.get(pk=pk)
     except Cancer.DoesNotExist:
-        raise Http404("Populationdeatiled not found")
+        raise Http404("Cancer Id not found")
     serializer = CancerSerializer(population)
+    return JsonResponse(serializer.data)
 
 def depression_data(request):
     data = Depression.objects.all()
@@ -97,7 +98,7 @@ def depression_detail(request, pk):
     try:
         population = Depression.objects.get(pk=pk)
     except Depression.DoesNotExist:
-        raise Http404("Depression not found")
+        raise Http404("Depression Id not found")
     serializer = DepressionSerializer(population)
     return JsonResponse(serializer.data)
 
