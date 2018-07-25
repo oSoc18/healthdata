@@ -48,10 +48,11 @@ class Questions extends React.Component {
             <div className="questionsContent">
               <h1>Hi there!</h1>
               <p className="questionsExplenation">
-                  <div className="smallblack">
-                Before we start, we just need you to <br />fill in some simple questions.
-                      <br />
-                Don't worry,<span className="red bold"><span className="smallboldred"> this won't take long! </span></span></div>
+                Before starting, we need you to answer some simple questions.
+                Don't worry, none of this data will be stored nor used.
+              </p>
+              <p classname="questionsExplenation">
+                This will make your journey more personnal.
               </p>
               <div className="flex-container firsttwoQuestions">
                 <div>
@@ -79,7 +80,7 @@ class Questions extends React.Component {
                     <option value="female`">Female</option>
                     <option value="male">Male</option>
                     <option value="null">Won't say</option>
-                    
+
                   </select>
                 </div>
               </div>
