@@ -32,6 +32,7 @@ class Population(models.Model):
     amount = models.IntegerField()
 
 class PopulationDetailed(models.Model):
+    code = models.CharField(null=True, max_length = 600)
     name = models.CharField(max_length = 600)
     year = models.IntegerField()
     amount = models.IntegerField()
