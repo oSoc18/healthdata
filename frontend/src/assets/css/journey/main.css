@@ -1,5 +1,6 @@
 .mainLeft, .mainRight {
-    height: calc(100vh - 3.8em);
+    /* height: calc(100vh - 3.8em); */
+    height: auto;
 }
 
 .mainExplorer, .mainJourney {
@@ -29,7 +30,7 @@
 
 .mainJourney a:hover {
     transition: 0.3s;
-    background-color: #ff6464;
+    background-color: white;
     color: white;
 }
 
@@ -42,7 +43,7 @@
 }
 
 .mainRight {
-    background-color: #f1f1f1;
+    background-color: white;
 }
 
 /* take me on a journey button */
@@ -58,6 +59,46 @@
 
 .mainExplorer a:hover {
     transition: 0.3s;
-    background-color: white;
+    background-color: #ff6464;
     color: #ff6464;
 }
+
+.twohuman {
+    content: url(../../images/twohuman.png);
+    width: 100%;
+    height: 700px;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+
+.pwhite{
+    font-size: 10pt;
+    color: white;
+    line-height: 25px;
+    margin-bottom: 2.5em;
+}
+
+.pblack{
+    font-size: 10pt;
+    color: black;
+    line-height: 25px;
+    margin-bottom: 3em;
+}
+
+
+
+.buttonwhite{
+    color: #ff6464;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.buttonred{
+    color: white;
+    font-weight: 600;
+    font-size: 14pt; 
+}
+

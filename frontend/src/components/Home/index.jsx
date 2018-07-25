@@ -15,25 +15,32 @@ const Home = () => (
         <div className="mainJourney">
           <h1>You are not alone</h1>
           <p>
-            Get insights into cancer and depression in Belgium,
+              <div className="pwhite">
+            Get insights into cancer and <span className="bold">depression</span> in Belgium,
             and compare them yourself to the public.
+                  </div>
           </p>
-          <Link to="/journey">Take me on a journey <i className="fa fa-angle-right bold" /></Link>
+            
+            <p>
+            <Link to="/journey"><span className="buttonwhite">Take me on a journey </span><i className="fa fa-angle-right bold" /></Link>
+            </p>
+            
         </div>
         <div className="mainExplorer">
           <h1>Get insights in Belgian hospital data</h1>
           <p>
-            Get insights into data from all Belgian hospitals.
+              <div className="pblack">
+                  Get insights into data from all <span className="bold">Belgian hospitals.</span>
+              </div>
           </p>
-          <Link to="/explorer">Explore on my own <i className="fa fa-angle-right bold" /></Link><br />
+            <Link to="/explorer"><span className="buttonred">Explore on my own</span> <i className="fa fa-angle-right bold" /></Link><br />
         </div>
 
       </div>
       <div className="mainRight">
-        Img will come here
+        <div className="twohuman"></div>
       </div>
     </div>
-    <Footer />
   </div>
 );
 

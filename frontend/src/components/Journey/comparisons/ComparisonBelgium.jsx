@@ -12,16 +12,23 @@ class ComparisonBelgium extends React.Component {
     };
   }
 
+
   render() {
     return (
       <div>
         <div className="journey_content">
           <h1>Comparison over Belgium</h1>
           <p>
-              Meanwhile, Belgium counts 703,700 people with depression, which is more than the inhabitants of Antwerp AND Namur combined (show city of antwerp and Namur).
-              (0.062*11,350,000=703,700 people in Belgium in 2017; Antwerp = 520,000; Namur=110,000 -> We can say “more than the inhabitants of Antwerp and Namur combined”).
+            Meanwhile, Belgium counts 703,700 people with depression, which is more than the inhabitants of Antwerp AND Namur combined (show city of antwerp and Namur).
+            (0.062*11,350,000=703,700 people in Belgium in 2017; Antwerp = 520,000; Namur=110,000 -> We can say “more than the inhabitants of Antwerp and Namur combined”).
           </p>
-          <button type="button" className="redButtonLink" onClick={() => this.props.onClick()}>Start your journey</button>
+          <p>
+            <button type="button" className="redButtonLink" onClick={() => this.props.prev()}>
+              <i className="fa fa-angle-left bold"></i> Go back
+                </button> <button type="button" className="redButtonLink" onClick={() => this.props.next()}>
+              Continue <i className="fa fa-angle-right bold"></i>
+            </button>
+          </p>
         </div>
       </div>
     );

@@ -19,6 +19,10 @@
     font-weight: bold;
 }
 
+.justify {
+    text-align: justify;
+}
+
 .redUnderline {
     border-bottom: #ff6464 5px solid;
 }
