@@ -6,8 +6,7 @@ import Footer from '../Footer';
 import '../../assets/css/journey/main.css';
 
 const Home = () => (
-
-  <div>
+  <div className="App">
     <Navbar />
 
     <div className="flex-container">
@@ -20,11 +19,11 @@ const Home = () => (
             and compare them yourself to the public.
                   </div>
           </p>
-            
+
             <p>
             <Link to="/journey"><span className="buttonwhite">Take me on a journey </span><i className="fa fa-angle-right bold" /></Link>
             </p>
-            
+
         </div>
         <div className="mainExplorer">
           <h1>Get insights in Belgian hospital data</h1>

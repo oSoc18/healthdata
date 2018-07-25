@@ -1,4 +1,4 @@
-button {
+.hospital-detail-pane button {
   background: none;
   color: inherit;
   border: none;
@@ -9,7 +9,7 @@ button {
   font-size: 1rem;
 }
 
-button:hover {
+.hospital-detail-pane button:hover {
   color: #ff6464;
   text-decoration: underline;
 }
