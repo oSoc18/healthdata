@@ -14,7 +14,19 @@ class MapLeaflet extends Component {
   campusSelectReaction = reaction(
     () => this.props.store.currentCampus,
     (campus) => {
-      this.map.leafletElement.flyTo([campus.latitude, campus.longitude], 11, {
+      if (!campus) {
+        return this.map.leafletElement.flyTo([50.52, 4.3517], 8, {
+          pan: {
+            animate: false,
+            duration: 0.5
+          },
+          zoom: {
+            animate: true,
+            duration: 0.5
+          }
+        });
+      }
+      return this.map.leafletElement.flyTo([campus.latitude, campus.longitude], 11, {
         pan: {
           animate: true,
           duration: 1.5

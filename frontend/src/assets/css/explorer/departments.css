@@ -4,6 +4,7 @@
   width: 25%;
   padding: 2rem;
   overflow: scroll;
+  position: relative;
 }
 
 .departments-pane h3 {
@@ -51,3 +52,25 @@
   text-align: right;
 }
 
+.departments-pane .loading {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 12rem;
+  width: 100%;
+  top: calc(50% - 6rem);
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.departments-pane .loading .spin {
+  margin-bottom: 1rem;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

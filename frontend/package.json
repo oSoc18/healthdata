@@ -30,7 +30,7 @@
     "react-leaflet": "^2.0.0",
     "react-leaflet-markercluster": "^2.0.0-rc3",
     "react-router-dom": "^4.3.1",
-    "uuid": "^3.3.2"
+    "uniqid": "^5.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

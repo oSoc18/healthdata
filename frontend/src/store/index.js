@@ -65,7 +65,12 @@ class Store {
   }
 
   @action
-  setCurrentCampus(campus) {
+  setCurrentCampus = (campus) => {
+    if (!campus.hospital.hasHistory) {
+      this.api.getHospitalDetail(campus.hospital.id).then((history) => {
+        campus.hospital.setHistory(history);
+      });
+    }
     this.currentCampus = campus;
   }
 
