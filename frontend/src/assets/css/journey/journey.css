@@ -55,3 +55,9 @@
 .capitalize {
     text-transform: capitalize;
 }
+
+.namurAntwerp {
+    content: url(../../images/namurAntwerp.jpg);
+    width: 40%;
+    height: 40%;
+}
