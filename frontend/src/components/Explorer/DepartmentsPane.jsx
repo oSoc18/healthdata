@@ -9,9 +9,15 @@ const DepartmentsPane = ({ store }) => (
     <h3>Amount of hospital beds in all departments</h3>
     <ol className="departments-chart">
       {
-        store.departments.map(department => (
-          <Department key={department.id} department={department} />
-        ))
+        store.departments
+          .sort((d1, d2) => d2.latestBeds - d1.latestBeds)
+          .map(department => (
+            <Department
+              key={department.id}
+              department={department}
+              maxBeds={store.latestMaximumBeds}
+            />
+          ))
       }
     </ol>
   </div>

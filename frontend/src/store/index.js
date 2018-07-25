@@ -73,6 +73,10 @@ class Store {
   deselectCampus() {
     this.currentCampus = null;
   }
+
+  @computed get latestMaximumBeds() {
+    return Math.max(...this.departments.map(dep => dep.latestBeds));
+  }
 }
 
 export default Store;
