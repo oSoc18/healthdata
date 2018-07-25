@@ -1,11 +1,3 @@
-nav img {
-  position: absolute;
-  top: 0.4em;
-  left: 1em;
-  height: 5em;
-  z-index: 2;
-}
-
 nav {
   z-index: 2;
   font-family: 'Poppins', sans-serif;
@@ -14,35 +6,40 @@ nav {
   box-shadow: 0px -10px 30px black;
 }
 
+nav img {
+  position: absolute;
+  top: 0.7rem;
+  left: 1rem;
+  height: 5rem;
+  z-index: 2;
+}
+
 nav ul {
-  list-style-type: none;
-  margin: 0;
+  height: 100%;
+  margin: 0 4rem 0 8rem;
   padding: 0;
+  display: flex;
   background-color: white;
+  list-style-type: none;
+  justify-content: space-between;
 }
 
 nav li {
-  float: left;
+  align-self: center;
 }
 
-nav li:last-child {
-  border-right: none;
+nav li li {
+  display: inline-block;
+  margin-left: 4rem;
 }
 
 nav li a {
-  display: block;
   color: #7a7a7a;
-  text-align: center;
-  padding: 1.4em 2em;
   text-decoration: none;
   font-weight: 500;
 }
 
 nav li .selected, nav li .title {
   color: #FF6360;
-}
-
-nav li:nth-child(2) a {
-  margin-left: 6em
 }
 

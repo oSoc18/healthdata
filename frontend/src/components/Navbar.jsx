@@ -8,18 +8,18 @@ import '../assets/css/nav.css';
 const Navbar = ({ active }) => (
   <div>
     <nav>
+      <img src={imgLogo} alt="img of logo" />
       <ul>
-        <li>
-          <img src={imgLogo} alt="img of logo" />
-        </li>
         <li>
           <Link to="/" className="title">HealthStory</Link>
         </li>
-        <li className="right">
-          <Link to="/journey" className={active === 'journey' ? 'selected' : ''}>data journey</Link>
-        </li>
-        <li className="right">
-          <Link to="/explorer" className={active === 'explorer' ? 'selected' : ''}>data explorer</Link>
+        <li>
+          <li>
+            <Link to="/journey" className={active === 'journey' ? 'selected' : ''}>data journey</Link>
+          </li>
+          <li>
+            <Link to="/explorer" className={active === 'explorer' ? 'selected' : ''}>data explorer</Link>
+          </li>
         </li>
       </ul>
     </nav>
