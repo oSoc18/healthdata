@@ -1,13 +1,12 @@
 import React from 'react';
 import '../../../assets/css/journey/journey.css';
+import CompVisualization from './compVisualization/CompVisualization';
 
 class ComparisonProvince extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            depressedPercentage: 6,
-            listOfDummies: new Array(),
             name: this.props.name,
             age: this.props.age,
             isMale: this.props.gender == "male" ? true : false,
@@ -15,19 +14,7 @@ class ComparisonProvince extends React.Component {
             value: "",
             dataFromYear: "2013"
         };
-        this.fillList();
-
     }
-    fillList() {
-        let depressedPpl = this.state.depressedPercentage;
-
-        for (let i = 1; i < 101; i++) {
-            this.state.listOfDummies.push(<Dummy key={i} value={i <= depressedPpl ? true : false} />);
-            if (i % 10 == 0)
-                this.state.listOfDummies.push(<br />);
-        }
-    }
-
 
     componentDidMount() {
         this.processData("2013");
@@ -80,13 +67,8 @@ class ComparisonProvince extends React.Component {
                     <p>
                         In the whole province, that is <span className="red bold">{this.state.value}%</span> of people.
                     </p>
+                    <p>{this.state.value == "" ? "1" : <CompVisualization percent={this.state.value} />}</p>
                     <p>Year: {this.state.dataFromYear}</p>
-                    {
-                        this.state.listOfDummies.map(function (dummy) {
-                            return dummy;
-                        })
-
-                    }
                     <p>
                         <button type="button" className="redButtonLink" onClick={() => this.props.prev()}>
                             <i className="fa fa-angle-left bold"></i> Go back
@@ -97,21 +79,6 @@ class ComparisonProvince extends React.Component {
                 </div>
             </div>
         )
-    }
-}
-
-
-class Dummy extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isRed: this.props.value,
-        }
-    }
-    render() {
-        return (
-            <i className="fa fa-male" style={{ color: this.state.isRed ? "red" : "black", padding: "0.5em" }}> </i>
-        );
     }
 }
 

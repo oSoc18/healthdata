@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../assets/css/journey/journey.css';
+import CompVisualization from './compVisualization/CompVisualization';
 
 
 class ComparisonPerAgePerProvince extends React.Component {
@@ -66,6 +67,7 @@ class ComparisonPerAgePerProvince extends React.Component {
             In {this.props.province}, {this.state.value}% of the population from {this.props.name}'s age group have symptoms of a depressive disorder.
           </p>
           <p>Data is from: {this.state.dataFromYear}</p>
+          <p>{this.state.value == "" ? "1" : <CompVisualization percent={this.state.value} />}</p>
           <p>
             <button type="button" className="redButtonLink" onClick={() => this.props.prev()}>
               <i className="fa fa-angle-left bold"></i> Go back

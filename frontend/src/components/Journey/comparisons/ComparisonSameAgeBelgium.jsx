@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../assets/css/journey/journey.css';
+import CompVisualization from './compVisualization/CompVisualization';
 
 class ComparisonSameAgeBelgium extends React.Component {
 
@@ -61,6 +62,7 @@ class ComparisonSameAgeBelgium extends React.Component {
         <p>
           <span className="red bold"> {this.state.value}% </span> of people with depression from the same {this.state.age} group in Belgium
         </p>
+        <p>{this.state.value == "" ? "1" : <CompVisualization percent={this.state.value} />}</p>
         <p>Year: {this.state.dataFromYear}</p>
 
         <p>
