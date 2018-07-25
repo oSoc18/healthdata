@@ -1,6 +1,7 @@
 import { observable, action, computed, configure, runInAction } from 'mobx';
 
 import API from '../api/BaseAPI';
+import allDepartments from '../assets/data/departments.json';
 import Hospital from '../models/Hospital';
 import Department from '../models/Department';
 
@@ -23,6 +24,7 @@ class Store {
     const campuses = await this.api.getCampuses();
     campuses.map(this._addCampusToHospital);
 
+    this._addDepartment(...allDepartments);
     // Takes ~ 20 seconds to load -> disabled until optimized
     /*
     const departments = await this.api.getDepartments();
@@ -49,6 +51,7 @@ class Store {
   @action
   _addDepartment = (...departments) => {
     departments.forEach((department) => {
+      if (department.name === 'Total Results') return;
       this.departments.push(new Department(department));
     });
   }

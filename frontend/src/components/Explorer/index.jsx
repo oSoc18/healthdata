@@ -15,7 +15,7 @@ const Explorer = ({ store }) => (
       <main>
         <HospitalDetailPane store={store} />
         <Map store={store} />
-        <DepartmentsPane />
+        <DepartmentsPane store={store} />
       </main>
     ) : (
       <main className="loading">
