@@ -48,10 +48,10 @@ class Questions extends React.Component {
             <div className="questionsContent">
               <h1>Hi there!</h1>
               <p className="questionsExplenation">
-                Before we start, we just need you to fill in some simple questions.
-                Don't worry,
-                <span className="red bold"> this won't take long! </span>
-                And it will make the journey much more personal ;)
+                  <div className="smallblack">
+                Before we start, we just need you to <br />fill in some simple questions.
+                      <br />
+                Don't worry,<span className="red bold"><span className="smallboldred"> this won't take long! </span></span></div>
               </p>
               <div className="flex-container firsttwoQuestions">
                 <div>
@@ -59,13 +59,13 @@ class Questions extends React.Component {
                     <label htmlFor="inp1">What's your age?</label>
                     <br />
                     <select id="inp1" onChange={(event) => this.updateVal1(event.target.value)}>
-                      <option value="null">Won't say</option>
                       <option value="15-24">15-24</option>
                       <option value="25-34">25-34</option>
                       <option value="35-44">35-44</option>
                       <option value="45-54">45-54</option>
                       <option value="65-74">65-74</option>
                       <option value="75%2B">75+</option>
+                      <option value="null">Won't say</option>
                     </select>
                   </div>
                 </div>
@@ -75,9 +75,10 @@ class Questions extends React.Component {
                   </label>
                   <br />
                   <select id="inp2" onChange={(event) => this.updateVal2(event.target.value)}>
-                    <option value="null">Won't say</option>
-                    <option value="male">Male</option>
                     <option value="female`">Female</option>
+                    <option value="male">Male</option>
+                    <option value="null">Won't say</option>
+                    
                   </select>
                 </div>
               </div>
@@ -86,21 +87,21 @@ class Questions extends React.Component {
                 <br />
 
                 <select id="inp3" onChange={(event) => this.updateVal3(event.target.value)}>
-                  <option value="null">Won't say</option>
+                  <option value="west-vlaanderen">West Flanders</option>
                   <option value="antwerp">Antwerp</option>
                   <option value="oost-vlaanderen">East Flanders</option>
                   <option value="vlaams brabant">Flemish Brabant</option>
                   <option value="limburg">Limburg</option>
-                  <option value="west-vlaanderen">West Flanders</option>
                   <option value="liege">Liege</option>
                   <option value="hainout">Hainaut</option>
                   <option value="luxembourg">Luxembourg</option>
                   <option value="namur">Namur</option>
                   <option value="Brabant Wallon">Walloon Brabant</option>
                   <option value="brussels">Brussels</option>
+                  <option value="null">Won't say</option>
                 </select>
                 <p>
-                  <button id="continue_button" className="redButtonLink" onClick={() => this.NextScreenAndSendData()}>Start your journey <i className="fa fa-angle-right bold"></i></button>
+                    <button id="continue_button" className="redButtonLink" onClick={() => this.NextScreenAndSendData()}><span className="buttonredsmall">Start your journey</span> <i className="fa fa-angle-right bold"></i></button>
                 </p>
 
               </div>
@@ -110,7 +111,7 @@ class Questions extends React.Component {
 
           </div>
           <div className="questionsRight">
-            An image will come here.
+            <div className="Jonathan"></div>
           </div>
         </div>
       </div>
