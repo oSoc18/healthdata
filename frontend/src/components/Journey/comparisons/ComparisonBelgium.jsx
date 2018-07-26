@@ -24,9 +24,9 @@ class ComparisonBelgium extends React.Component {
 
               </div>
               <div style={{ paddingRight: "1em", width: "70%" }}>
-                <h1>Comparison per age per province</h1>
+                <h1>Overall Belgium</h1>
                 <p>
-                  Meanwhile, <span className="bold red">Belgium</span> counts <span className="bold red">703,700 people with depression</span>, which is more than the inhabitants of Antwerp AND Namur combined.
+                  <span className="bold red">Belgium</span> counts <span className="bold red">703,700 people with depression</span>, which is more than the inhabitants of Antwerp and Namur combined.
                   {/* (0.062*11,350,000=703,700 people in Belgium in 2017; Antwerp = 520,000; Namur=110,000 -> We can say “more than the inhabitants of Antwerp and Namur combined”). */}
                 </p>
               </div>
@@ -49,9 +49,6 @@ class ComparisonBelgium extends React.Component {
                   </button> <button type="button" className="redButtonLink" onClick={() => this.props.next()}>
               Continue <i className="fa fa-angle-right bold"></i>
             </button>
-          </p>
-          <p>
-            Data from the Belgian Health Interview Survey, current symptoms of a depressive disorder. Year: {this.state.dataFromYear}
           </p>
         </div>
       </div>

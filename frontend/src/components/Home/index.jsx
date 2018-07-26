@@ -18,7 +18,7 @@ const Home = () => (
           <h1>You are not alone</h1>
           <p>
             <div className="pwhite">
-              Get insight in cancer and <span className="bold">depression</span> data in Belgium and compare the general results with your own.
+              Get insight in <span className="bold">depression</span> data in Belgium and compare the general results with your own.
               {/* Get insights in cancer and depression in Belgium,
               and compare them yourself to the public. */}
             </div>

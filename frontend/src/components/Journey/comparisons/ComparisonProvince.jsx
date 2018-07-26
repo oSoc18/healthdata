@@ -71,7 +71,7 @@ class ComparisonProvince extends React.Component {
 
                             </div>
                             <div style={{paddingRight: "1em"}}>
-                                <h1>Comparison over <span className="capitalize">{this.state.province}</span></h1>
+                                <h1>Total in <span className="capitalize">{this.state.province}</span></h1>
                                 <p>
                                     That is <span className="red bold">{this.state.value}%</span> of the people living in the province.
                             </p>

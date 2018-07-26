@@ -65,9 +65,9 @@ class ComparisonSameAgeBelgium extends React.Component {
 
               </div>
               <div style={{ paddingRight: "1em" }}>
-                <h1>Depression at  <span className="red bold">{this.props.agegroup}</span> years old</h1>
+                <h1>Depression among <span className="red bold">{this.props.agegroup}</span> years old in Belgium (men and women)</h1>
                 <p>
-                  <span className="red bold"> {this.state.value}% </span> of people with depression from the same {this.state.age} agegroup in <span className="bold">Belgium</span>.
+                  <span className="red bold"> {this.state.value}% </span> of people with depression from the same {this.state.age} age group in <span className="bold">Belgium</span>.
                   </p>
               </div>
 

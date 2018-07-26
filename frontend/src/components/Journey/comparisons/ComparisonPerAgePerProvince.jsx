@@ -69,9 +69,9 @@ class ComparisonPerAgePerProvince extends React.Component {
 
               </div>
               <div style={{ paddingRight: "1em", width: "70%"  }}>
-                <h1>Comparison per age per province</h1>
-                <p> 
-                  {this.props.name} might feel alone, but what {this.props.gender == "male" ? "he" : "she"} doesn't know is that many people around {this.props.gender == "male" ? "him" : "her"} suffer from dysthymia and have similar syptoms.
+                <h1>Depression, same age group and province</h1>
+                <p>
+                  {this.props.name} might feel alone, but what {this.props.gender == "male" ? "he" : "she"} doesn't know is that many people around {this.props.gender == "male" ? "him" : "her"} also suffer from depression.
               In <span className="capitalize">{this.props.province}</span>, <span className="red bold">{this.state.value}%</span> of the population from {this.props.name}'s age group have similar symptoms.
             {/* What {this.props.name} does not know, is that many people around {this.props.gender == "male" ? "him" : "her"} also suffer from with current symptoms of a depressive disorder.
             In {this.props.province}, {this.state.value}% of the population from {this.props.name}'s age group have symptoms of a depressive disorder. */}

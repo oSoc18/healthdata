@@ -51,7 +51,7 @@ class Questions extends React.Component {
               <h1>Hi there!</h1>
               <p className="questionsExplenation">
                 <div className="smallblack">
-                  Before we start, we just need you to <br />fill in some simple questions.
+                  Before we start, we just need you to <br />fill in some simple questions. Do not worry, none of your data will be stored or used.
                   <br />
                   <span className="red bold"><span className="smallboldred"> This will not take long and it will make the journey more personal. </span></span></div>
                 {/* Before starting, we need you to answer some simple questions.

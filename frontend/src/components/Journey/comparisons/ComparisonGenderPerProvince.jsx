@@ -127,7 +127,7 @@ class ComparisonGenderPerProvince extends React.Component {
 
               </div>
               <div style={{ paddingRight: "1em", width: "70%" }}>
-                <h1>Comparison <span className="red bold">male vs female</span> <span className="capitalize">{this.props.province}</span></h1>
+                <h1>Comparison <span className="red bold">Men and women</span> in <span className="capitalize">{this.props.province}</span></h1>
                 <p>
                   <span className="bold red"> {(this.state.valueF) ? this.state.valueF : "Loading "}%</span> of women living in <span className="capitalize">{this.props.province}</span> have the same symptoms, while <span className="bold red"> {(this.state.valueM) ? this.state.valueM : "Loading "}%</span> of men living in <span className="capitalize">{this.props.province}</span> experience those symptoms.
 
