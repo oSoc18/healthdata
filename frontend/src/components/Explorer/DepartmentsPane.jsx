@@ -34,7 +34,7 @@ class DepartmentsPane extends Component {
 
       return (
         <div className="departments-pane">
-          <h3>Amount of hospital beds for departments of {currentCampus.hospital.name}</h3>
+          <h3>Amount of hospital beds for departments of <span className="hospital-name">{currentCampus.hospital.name}</span></h3>
           <Search placeholder="search for departments..." onChange={this.applyFilter} />
           <ol className="departments-chart">
             {

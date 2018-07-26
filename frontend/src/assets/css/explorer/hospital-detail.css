@@ -28,13 +28,10 @@
   padding: 2rem;
   line-height: 160%;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .campus-details .contact-information {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: center;
   width: 100%;
   padding: 0;
 }
@@ -45,20 +42,23 @@
 }
 
 .contact-information li {
-  width: 45%;
-  font-size: 0.6rem;
-  margin-bottom: 1.2rem;
-  height: 6.5rem;
-  background-color: #979797;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  font-size: 0.9rem;
   list-style-type: none;
-  padding: 1rem;
-  text-align: center;
+  text-transform: lowercase;
 }
 
 .contact-information li i {
-  font-size: 2.5rem;
-  margin-bottom: 0.8rem;
-  display: block;
+  margin-right: 0.8rem;
+  width: 1rem;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.campus-information-detail {
+  width: 10rem;
 }
 
 .hospital-list {
@@ -89,4 +89,8 @@
 .hospital-list ul li:nth-child(odd) {
   color: #fff;
   background-color: #FF6464;
+}
+
+@media screen and (max-width: 1100px){
+
 }

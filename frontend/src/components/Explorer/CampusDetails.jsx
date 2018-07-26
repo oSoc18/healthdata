@@ -22,19 +22,19 @@ const CampusDetails = ({ campus, deselect }) => {
         <ul className="contact-information">
           <li>
             <i className="fa fa-link" />
-            {campus.website || 'No known website'}
+            <span className="campus-information-detail">{campus.website || 'No known website'}</span>
           </li>
           <li>
             <i className="fa fa-map-marker" />
-            {campus.address}
+            <span className="campus-information-detail"> {campus.address}</span>
           </li>
           <li>
             <i className="fa fa-globe" />
-            {campus.province}
+            <span className="campus-information-detail">{campus.province}</span>
           </li>
           <li>
             <i className="fa fa-phone" />
-            {campus.telephone}
+            <span className="campus-information-detail">{campus.telephone}</span>
           </li>
         </ul>
       </div>
