@@ -66,7 +66,7 @@ class MapLeaflet extends Component {
         attributionControl={false}
         useFlyTo
       >
-        <TileLayer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png" />
+        <TileLayer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"  attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"/>
         <GeoJSON
           data={provincesGeoJSON}
           style={{
