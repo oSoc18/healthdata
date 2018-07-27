@@ -63,10 +63,12 @@ class MapLeaflet extends Component {
         maxZoom={17}
         maxBounds={this.state.bounds}
         maxBoundsViscosity={0.5}
-        attributionControl={false}
         useFlyTo
       >
-        <TileLayer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"  attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"/>
+        <TileLayer
+          url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
+          attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+        />
         <GeoJSON
           data={provincesGeoJSON}
           style={{
